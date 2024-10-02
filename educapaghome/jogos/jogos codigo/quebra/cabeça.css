@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #000;
+}
+
+#board {
+    width: 395px; /* Largura do tabuleiro */
+    height: 400px; /* Altura do tabuleiro */
+    border: 2px solid #1aeeef;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    color: #fff;
+}
+
+#board img {
+    width: 79px;
+    height: 79px;
+    border: 0.5px solid lightblue;
+    box-sizing: border-box;
+}
+
+#pieces {
+    width: 1051px; /* Largura para acomodar 14 e 15 peças */
+    height: 160px;
+    border: 2px solid #1aeeef;
+    margin: 0 auto; /* Espaçamento entre tabuleiro e peças */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; Distribui espaço entre as peças */
+}
+
+#pieces img {
+    width: 79px; /* Tamanho das peças */
+    height: 79px; /* Tamanho das peças */
+    border: 0.5px solid lightblue;
+    /* box-sizing: border-box;
+    margin: 2px; Espaçamento para evitar sobreposição */
+}

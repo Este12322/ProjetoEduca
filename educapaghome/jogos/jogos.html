@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/educapaghome/jogos/jogos.css">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="website icon"  type="png" href="/img/logotra.png"/>
+    <title>Jogos da Educa</title>
+    <script src="https://vlibras.gov.br/app/vlibras.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href="" class="logo">Jogos da Educa</a>
+        <ul class="nav">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#jogos">Jogos</a></li>
+            <li><a href="#filmes">Filmes de Jogos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="action">
+            <div class="searchBx">
+                <a href="#"><i class="bx bx-search"></i></a>
+                <input type="text" placeholder="Search Games">
+            </div>
+        </div>
+        <div class="toggleMenu" onclick="toggleMenu();"></div>
+    </header>
+
+    <div id="inicio" class="banner animeX">
+        <div class="bg">
+            <div class="content">
+                <h2>Bem-Vindo a Educa Jogos</h2>
+                <p>Reviva os melhores momentos dos jogos clássicos e desafie sua mente com nossos jogos de raciocínio lógico. Com a Educa, a diversão e o desafio são garantidos!</p>
+                <a href="#jogos" class="btn">Jogar</a>
+            </div>
+            <img src="/educapaghome/jogos/images/mariosonic.png" alt="Banner Image"> 
+        </div>
+    </div>
+    
+    <div id="sobre" class="about animeX">
+        <br>
+        <img src="/educapaghome/jogos/images/control.png" alt="About Image">
+        <div class="contentBx">
+            <h2>Sobre Nós</h2>
+            <p>Fundada em 2024, a Educa visa proporcionar a todos uma experiência de aprendizado acessível e inclusiva. Com métodos de ensino distintos e suporte completo, nossa missão é ajudar você a desenvolver seu potencial e florescer seu futuro com a Educa, e acreditamos que esse futuro tem que ser algo leve e divertido por isso fornecemos jogos gratuitos para que no lazer se divirta um pouco.</p>
+            <a href="/1paginasemlogin/index.html">ir para Educa</a>
+            <a href="#jogos">Jogar</a>
+        </div>
+        
+    </div>
+
+    <!-- Games Section -->
+    <div id="jogos" class="games animeX">
+    <div class="games">
+        <h2>Jogos da Educa</h2>
+        <ul>
+            <li class="list active" data-filter="all">Todos</li>
+            <li class="list" data-filter="pc">Jogos de Logica</li>
+            <li class="list" data-filter="mobile">Jogos Classicos</li>
+        </ul>
+
+        <div class="cardBx">
+            <div class="card" data-item="pc">
+                <img src="/educapaghome/jogos/images/xadrezj.jpeg" alt="Game Image">
+                <div class="content">
+                    <h4>Xadrez</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo/xadrez/xadrez.html">Jogar</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="card" data-item="mobile">
+                <img src="/educapaghome/jogos/images/Mario.jpeg" alt="Game Image">
+                <div class="content">
+                    <h4>Mario</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo">Jogar</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="card" data-item="pc">
+                <img src="/educapaghome/jogos/images/dama.avif" alt="Game Image">
+                <div class="content">
+                    <h4>Damas</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo">Jogar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-item="mobile">
+                <img src="/educapaghome/jogos/images/Sonic.jpg" alt="Game Image">
+                <div class="content">
+                    <h4>Sonic</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo">Jogar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-item="pc">
+                <img src="/educapaghome/jogos/images/jogodamemoria.jpeg" alt="Game Image">
+                <div class="content">
+                    <h4>Jodo da Memoria</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo/memoria/index.html">Jogar</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="card" data-item="mobile">
+                <img src="/educapaghome/jogos/images/Pac-man.jpg" alt="Game Image">
+                <div class="content">
+                    <h4>Pac-Man</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo">Jogar</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="card" data-item="pc">
+                <img src="/educapaghome/jogos/images/jogodavelha.jpg" alt="Game Image">
+                <div class="content">
+                    <h4>Jogo da Velha</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo/Jogo da velha/Jogo da velha/index.html">Jogar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-item="mobile">
+                <img src="/educapaghome/jogos/images/Tetris.png" alt="Game Image">
+                <div class="content">
+                    <h4>Tetris</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo">Jogar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-item="pc">
+                <img src="/educapaghome/jogos/images/quebra-cabeça.avif" alt="Game Image">
+                <div class="content">
+                    <h4>Quebra-Cabeça</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo/quebra/cabeça.html">Jogar</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="card" data-item="mobile">
+                <img src="/educapaghome/jogos/images/Snake.jpeg" alt="Game Image">
+                <div class="content">
+                    <h4>Snake</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo/cobrinha/cobra.html">Jogar</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="card" data-item="pc">
+                <img src="/educapaghome/jogos/images/labirinto.jpg" alt="Game Image">
+                <div class="content">
+                    <h4>Labirinto</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo/labirinto/labirinto.html">Jogar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-item="mobile">
+                <img src="/educapaghome/jogos/images/Pong.jpg" alt="Game Image">
+                <div class="content">
+                    <h4>Pong</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p>Disponível<br><span>Grátis</span></p>
+                        <a href="/educapaghome/jogos/jogos codigo/pong/pong.html">Jogar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="filmes" class="filmes animeX">
+        <h2> Filmes de jogos Classicos</h2>
+        <div class="boxBx">
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/sonic.jpeg">
+                <div class="content">
+                    <h4><span>Aventura, Família</span> <br>Sonic - O Filme</h4>
+                    <p>Sonic, o porco-espinho azul mais famoso do mundo, se junta com os seus amigos para derrotar o terrível Doutor Eggman...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/OsyVeiW3CZ8?si=FBSgP_4_2F9kbmiT" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/sonic.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/pixels.jpeg">
+                <div class="content">
+                    <h4><span>Comédia, Ficção Científica</span> <br>Pixels</h4>
+                    <p>A humanidade sempre buscou vida fora da Terra e, em busca de algum contato, enviou imagens e sons variados sobre a cultura terrestre...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/0_Gg_YWnlU8?si=EsTTiHnvq8ajzQVq" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/pixels.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mario.jpeg">
+                <div class="content">
+                    <h4><span> Animação, Comédia, Família</span> <br>Super Mario Bros. - O Filme</h4>
+                    <p>A humanidade sempre buscou vida fora da Terra e, em busca de algum contato, enviou imagens e sons variados sobre a cultura terrestre...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/cDNkh5WybZo?si=PKJzYUQKjdsLsfZ_" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/mario.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/jogador.jpeg">
+                <div class="content">
+                    <h4><span> Ação, Ficção Científica</span> <br>Jogador Nº1</h4>
+                    <p>Num futuro distópico, em 2044, Wade Watts (Tye Sheridan), como o resto da humanidade, prefere a realidade virtual do jogo OASIS ao mundo real...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/yulwIjJ-C4Q?si=VBWUHZC0yZzMLZL6" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/jogador.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/pikachu.jpeg">
+                <div class="content">
+                    <h4><span>Ação, Aventura</span> <br>Pokémon: Detetive Pikachu</h4>
+                    <p>O desaparecimento do detetive Harry Goodman faz com que seu filho Tim (Justice Smith) parta à sua procura. Ao seu lado ele conta com Pikachu...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/ikwHWX-ZWnc?si=MG9ft8iR399hDHDp" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/picachu.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mortal.jpeg">
+                <div class="content">
+                    <h4><span>Ação, Artes Marciais</span> <br>Mortal Kombat</h4>
+                    <p>Um Filme Minecraft é a primeira adaptação live-action para os cinemas do jogo mais vendido de todos os tempos, Minecraft. Neste universo onde a criatividade não só proporciona diversão como também é vital para a sobrevivência...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/UM1gXYWO1mc?si=8synD3biGJRnM3RI" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/mortal.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mine.jpg">
+                <div class="content">
+                    <h4><span>Aventura, Animação, Família, Fantasia</span> <br>A Minecraft Movie</h4>
+                    <p>A humanidade sempre buscou vida fora da Terra e, em busca de algum contato, enviou imagens e sons variados sobre a cultura terrestre...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/LA8QGAge2Pg?si=mL6NFVC2d8XqNPTn" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/mine.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/detona.jpeg">
+                <div class="content">
+                    <h4><span>Aventura, Animação, Comédia, Família</span> <br>Detona Ralph</h4>
+                    <p>Detona Ralph acompanha o vilão de Conserta Félix Jr. de um popular jogo de fliperama chamado Ralph (John C. Reilly) que está completando 30 anos...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/MsoG4LnjhL0?si=O1RoIswWxCtmnDab" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/detona.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/free.jpg">
+                <div class="content">
+                    <h4><span>Ação, Aventura, Comédia</span> <br>Free Guy - Assumindo o Controle</h4>
+                    <p>Em Free Guy - Assumindo o Controle, Guy é um personagem não-jogador (NPC) em Free City, um jogo de RPG online multijogador massivo desenvolvido pela Soonami Studio. Sem saber que o mundo em que vive é um videogame,...
+                    </p>
+                    
+                    <div class="btn">
+                        <a href="https://youtu.be/iLcwgsQ0V28?si=I8D3gAk-v7Zvhs26" class="watch">Assistir o Trailer</a>
+                        <a href="/educapaghome/jogos/filmes/indexdosfilmes/freeguy.html" class="join">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- <br> -->
+        <div id="contato" class="contato animeX">
+            <img src="/educapaghome/jogos/images/gamer.jpg" alt="Imagem de Contato">
+            <div class="form">
+                <h1>Contato:</h1>
+                <div class="inputBx">
+                    <p>Enter Name</p>
+                    <input type="text" placeholder="Digite seu nome aqui...">
+                </div>
+                <div class="inputBx">
+                    <p>Enter Email</p>
+                    <input type="text" placeholder="Digite seu Email aqui...">
+                </div>
+                <div class="inputBx">
+                    <p>Message</p>
+                    <textarea placeholder="Digite Aqui Sua Mensagem..."></textarea>
+                </div>
+                <div class="inputBx">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+
+
+    <footer>
+        <div class="info">
+            <a href="#" class="logo">Educa Jogos</a>
+            <ul>
+                <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                <li><a href="#"><i class="bx bxl-youtube"></i></a></li>
+            </ul>
+        
+    </footer>
+
+
+    <!-- Inclusão do widget VLibras -->
+    <script>
+        new window.VLibras.Widget().init();
+    </script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        
+        function toggleMenu() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const nav = document.querySelector('.nav'); // Corrigido para querySelector
+            toggleMenu.classList.toggle('active');
+            nav.classList.toggle('active'); // Corrigido para classList
+        }
+        
+        window.addEventListener('scroll', function() {
+            var anime = document.querySelectorAll('.animeX');
+            var windowheight = window.innerHeight;
+            var animepoint = 150;
+        
+            anime.forEach(el => {
+                var animetop = el.getBoundingClientRect().top;
+        
+                if (animetop < windowheight - animepoint) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const lists = document.querySelectorAll('.list');
+            const cards = document.querySelectorAll('.card');
+        
+            lists.forEach(list => {
+                list.addEventListener('click', function() {
+                    lists.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+        
+                    const dataFilter = this.getAttribute('data-filter');
+        
+                    cards.forEach(card => {
+                        card.classList.remove('active');
+                        card.classList.add('hide');
+        
+                        if (dataFilter === 'all' || card.getAttribute('data-item') === dataFilter) {
+                            card.classList.remove('hide');
+                            card.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+        </script>
+        
+</body>
+</html>

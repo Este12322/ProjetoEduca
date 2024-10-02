@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* Faz parte do header/inicio */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    color:#013927
+}
+
+.cabeçalho-menu {
+    background-color: #013927;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap; 
+}
+.cabeçalho-menu-item {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.cabeçalho-menu-item:hover {
+    background-color: #ddd;
+    color: black; 
+}
+.cabeçalho-menu-item:active,
+.cabeçalho-menu-item:focus {
+    background-color: #43a271; 
+    color: white; 
+}
+.login-button {
+    background-color: #43a271;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-left: auto; 
+}
+.header {
+    background-color: #013927;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+}
+.header-logo {
+    width: 400px; 
+    margin-bottom: 20px;
+}
+.header-text {
+    text-align: center;
+}
+.inicio {
+    text-align: center;
+}
+.header h1 {
+    font-family: 'Brittany', sans-serif;
+    font-size: 3em;
+    margin: 0;
+}
+.line {
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    margin: 10px auto;
+}
+.header p {
+    font-size: 40px;
+    margin: 20px 0;
+}
+.button {
+    display: inline-block;
+    background-color: #43a271;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+  
+}
+.section {
+    padding: 60px 20px;
+    min-height: 100vh; 
+    border-bottom: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+
+
+
+/* Faz da pagina sobre */
+#sobre {
+    background-color: #145631;
+}
+#sobre {
+    position: relative;
+    padding: 60px 20px;
+    min-height: 100vh; 
+    border-bottom: 1px solid #ddd;
+    background-color: #14563f;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#sobre h1 {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+}
+#sobre p {
+    color: #fff;
+    font-size: 40px; 
+    max-width: 600px; 
+}
+#sobre video {
+    position: absolute;
+    right: 50px;
+    top: 260px;
+    width: 600px;
+    height: 400px;
+}
+
+
+
+
+/* Faz parte da pagina de serviços */
+#serviços {
+    background-color: #013927;
+    padding: 60px 20px;
+    text-align: center;
+}
+#serviços h1 {
+    color: #cae6d5;
+    font-size: 50px;
+
+}
+#serviços h2 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+#serviços p {
+    color: #fff;
+    font-size: 30px; 
+    max-width: 1000px; 
+}
+.conteudo-secundario {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+figure {
+    flex: 1;
+    max-width: 30%;
+    margin: 0;
+    padding: 10px;
+}
+img.conteudo-secundario-imagem1 {
+    width: 100%;
+    height: auto;
+    border: 4px solid #162b24;
+    border-radius: 20px;
+}
+.conteudo-secundario h3, .conteudo-secundario p {
+    margin: 10px 0;
+}
+.button-container {
+    margin-top: 20px;
+}
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #bc9c22;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 2px solid #bc9c22;
+    border-radius: 20px;
+}
+
+
+
+
+
+/* Faz parte da pagina de cursos */
+#cursos h1{
+    color: #fff;
+    font-size: 30px; 
+    text-align: center;
+}
+#cursos {
+    background-color: #14563f;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+#cursos h1 {
+    font-size: 50px;
+    margin: 0;
+}
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: #fff;
+    margin: 20px auto;
+}
+.curso-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.curso-item {
+    background-color: #14563f;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 23%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+    text-align: center;
+    border: 2px solid #ffffff;
+}
+.curso-item img {
+    width: 90%;
+    height: auto;
+    border-bottom: 2px solid #1e7247;
+}
+.curso-text {
+    padding: 10px;
+}
+.curso-text h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+.curso-text p {
+    font-size: 20px;
+}
+
+
+
+
+/* Faz parte da pagina de blog*/
+
+
+
+
+
+
+
+
+
+/* Faz parte da pagina de frases */
+#frases {
+    position: relative;
+    padding: 0; /* Remove o padding da seção */
+    min-height: 100vh; /* Garante que a altura mínima é 100vh */
+    background-color: #000;
+    overflow: hidden; /* Esconde o conteúdo que sai da área visível */
+}
+
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: none; /* Remove a sombra */
+    margin: 0; /* Remove a margem */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* Faz parte da pagina de comentarios */
+#comentarios{
+    background-color: #cae6d5;
+}
+
+
+
+
+/* Faz parte da pagina de contatos */
+#contato {
+    background-color: #005034;
+}
+#contato h1{
+    font-family: "Qwitcher Grypen", cursive;
+    color:#ffffff;
+    text-align: center;
+    font-size: 100px;
+}
+
+#contato h2{
+    font-family: "Roboto", cursive;
+    color:#9fcfbb;
+    text-align: center;
+    font-size: 50px;
+}
+#contato p{
+    font-family: "Roboto", cursive;
+    color:#f6f6f6;
+    text-align: center;
+    font-size: 40px;
+}
+#contato i{
+    color:#ffffff;
+    font-size: 60px;
+    text-align: left;
+}
+
+#contato h3{
+    font-family: "Roboto", cursive;
+    color:#43a271;
+    text-align: center;
+    font-size: 40px;
+}
+#contato h4{
+    font-family: "Roboto", cursive;
+    color:#9fcfbb;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+
+
+/* Faz parte do rodapé */
+.conteudo-rodape {
+    background-color: #013927;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo-rodape-imagem {
+    width: 100px;
+}
+
+
+/* Media do header*/
+@media (max-width: 768px) {
+    .cabeçalho-menu-item {
+        padding: 10px 12px;
+    }
+    .login-button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    .header-logo {
+        width: 120px;
+    }
+    .header h1 {
+        font-size: 2.5em;
+    }
+    .header p {
+        font-size: 16px;
+    }
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .section {
+        padding: 40px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabeçalho-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cabeçalho-menu-item {
+        display: block;
+        padding: 10px 0;
+        text-align: left;
+        width: 100%;
+    }
+    .login-button {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .header {
+        padding: 100px 10px 20px;
+        margin-top: 0; 
+    }
+    .header-logo {
+        width: 100px;
+    }
+    .header h1 {
+        font-size: 2em;
+    }
+    .header p {
+        font-size: 40px;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .section {
+        padding: 30px 10px;
+    }
+}

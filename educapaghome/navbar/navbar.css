@@ -1,0 +1,56 @@
+/* parte do header */
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #88ae84;
+    padding: 10px 20px;
+}
+
+.cabeçalho-imagem {
+    max-height: 10%;
+    max-width: 10%;
+}
+
+.cabeçalho-menu {
+    display: flex;
+    gap: 15px;
+    margin-left: 300px;
+}
+
+.cabeçalho-menu-item {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px; 
+}
+
+.cabeçalho-menu-item:hover {
+    text-decoration: underline;
+}
+
+div img {   
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+} 
+
+.form {
+    display: flex;
+}
+
+.imginicio {
+    width: 100%;
+    overflow: hidden;
+}
+
+.imginicio img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* parte de cursos */
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lojateste.css">
+    <title>Loja da Educa</title>
+</head>
+<body>
+    <div class="navbar show-menu">
+        <div class="header-inner-content">
+            <div class="logo">
+                <img class="logo-img" src="/img/Educalog.png" alt="logo da Educa"> 
+            </div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Produtos</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                    <li>Conta</li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="/img/ajudad.png">
+                <img src="/img/casa.png" class="menu-button">
+            </div>
+        </div>
+    </div>
+
+        <header>
+            <div class="header-inner-content">
+                <div class="header-bottom-side">
+                    <div class="header-bottom-side-left">
+                    <h2>Deia Um Novo Estilo ao Seu Trabalho!</h2>
+                        <p>
+                            Sucesso nem sempre ter haver com grandeza. Tem haver com consistencia.
+                        </p>
+                        <button>Ver Agora &#8594;</button>
+                    </div>
+                    <div class="header-bottom-side-right">
+                        <img src="/img/fundo.png" alt="Fundo">
+                    </div>
+                </div>
+            </div>
+        </header>
+<!-- 
+          Começo das categorias -->
+        <div id="categorias" class="categorias">
+            <div class="linha">
+                <div class="col-3">
+                    <img src="/educapaghome/loja/images/categoria1.png" alt="categorias">
+                </div>
+                <div class="col-3">
+                    <img src="/educapaghome/loja/images/categoria2.png" alt="categorias">
+                </div>
+                <div class="col-3">
+                    <img src="/educapaghome/loja/images/categoria3.png" alt="categorias">
+                </div>
+            </div>
+        </div>
+        <!-- Fim das categorias -->
+
+        Seções adicionais
+        <section id="sobre" class="additional-section">
+            <h2>Sobre Nós</h2>
+            <p>Informações sobre a loja e nossa missão.</p>
+        </section>
+
+        <section id="produtos" class="additional-section">
+            <h2>Nossos Produtos</h2>
+            <p>Descrição dos produtos oferecidos.</p>
+        </section>
+
+        <section id="contato" class="additional-section">
+            <h2>Contato</h2>
+            <p>Formas de contato e suporte.</p>
+        </section>
+        <script>
+            const navbar = document.querySelector (".navbar");
+            const menuButton = document.querySelector(".menu-button");
+            
+            menuButton.addEventListener("click", () => {
+                navbar.classList.toggle("show-menu")
+            });
+        </script>
+    </body>
+</html>

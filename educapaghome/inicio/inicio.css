@@ -1,0 +1,279 @@
+/* parte  */
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu-bar{
+    background: rgb(0,100,0);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li {
+    width: 115px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.active, .menu-bar ul li:hover{
+    background: #2bab0d;
+    border-radius: 3px;
+}
+
+.menu-bar .fa {
+    margin-right: 10px;
+}
+
+.sub-menu-1{
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgb(0, 100, 0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}  
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color:#b2ff00;
+}
+
+.fa-angle-right{
+    float: right;
+}
+
+.sub-menu-2{
+    display: none;
+}
+
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgb(0, 100, 0);
+}
+
+.logo{
+    display: flex;
+    width: 160px;
+    margin-top: 10px;
+}
+
+/* imagem de inicio */
+.imginicio {
+    width: 100%;
+    overflow: hidden;
+}
+
+.imginicio img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+/* slides dos cursos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #88ae84;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.wrapper i#left {
+    left: -22px;
+}
+
+.wrapper i#right {
+    right: -22px;
+}
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 25px);
+    gap: 25px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin-left: 50px;
+}
+
+.container-carousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    height: 400px;
+    list-style: none;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 4px solid #fff;
+}
+
+.card .img {
+    background: green;
+    width: 170px;
+    height: 168px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.card .img img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.card span {
+    color: #6a6d78;
+    font-size: 1.31rem;
+}
+
+.no-transition {
+    transition: none !important;
+}
+
+#linha-horizontal {
+    width: 210px;
+    border: 1px solid #000;
+    margin-bottom: 50px;
+}
+
+.imginicio {
+    width: 100%;
+    overflow: hidden;
+}
+
+.imginicio img {
+    width: 100%;
+    height: auto; /* Mantém a proporção */
+    object-fit: cover; /* Cobre o espaço, cortando partes, se necessário */
+    display: block; /* Remove espaço embaixo da imagem */
+}
+
+/* Para dispositivos menores */
+@media (max-width: 600px) {
+    .imginicio img {
+        object-fit: contain; /* Ajusta a imagem para caber completamente */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+
+/* Faz parte do rodapé */
+.conteudo-rodape {
+    background-color: #013927;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo-rodape-imagem {
+    width: 20%;
+}
+

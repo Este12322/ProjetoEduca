@@ -1,0 +1,277 @@
+/* Estilo global */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #013927;
+}
+
+/* Cabeçalho */
+.cabeçalho {
+    background-color: #c7c7c7; /* Translucidez do cabeçalho */
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px; /* Diminui o padding para reduzir a altura do cabeçalho */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.cabeçalho-conteudo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between; /* Alinha os itens ao longo da largura */
+}
+
+.cabeçalho-voltar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Margem para espaçar do lado esquerdo */
+}
+
+.seta {
+    font-size: 16px; /* Ajuste conforme necessário */
+    color: white;
+    margin-right: 5px;
+}
+
+.texto-voltar {
+    font-size: 16px; /* Ajuste conforme necessário */
+    color: white;
+}
+
+.cabeçalho-imagem {
+    max-width: 150px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaço entre a logo e o conteúdo à direita */
+}
+
+/* Navegação */
+.navegacao {
+    display: none; /* Inicialmente oculta */
+    background-color: #013927;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 60px; /* Ajuste conforme necessário para não sobrepor o cabeçalho */
+    left: 0;
+    z-index: 1000;
+}
+
+.navegacao-item {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navegacao-item:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navegacao-item:active,
+.navegacao-item:focus {
+    background-color: #43a271;
+    color: white;
+}
+
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #bfd1bf;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.modal-logo {
+    max-width: 200px;
+    margin: 10px auto;
+    margin-bottom: 5px;
+}
+
+.modal p {
+    font-size: 30px;
+    color: #013927;
+    line-height: 1.5;
+    margin: 10px 0;
+    margin-top: 0px;
+}
+
+/* Estilo dos botões como links */
+.button-link {
+    display: block;
+    background-color: #007d2a;
+    color: white;
+    padding: 12px 25px;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    max-width: 300px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #005f1f;
+}
+
+/* .section {
+    background-color: #005f1f;
+} */
+
+/* Estilo para a seção de início */
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* Garante que a seção ocupe a altura da tela menos o cabeçalho */
+}
+
+.inicio-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 100px;
+    background-color: #c7c7c7;
+}
+
+.login-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+    margin-top: 0;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form button {
+    background-color: #007d2a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-form button:hover {
+    background-color: #005f1f;
+}
+
+.inicio-image img {
+    width: 170%;
+    
+}
+
+/* Estilo para a seção de beneficio */
+.benefício {
+    display: flex;
+    flex-direction: row;
+    background-color: #b9dfb6;
+}
+
+.benefício img {
+    max-width: 30%;
+}
+
+/* Estilo para a seção de como funciona*/
+.comofunciona {
+    display: flex;
+    flex-direction: row;
+}
+
+.comofunciona img {
+    max-width: 35%;
+}
+
+/* Estilo para a seção de preço */
+.preço {
+    display: flex;
+    flex-direction: row;
+}
+
+.preço img {
+    max-width: 35%;
+}
+
+/* Estilo para a seção de pq */
+.porqueaEduca{
+    display: flex;
+    flex-direction: row;
+}
+
+.porqueaEduca img {
+    max-width: 35%;
+}
+
+/* Estilo para a seção de requisitos */
+.requisitos{
+    display: flex;
+    flex-direction: row;
+}
+
+.requisitos img {
+    max-width: 35%;
+}

@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-inner-content {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    background-color: rgb(65, 112, 65);
+    padding: 0.5em 1em;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    box-shadow: 10px 0px 10px;
+}
+
+.navbar > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo-img {
+    width: 165px;
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.nav-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon-container img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav-icon-container img:first-child {
+    margin-right: 1em;
+}
+
+nav ul li {
+    color: aliceblue;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+
+.menu-button {
+    display: none;
+}
+
+/* Estilos para o header */
+.header{
+    background-color: radial-gradient(#fff #c7c7c7) ;
+}
+
+.header-bottom-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-bottom-side-left {
+    flex-basis: 50%;
+}
+
+.header-bottom-side-left h2 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left p {
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left button {
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+    border-radius: 40px;
+}
+
+.header-bottom-side-left button:hover {
+    background-color: #417041;
+}
+
+.header-bottom-side-right {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-bottom-side-right img {
+    width: 100%;
+    max-width: 5000px; /* Ajuste conforme necessário */
+}
+
+
+
+/* media  */
+@media(max-width: 800px){
+    .logo-img{
+        font-size: 1.2rem;
+    }
+
+    .menu-button{
+        display: block;
+    }
+
+    .header-bottom-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    nav{
+        position: absolute;
+        background-color: #527852;
+        width: 100%;
+        top: 53px;
+        display: none;
+    }
+
+    .show-menu nav{
+        display: block;
+    }
+
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem;
+    }
+}

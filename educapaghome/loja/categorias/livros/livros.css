@@ -1,0 +1,301 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1e5328;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seção principal de produtos */
+.produto {
+    padding: 40px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.subtitle-underline {
+    width: 100px;
+    height: 5px;
+    background-color: #1e5328;
+    border-radius: 9999px;
+    margin: 10px auto;
+}
+
+.sub-category-title {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #444;
+}
+
+/* Estilos para o carrossel e interação */
+/* Estilos para o carrossel e interação */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.category-item {
+    min-width: calc(20% - 20px);
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+/* Estilos das imagens */
+.category-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, filter 0.3s;
+}
+
+/* Imagem em destaque */
+.category-item.selected img {
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+/* Efeito de desfoque nas outras imagens */
+.category-item.blur img {
+    filter: blur(5px);
+}
+
+/* Mantenha o estilo de hover */
+.category-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Controle das setas */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Estilo para setas de controle */
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+/* Controle das setas */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Efeitos de hover */
+.category-item:hover img {
+    transform: scale(1.1); /* Escala a imagem ao passar o mouse */
+}
+
+/* Correção adicional para garantir que a imagem não corte */
+.category-item {
+    position: relative;
+    z-index: 0; /* Garante que o item tenha uma camada apropriada */
+}
+
+.category-item img {
+    transition: transform 0.3s ease-in-out;
+    will-change: transform; /* Otimiza o efeito */
+}
+
+.category-item:hover {
+    z-index: 1; /* Garante que o item fica em destaque */
+}
+
+.category-item a {
+    text-decoration: none; /* Remove a linha de sublinhado */
+    color: #000; /* Mantém a cor do texto */
+}
+
+.category-item a:hover {
+    color: #1e5328; /* Cor no hover (se quiser manter o efeito) */
+    text-decoration: none; /* Garante que não haja sublinhado ao passar o mouse */
+}
+
+/* Grid de produtos */
+.cols-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Para telas menores, ajustar o número de colunas */
+@media (max-width: 1200px) {
+    .cols-4 {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas para telas médias */
+    }
+}
+
+@media (max-width: 900px) {
+    .cols-4 {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para telas pequenas */
+    }
+}
+
+@media (max-width: 600px) {
+    .cols-4 {
+        grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
+    }
+}
+
+.product {
+    background-color: #f9f9f9; /* Um tom de cinza claro */
+    border: 1px solid #C7C7C7; /* Borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeito de hover */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Eleva o produto no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.product img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do cartão */
+    height: 200px; /* Altura fixa */
+    object-fit: contain; /* Mantém a proporção da imagem sem cortar */
+    border-radius: 5px; /* Bordas arredondadas na imagem */
+}
+
+.product-name {
+    font-size: 1.5rem; /* Aumenta o tamanho do nome do produto */
+    color: #1e5328; /* Cor verde escuro */
+    margin-top: 10px;
+}
+
+.product-description {
+    font-size: 1rem; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #666; /* Cor da descrição */
+    margin: 10px 0;
+    min-height: 40px; /* Garante espaço para a descrição */
+}
+
+.rate {
+    margin: 10px 0;
+    color: #f39c12;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.product-price span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.availability {
+    font-size: 1rem; /* Tamanho da fonte para a disponibilidade */
+    color: #28a745; /* Cor verde para disponível */
+    margin: 10px 0; /* Espaçamento */
+}
+
+.buy-button {
+    background-color: #1e5328; /* Cor do botão */
+    color: #FFFFFF; /* Cor do texto do botão */
+    padding: 10px 15px; /* Espaçamento do botão */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    margin-top: 10px; /* Espaçamento acima do botão */
+    display: inline-block; /* Para permitir margens */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.buy-button:hover {
+    background-color: #155724; /* Cor do botão no hover */
+}
+
+
+
+
+/* Rodapé */
+footer {
+    background-color: #1e5328;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
