@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/educapaghome/trabalhe/trabalhando/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/circle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <link rel="website icon" type="png" href="/img/logotra.png" />
+    <title>Trabalhe conosco</title>
+
+    <script>
+        new WOW().init();
+    </script>
+
+<script>
+    $(window).scroll(function() {
+        var navbar = $('nav');
+        if ($(this).scrollTop() > 50) {
+            navbar.addClass('scrolled');
+        } else {
+            navbar.removeClass('scrolled');
+        }
+    });
+</script>
+
+
+
+    <style>
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <section class="header">
+            <nav>
+                <img class="cabeçalho-imagem" src="/img/logotra.png" alt="Logo da Educa">
+                <h1>Educa</h1>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="#inicio"><i class="fa-solid fa-house-chimney"></i> Inicio</a></li>
+                        <li onmouseenter="toggleSubMenu(true)" onmouseleave="toggleSubMenu(false)">
+                            <a href="#cursos">
+                                <i class="fa-regular fa-handshake"></i> Explorar <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <div class="sub-menu" id="subMenu">
+                                <a href="#beneficios">Benefícios</a>
+                                <a href="#areas">Áreas disponíveis</a>
+                                <a href="#requisitos">Requisitos</a>
+                                <a href="#diferenciais">Diferenciais</a>
+                                <a href="#como-funciona">Como Funciona</a>
+                                <a href="#pq-da-educa">Por que a Educa?</a>
+                                <a href="#content8">Remunerações</a>
+                                <a href="#comentarios">Comentários</a>
+                            </div>
+                        </li>
+                        <li><a href="/educapaghome/serviços/serviços.html"><i class="fa-solid fa-chalkboard-user"></i> Voltar aos Serviços</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="inicio" class="banner">
+                <div class="opacity_overlay">
+                    <div class="info">
+                        <h2>Trabalhe Conosco</h2>
+                        <br>
+                        <h3>Trabalhe na Educa e ajude a moldar o futuro, compartilhando seu conhecimento<br> e
+                            experiência em um ambiente flexível e acolhedor!</h3>
+                        <br>
+                        <a href="#beneficios"><button type="button" id="proceed">Saiba mais</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    
+
+    <section id="beneficios">
+        <div class="container">
+            <h2>Benefícios de trabalhar na Educa:</h2>
+    
+            <div class="boxes">
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-heading">
+                                <i class="fa fa-fw fa-check"></i> Flexibilidade Total:
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>Escolha seus horários de aula e o plano que se adapta melhor aos seus alunos, permitindo um equilíbrio ideal entre trabalho e vida pessoal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-heading">
+                                <i class="fa fa-fw fa-gift"></i> Remuneração:
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>Ganhe por hora sem limites por dia, trabalhe em seu horário com metodologias únicas, ganhando por horas dadas sem mensalidade.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-heading">
+                                <i class="fa fa-fw fa-compass"></i> Trabalho Remoto:
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>Atue do conforto da sua casa e tenha a oportunidade de fazer a diferença na educação, especialmente com alunos que precisam de atenção inclusiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="areas">
+        <div class="opacity_overlay">
+            <h1>Áreas Disponíveis:</h1>
+            <br>
+            <div class="container-fluid" style="padding: 0;">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-item text-center">
+                        <span class="fa-solid fa-person-chalkboard"></span>
+                        <h6>Professores </h6>
+                        <hr>
+                        <hr class="custom-line">
+                        <p>Especialistas em diversas disciplinas que oferecem suporte individualizado a alunos, ajudando
+                            na compreensão de conteúdos e na realização de atividades escolares.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-item text-center">
+                        <span class="glyphicon glyphicon-edit glyphicon-lg "></span>
+                        <h6>Mentores Educacionais</h6>
+                        <hr>
+                        <hr class="custom-line">
+                        <p> Profissionais que orientam alunos em suas trajetórias acadêmicas e pessoais, auxiliando no
+                            desenvolvimento de habilidades e na escolha de caminhos educacionais.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-item text-center">
+                        <span class="fa-solid fa-hand-holding-medical"></span>
+                        <h6>Psicólogos</h6>
+                        <hr>
+                        <hr class="custom-line">
+                        <p>Especialistas que oferecem suporte emocional e psicológico aos alunos, ajudando a lidar com
+                            questões como ansiedade, dificuldades de aprendizado e autoconhecimento.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-item text-center">
+                        <span class="fa-solid fa-comments"></span>
+                        <h6>Orientadores Vocacionais</h6>
+                        <hr>
+                        <hr class="custom-line">
+                        <p>Profissionais que ajudam alunos a descobrir suas aptidões e interesses, oferecendo orientação
+                            sobre cursos e carreiras, além de promover reflexões sobre o futuro profissional.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="requisitos">
+        <div class="information">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <h2>Requisitos:</h2>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-6">
+                        <div class="blockquote-box clearfix">
+                            <div class="square pull-left">
+                                <span class="fa-solid fa-graduation-cap"></span>
+                            </div>
+                            <h4>Graduação completa</h4>
+                            <p>Formação superior na área correspondente.</p>
+                        </div>
+                        <div class="blockquote-box blockquote-primary clearfix">
+                            <div class="square pull-left">
+                                <span class="fa-solid fa-computer"></span>
+                            </div>
+                            <h4>Experiência prévia com ensino a distância (desejável)</h4>
+                            <p>Preferencialmente em plataformas de EAD e com alunos de diferentes perfis (crianças, adolescentes, adultos).</p>
+                        </div>
+                        <div class="blockquote-box blockquote-success clearfix">
+                            <div class="square pull-left">
+                                <span class="fa-solid fa-book-open"></span>
+                            </div>
+                            <h4>Habilidade para desenvolver conteúdos e materiais didáticos online</h4>
+                            <p>Criação de aulas, slides interativos, quizzes, e outros recursos multimídia para enriquecer a experiência de aprendizagem.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="blockquote-box blockquote-info clearfix">
+                            <div class="square pull-left">
+                                <span class="fa-solid fa-landmark"></span>
+                            </div>
+                            <h4>Ser maior de 18 anos</h4>
+                            <p>Possuir documentação legal para atuar na área de educação ou psicologia.</p>
+                        </div>
+                        <div class="blockquote-box blockquote-warning clearfix">
+                            <div class="square pull-left">
+                                <span class="glyphicon glyphicon-signal glyphicon-lg"></span>
+                            </div>
+                            <h4>Trabalho EAD</h4>
+                            <p>Capacidade de trabalhar de forma autônoma e gerenciar atividades remotamente.</p>
+                        </div>
+                        <div class="blockquote-box blockquote-danger clearfix">
+                            <div class="square pull-left">
+                                <span class="glyphicon glyphicon-globe glyphicon-lg"></span>
+                            </div>
+                            <h4>Flexibilidade e adaptação a novas tecnologias de ensino</h4>
+                            <p>Conseguir se desenvolver em novas ferramentas e recursos tecnológicos que otimizem o processo de aprendizagem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="diferenciais" class="diferenciais">
+        <div class="container">
+            <h3 class="titulo">Diferenciais:</h3>
+            <hr>
+            <hr class="custom-line">
+            <div class="product-info">
+                <div class="col-md-4 col-sm-6">
+                    <div class="left-text pull-left">
+                        <h5>Melhores Remunerações</h5>
+                        <h4>Certificações:</h4>
+                        <hr>
+                        <hr class="custom-line">
+
+                        <p>Experiência em Educação Inclusiva: Formação ou experiência em trabalhar com alunos com
+                            necessidades especiais.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="left-text pull-left">
+                        <h5>Cargo muito requisitado</h5>
+                        <h4>Conhecimento em Libras:</h4>
+                        <hr>
+                        <hr class="custom-line">
+
+                        <p>Para profissionais que desejam atender um público diversificado.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="left-text pull-left">
+                        <h5>Importante</h5>
+                        <h4>Experiência em EAD:</h4>
+                        <hr>
+                        <hr class="custom-line">
+
+                        <p>Histórico comprovado de ensino ou orientação online, com familiaridade com plataformas na
+                            internet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- <section id="content5">
+        <div class="opacity_overlay">
+            <div class="container">
+                <h3>Our Skills</h3>
+                <div class="col-md-4 col-sm-6">
+                    <div class="c100 p25">
+                        <span>25%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <h4>JQuery</h4>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="c100 p50 green">
+                        <span>50%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <h4>CSS</h4>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="c100 p75 orange">
+                        <span>75%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <h4>HTML</h4>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="como-funciona" class="como-funciona">
+        <h2>Como Funciona o Trabalhe Conosco</h2>
+        <p>
+            Na Educa, valorizamos talentos que compartilham nossa paixão por educação de qualidade. O processo de
+            candidatura é simples:
+        </p>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Envie seu Currículo</h3>
+                <p>Envie seu currículo pelo nosso email: educa@gmail, destacando suas habilidades e experiências.</p>
+            </div>
+            <div class="step">
+                <h3>2. Entrevista</h3>
+                <p>Se seu perfil estiver de acordo com a vaga, entraremos em contato para agendar uma entrevista.</p>
+            </div>
+            <div class="step">
+                <h3>3. Feedback</h3>
+                <p>Após a entrevista, você receberá um retorno sobre o processo e, se for o caso, uma proposta de
+                    trabalho.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="pq-da-educa" class="educa-section">
+        <h2>Por que a Educa?</h2>
+        <p>
+            A Educa se diferencia pelo compromisso com o desenvolvimento contínuo de nossos alunos e profissionais.
+            Estamos sempre em busca de inovação e excelência. Aqui estão alguns motivos pelos quais acreditamos que a
+            Educa é a escolha certa:
+        </p>
+        <ul>
+            <li>• Metodologia inovadora, focada em resultados reais.</li>
+            <li>• Equipe de profissionais capacitados e experientes.</li>
+            <li>• Ambiente inclusivo e colaborativo.</li>
+            <li>• Oportunidades de crescimento profissional contínuo.</li>
+        </ul>
+    </section>
+    
+    
+    <section id="content8">
+        <div class="container-fluid" style="padding: 0;">
+            <h2 class="text-center">Valor da Remuneração:</h2>
+        </div>
+        <div id="pricing-table">
+            <div class="container">
+                <div class="row">
+                    <div class="pricing">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <p class="pricing-title">Sem Certificações</p>
+                                    <p class="pricing-rate"><sup>$</sup> 48 <span>/Por Hora.</span></p>
+                                    <a href="#diferenciais" class="btn btn-custom">Conheça os Diferenciais</a>
+                                </div>
+                                <div class="pricing-list">
+                                    <ul>
+                                        <li><i class="fa fa-envelope"></i>11,000 pedidos</li>
+                                        <li><i class="fa fa-signal"></i><span>data</span> indefinida</li>
+                                        <li><i class="fa fa-user"></i><span>vagas</span> ilimitadas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <p class="pricing-title">Fluente em Libras</p>
+                                    <p class="pricing-rate"><sup>$</sup> 54 <span>/Por Hora.</span></p>
+                                    <a href="#areas" class="btn btn-custom">Conheça nossas áreas</a>
+                                </div>
+                                <div class="pricing-list">
+                                    <ul>
+                                        <li><i class="fa fa-envelope"></i>7,000 messages</li>
+                                        <li><i class="fa fa-signal"></i><span>data</span> indefinida</li>
+                                        <li><i class="fa fa-user"></i><span>vagas</span> ilimitadas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <p class="pricing-title">Com Certificações</p>
+                                    <p class="pricing-rate"><sup>$</sup> 60 <span>/Por Hora.</span></p>
+                                    <a href="#beneficios" class="btn btn-custom">Veja nossos Benefícios</a>
+                                </div>
+                                <div class="pricing-list">
+                                    <ul>
+                                        <li><i class="fa fa-envelope"></i>10,000 messages</li>
+                                        <li><i class="fa fa-signal"></i><span>data</span> indefinida</li>
+                                        <li><i class="fa fa-user"></i><span>vagas</span> ilimitadas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="comentarios" class="comentarios-section">
+        <div id="carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+                        <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                            <!-- Carousel indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                                <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+                            </ol>
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <blockquote>
+                                        <p>Trabalhar na Educa tem sido uma experiência incrível! A flexibilidade de horários me permite conciliar minha vida pessoal com minha paixão pela educação. Adoro ver o progresso dos meus alunos e sei que estou fazendo a diferença na vida deles.</p>
+                                    </blockquote>
+                                    <div class="profile-circle" style="background-image: url('/educapaghome/trabalhe/trabalhando/images/profdemat.jpeg');"></div>
+                                    <h4>Ana</h4>
+                                    <p>Professora de alfabetização</p>
+                                </div>
+                                <div class="item">
+                                    <blockquote>
+                                        <p>A Educa me proporcionou a oportunidade de trabalhar de casa, o que é perfeito para mim. Atender alunos online me permite conectar com eles de uma maneira única, e a equipe sempre está disposta a colaborar e compartilhar experiências. Sinto que faço parte de uma grande família!</p>
+                                    </blockquote>
+                                    <div class="profile-circle" style="background-image: url('/educapaghome/trabalhe/trabalhando/images/psi.jpg');"></div>
+                                    <h4>Mariana</h4>
+                                    <p>Psicóloga</p>
+                                </div>
+                                <div class="item">
+                                    <blockquote>
+                                        <p>Na Educa, tenho a liberdade de moldar meu próprio estilo de trabalho e adaptar as orientações às necessidades de cada aluno. É muito recompensador ajudá-los a descobrir suas paixões e objetivos de carreira. A equipe é incrível e sempre apoia um ao outro.</p>
+                                    </blockquote>
+                                    <div class="profile-circle" style="background-image: url('/educapaghome/trabalhe/trabalhando/images/prof.png');"></div>
+                                    <h4>Felipe</h4>
+                                    <p>Orientador Vocacional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+                navbar.classList.add("navbar-sticky")
+                navbar.classList.remove("navbar-default")
+            } else {
+                navbar.classList.remove("sticky")
+            }
+        }
+
+        function toggleSubMenu(show) {
+            const subMenu = document.getElementById('subMenu');
+            subMenu.style.display = show ? 'block' : 'none';
+        }
+
+
+        $(window).scroll(function() {
+    var navbar = $('nav');
+    if ($(this).scrollTop() > 50) {
+        navbar.addClass('scrolled');
+    } else {
+        navbar.removeClass('scrolled');
+    }
+});
+
+
+    </script>
+</body>
+
+</html>

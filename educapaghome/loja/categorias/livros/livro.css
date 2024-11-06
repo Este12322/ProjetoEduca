@@ -1,4 +1,5 @@
-/* Estilos gerais */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@400..700&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,30 +11,105 @@ body {
 header {
     background-color: #1e5328;
     padding: 1rem;
-    text-align: center;
 }
 
+/* Usando Flexbox para o layout da navegação */
+header nav {
+    display: flex;
+    align-items: center; /* Alinha a logo e os itens de navegação verticalmente */
+    justify-content: space-between; /* Espaço entre a logo e os itens de navegação */
+}
+
+/* Logo */
+.logo {
+    width: 140px;
+    height: 140px;
+    margin-top: 20px;
+    margin-left: -30px;
+}
+
+/* Título "Educa" */
+/* Ajuste da altura da navbar */
+header nav {
+    display: flex;
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: space-between;
+    padding: 0.8rem 2rem; /* Ajusta o espaçamento interno da navbar */
+    background-color: #1e5328; /* Cor de fundo da navbar */
+    height: 30px; /* Defina uma altura fixa, se necessário */
+}
+
+header nav p {
+    font-size: 100px;
+    color: #f8f8f8e2;
+    margin: 0;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    font-family: "Noto Serif Oriya", sans-serif;
+    margin-left: 100px;
+}
+
+/* Estilo para o menu de navegação */
+/* Estilos gerais da navegação */
 header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex; /* Alinha os itens de navegação horizontalmente */
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin-right: 20px; /* Espaçamento entre os itens */
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    position: relative; /* Necessário para o pseudo-elemento */
+    padding-bottom: 5px; /* Espaçamento entre o texto e a linha de efeito */
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+/* Efeito de underline animado */
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Posiciona a linha abaixo do texto */
+    left: 50%; /* Inicia a linha no meio */
+    width: 0; /* A largura inicial é 0, ou seja, invisível */
+    height: 3px; /* Altura da linha */
+    background: #ffa400; /* Cor da linha */
+    transform: translateX(-50%) translateY(5px); /* Centra a linha e ajusta a posição */
+    transition: width 0.3s ease, transform 0.3s ease; /* Anima a largura e o deslocamento da linha */
 }
 
+/* Quando o link é hoverado, a linha cresce */
+header nav ul li a:hover::after {
+    width: 38%; /* A linha se expande para 38% da largura do link */
+    transform: translateX(-50%) translateY(0); /* Ajusta a posição da linha para ficar abaixo do link */
+}
+
+
+.nav-links ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    transform: translateX(-50%) translateY(-5px);
+    height: 3px;
+    background: #ffa400;
+    transition: 0.3s;
+}
+
+ul li a:hover::after {
+    width: 38%;
+}
 /* Seção principal de produtos */
 .produto {
     padding: 40px;

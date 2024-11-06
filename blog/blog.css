@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@400..700&display=swap');
+
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -97,12 +99,18 @@ header {
 }
 
 .logo img {
-    margin-right: 10px;
+    width: 130px;
+    margin-top: 0rem;
+    margin-left: 1px;
 }
 
 .logo p {
     color: var(--second-color);
     font-size: 1.8rem; 
+    color: #f8f8f8e2;
+    margin-top: 0rem;
+    font-family: "Noto Serif Oriya", sans-serif;
+    margin-left: -20px;
 }
 
 .login {
@@ -130,9 +138,11 @@ header {
     min-height: 800px;
     background: url("/blog/img/fundo.jpg") no-repeat center center;
     background-size: cover;
+    font-family: "Noto Serif Oriya", sans-serif;
 }
 
 .home-text {
+    /* margin-top: 200px; */
     color: var(--bg-color);
     text-align: center;
     position: relative;
@@ -141,10 +151,12 @@ header {
 
 .home-title {
     font-size: 6.4rem;
+    font-family: "Noto Serif Oriya", sans-serif;
 }
 
 .home-text p {
     font-size: 2.5rem;
+    
 }
 
 .home-subtitle {

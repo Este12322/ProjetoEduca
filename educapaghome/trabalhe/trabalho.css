@@ -1,195 +1,215 @@
-body{
-    background-color: rgb(34, 34, 34);
-    color: white;
-    font-family: poppinsregular;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+    --first-color: hsl(18, 95%, 55%);
+    --second-color: hsl(42, 98%, 52%);
+    --title-color: hsl(255, 12%, 12%);
+    --text-color: hsl(225, 12%, 24%);
+    --text-color-light: hsl(255, 4%, 70%);
+    --body-color: hsl(0, 0%, 100%);
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(255, 20%, 10%);
 }
 
-header{
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--black-color);
+    z-index: 100;
+}
+
+.nav {
+    position: relative;
+    height: var(--header-height);
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-#title{
-    flex-direction: column;
-    line-height: 10px;
-}
-
-li{
-    display: inline-block;
-    margin: 20px;
-}
-
-a{
-    color: white;
-}
-
-a:hover{
-    color: rgb(132, 14, 201);
-    transition: 0.3s all;
-}
-
-#inscreva-se-btn{
-    border: 2px solid rgb(132, 14, 201);
-    padding: 10px;
-    border-radius: 15px;
-}
-
-#inscreva-se-btn:hover{
-    background-color: rgb(132, 14, 201);
-    color: white;
-}
-
-h1{
-    font-weight: 200;
-}
-
-main{
+/* Logo */
+.nav__logo {
     display: flex;
-    flex-direction: row;
-    margin-top: 50px;
+    align-items: center;
+    gap: 0.25rem;
 }
 
-h2{
-    font-size: 56px;
-    line-height: 10px;
-    font-family: poppinsmedium;
+.nav__logo span {
+    color: var(--white-color);
+    font-weight: 600;
 }
 
-span{
-    color: rgb(132, 14, 201);
-}
-
-p{
-    line-height: 20px;
-    max-width: 500px;
-    font-family: poppinslight;
-}
-
-img{
-    width: 580px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-}
-
-form [type="submit"]{
-    height: 50px;
-    width: 50%;
-    background-color: rgb(132, 14, 201);
-    color: white;
-    font-weight: bold;
-}
-form [type="submit"]:hover{
+/* Toggle e Close */
+.nav__toggle,
+.nav__close {
+    font-size: 1.5rem;
+    color: var(--white-color);
     cursor: pointer;
 }
 
-input{
-    margin-top: 20px;
-    height: 20px;
-    padding: 15px;
-    border-radius: 20px;
-    border: none;
-    font-size: 15px;
+/* Navbar List */
+.nav__list {
+    display: flex; /* Alinha os itens em linha */
+    gap: 2rem; /* Espaçamento entre os itens */
 }
 
-/* media */
-@media screen and (max-width: 760px){
+.nav__list ul {
+    display: flex; /* Garante que a lista fique em linha */
+    gap: 2rem; /* Espaçamento entre os itens */
+    padding: 0; /* Remove o padding padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+    list-style: none; /* Remove os bullets padrão */
+}
 
-    header{
-        flex-direction: column;
+.nav__link {
+    color: var(--text-color-light);
+    font-weight: 600;
+    transition: color 0.4s;
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav__list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: var(--black-color);
+        width: 80%;
+        height: 100%;
+        padding: 5rem 2rem;
+        transition: right 0.3s ease;
+        flex-direction: column; /* Muda para coluna em dispositivos móveis */
     }
 
-    main{
-        flex-direction: column;
+    .nav__toggle {
+        display: block;
     }
 
-    h2{
-        font-size: 38px;
+    .nav__close {
+        display: block;
     }
 
-    form{
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    input{
-        align-self: center;
-    }
-
-    img{
-        display: none;
-    }
-
-    ul{
-        text-align: center;
+    .nav__list.active {
+        right: 0;
     }
 }
 
-/* fontes */
+/* home */
+.home{
+    position: relative;
+    background-color: black;
+}
 
-@font-face {
-    font-family: 'poppinsblack';
-    src: url('../components/fonts/poppins-black-webfont.woff2') format('woff2'),
-         url('../components/fonts/poppins-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  
-  }
-  
-  
-  
-  
-  @font-face {
-    font-family: 'poppinsbold';
-    src: url('../components/fonts/poppins-bold-webfont.woff2') format('woff2'),
-         url('../components/fonts/poppins-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  
-  }
-  
-  
-  @font-face {
-    font-family: 'poppinslight';
-    src: url('../components/fonts/poppins-light-webfont.woff2') format('woff2'),
-         url('../components/fonts/poppins-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  
-  }
-  
-  
-  @font-face {
-    font-family: 'poppinsmedium';
-    src: url('../components/fonts/poppins-medium-webfont.woff2') format('woff2'),
-         url('../components/fonts/poppins-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  
-  }
-  
-  @font-face {
-    font-family: 'poppinsregular';
-    src: url('../components/fonts/poppins-regular-webfont.woff2') format('woff2'),
-         url('../components/fonts/poppins-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  
-  }
-  
-  @font-face {
-    font-family: 'poppinssemibold';
-    src: url('../components/fonts/poppins-semibold-webfont.woff2') format('woff2'),
-         url('../components/fonts/poppins-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  
-  }
+.home__container{
+    position: relative;
+    row-gap: 3rem;
+    padding-block: 2.5rem 6rem;
+}
+
+.home__content{
+    row-gap: 2.5rem;
+}
+
+.home__data{
+    text-align: center;
+}
+
+.home__title{
+    color: var(--white-color);
+    font-size: var(--big-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: 1rem;
+}
+
+.home__description{
+    margin-bottom: 2.5rem;
+    color: var(--text-color-light);
+}
+
+.home__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home__info{
+    display: flex;
+    justify-content: center;
+    column-gap: 4.5rem;
+}
+
+.home__info-title{
+    color: var(--second-color);
+    font-size: var(--big-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: .5rem;
+}
+
+.home__info-description{
+    font-size: var(--small-font-size);
+    color: var(--white-color);
+}
+.home__images{
+    position: relative;
+    justify-self: center;
+}
+
+/* button */
+
+.button{
+    display: inline-flex;
+    border-radius: 10px;
+    background: #57b17ba8;
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 2rem; 
+    transition: box-shadow .4s;
+}
+
+.button:hover{
+    box-shadow: 0 8px 32px hsla(116, 100%, 28%, 0.3);
+    color: var(--white-color);
+}
+
+.button__link{
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    color: #57b17ba8;
+}
+
+.button__link span{
+    font-weight: #57b17ba8;
+}
+
+.button__link i{
+    font-size: 1.5rem;
+    transition: transform .4s;
+}
+
+.button__link:hover i{
+    transform: translateX(.25rem);
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/educapaghome/inicio/inicial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="website icon" type="png" href="/img/logotra.png"/>
+    <title>Educa</title>
+</head>
+
+<body>
+    <id="inicio">
+        <header>
+            <section class="header">
+                <nav>
+                    <img class="cabeçalho-imagem" src="/img/logotra.png" alt="Logo da Educa">
+                    <p>Educa</p>
+                    <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="#inicio"><i class="fa-solid fa-house-chimney"></i> Inicio</a></li>
+                            <li><a href="#cursos"><i class="fa-solid fa-graduation-cap"></i> Cursos</a>
+                            <li><a href="/educapaghome/serviços/serviços.html"><i
+                                        class="fa-solid fa-chalkboard-user"></i> Serviços</a></li>
+                            </li>
+                            <li><a href="/educapaghome/loja/loja.html"><i class="fa-solid fa-shop"></i> Loja</a></li>
+                            <li onmouseenter="toggleSubMenu(true)" onmouseleave="toggleSubMenu(false)">
+                                <a href="#subMenu">
+                                    <i class="fa-solid fa-user-graduate"></i> Meus Estudos <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                </a>
+                                <div class="sub-menu" id="subMenu">
+                                    <a href="#cursos">Meus Cursos</a>
+                                    <a href="/educapaghome/inicio/mapasmentais/mapasmentais.html">Mapas Mentais</a>
+                                    <a href="/quiz/quiz.html">Quiz da Educa</a>
+                                    <!-- <a href="/educapaghome/inicio/meusestudos/simule/simule.html">Simulados</a>
+                                    <a href="/">Rendimentos</a> -->
+                                    <a href="/educapaghome/inicio/meusestudos/calculadora/calculadora.html">Calculadora</a>
+                                    <a href="/educapaghome/inicio/meusestudos/listadetarefas/lista.html">Fazer lista de tarefas</a>
+                                    <a href="/educapaghome/inicio/meusestudos/calendario/calendario.html">Calendário</a>
+                                    <a href="/educapaghome/inicio/entrevista/entrevista.html">Entrevistas Com Profissiões</a>
+                                    <a href="#atividades">Outras Atividades</a>
+                                </div>
+                           </li>
+                           <li><a href="/educapaghome/jogos/jogos.html"><i class="fa-solid fa-puzzle-piece"></i>
+                                    Jogos</a></li>
+                            <li><a href="/blog/blog.html"><i class="fa-solid fa-globe"></i> Blog</a></li>
+                            <li><a href="/educapaghome/ajuda/ajuda.html"><i class="fa-solid fa-circle-question"></i>
+                                    Ajuda?</a></li>
+                            <li><a href=""><i class="fa-solid fa-circle-user"></i> Perfil</a></li>
+                        </ul>
+                    </div>
+
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                </nav>
+                <div class="text-box">
+                    <h1>Educa Escola</h1>
+                    <p>Floreça seu conhecimento com a Educa! Aproveite nossos cursos, loja, blog e jogos gratuitos, <br>
+                        descubra nossas opções de serviços e valores.</p>
+                    <a href="/educapaghome/serviços/serviços.html" class="hero-btn">Conheça nossos Serviços</a>
+                </div>
+            </section>
+        </header>
+
+        <!-- cursos -->
+        <!-- cursos -->
+
+        <section class="course" id="cursos">
+            <h1>Cursos disponíveis</h1>
+            <div class="row">
+                <div class="course-col">
+                    <a href="/educapaghome/inicio/cursos/Idiomas.html"><img src="/img/idiomascurso.png"
+                            alt="Curso de Idiomas"></a>
+                    <h3>Idiomas</h3>
+                    <p>Desde o básico ao avançado, oferecemos aulas gratuitas para todos os níveis, com foco em
+                        conversação e compreensão cultural.</p>
+                </div>
+                <div class="course-col">
+                    <a href="/educapaghome/inicio/cursos/tec.html"><img src="/img/teccurso.jpeg"
+                            alt="Curso de Tecnologia"></a>
+                    <h3>Tecnologia</h3>
+                    <p>Cursos gratuitos que abrangem desde noções básicas até programação avançada, preparando os alunos
+                        para o mercado de trabalho.</p>
+                </div>
+                <div class="course-col">
+                    <a href="/educapaghome/inicio/cursos/saude.html"><img src="/img/saude.jpeg"
+                            alt="Curso de Saúde"></a>
+                    <h3>Saúde</h3>
+                    <p> Formação em temas como nutrição, bem-estar e primeiros socorros, promovendo uma vida saudável e
+                        cuidados essenciais.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="course-col">
+                    <a href="/educapaghome/inicio/cursos/eja.html"><img src="/img/eja.png" alt="Curso EJA"></a>
+                    <h3>EJA (Educação de Jovens e Adultos)</h3>
+                    <p>Ensino acessível para pessoas mais velhas, focando em habilidades fundamentais e desenvolvimento
+                        pessoal.</p>
+                </div>
+                <div class="course-col">
+                    <a href="/educapaghome/inicio/cursos/infantilarea.html"><img src="/img/infantil.png"
+                            alt="Curso Infantil"></a>
+                    <h3>Área Infantil</h3>
+                    <p>Atividades lúdicas e educativas voltadas para crianças, estimulando a criatividade e o
+                        aprendizado de forma divertida.</p>
+                </div>
+                <div class="course-col">
+                    <a href="/educapaghome/inicio/cursos/vestibular.html"><img src="/img/vestibularcurso.png"
+                            alt="Curso Vestibulando"></a>
+                    <h3>Preparação para Vestibular</h3>
+                    <p>Aulas gratuitas com conteúdo abrangente e estratégias de estudo para garantir um bom desempenho
+                        nas provas de ingresso.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="campus" id="atividades">
+            <h1>Veja nossas atividades: </h1>
+
+            <div class="row">
+                <div class="campus-col">
+                    <img src="/img/entrevistas.png">
+                    <div class="layer">
+                        <a href="/educapaghome/inicio/entrevista/entrevista.html">
+                            <h3>Entrevistas de profissões</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="/img/reunião.png">
+                    <div class="layer">
+                        <a href="/educapaghome/inicio/reunioes/reunioes.htm">
+                        <h3>Reuniões ao vivo sobre estudos</h3>
+                    </a>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="/img/quiz.png">
+                    <div class="layer">
+                        <a href="/quiz/quiz.html">
+                            <h3>Quiz de conhecimentos gerais</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container-principal">
+            <h1>Conheça nossas outras abas</h1>
+            <div class="container1">
+                <a href="/educapaghome/jogos/jogos.html"><img src="/img/jogosimg.png" alt=""></a>
+                <a href="/educapaghome/trabalhe/trabalhando/index.html"><img src="/img/trabalhoimg.png" alt=""></a>
+            </div>
+            <div class="container2">
+                <a href="/blog/blog.html"><img src="/img/blogimg.png" alt=""></a>
+                <a href="/educapaghome/loja/loja.html"><img src="/img/lojaimg.png" alt=""></a>
+            </div>
+        </section>
+        <!-- <footer>
+            <div class="footer-container">
+                <div class="sec aboutus">
+                    <h2>Quem somos?</h2>
+                    <p> Fundada em 2024, a Educa visa proporcionar a todos uma experiência de aprendizado acessível e
+                        inclusiva. Com métodos de ensino distintos e suporte completo, nossa missão é ajudar você a
+                        desenvolver seu potencial e florescer seu futuro com a Educa.
+                    </p>
+                    <ul class="sci">
+                        <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="sec quicklinks">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="#">Home do Blog</a></li>
+                        <li><a href="#postes">Ler artigos do Blog</a></li>
+                        <li><a href="/1paginasemlogin/index.html">Conhecer a Educa</a></li>
+                    </ul>
+                </div>
+                <div class="sec contactBx">
+                    <h2>informações de contato:</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class='bx bxs-map'></i></span>
+                            <span>acesse nosso site: <br> https://www.educa.com <br></span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-envelope'></i></span>
+                            <p><a href="mailto:codemyhobby9@gmail.com">@educaescolaonline2024@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer> -->
+        <script>
+            function showMenu() {
+                navLinks.style.right = "0";
+
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+
+            }
+
+
+            function toggleSubMenu(show) {
+                const subMenu = document.getElementById('subMenu');
+                subMenu.style.display = show ? 'block' : 'none';
+            }    
+        </script>
+</body>
+
+</html>

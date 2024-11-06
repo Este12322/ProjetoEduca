@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/cadastro/cadastro.css">
     <title>Formulário</title>
@@ -12,16 +11,16 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="/login/givlog.svg" alt="">
+            <img src="/img/logotra.png" alt="logo da educa">
         </div>
         <div class="form">
-            <form action="#">
+            <form id="registration-form">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="/login/login.html">Entrar</a></button>
+                        <button type="button" onclick="window.location.href='/login/login.html'">Entrar</button>
                     </div>
                 </div>
 
@@ -50,12 +49,10 @@
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
 
-
                     <div class="input-box">
                         <label for="confirmPassword">Confirme sua Senha</label>
                         <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
                     </div>
-
                 </div>
 
                 <div class="gender-inputs">
@@ -85,13 +82,58 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Possui alguma deficiência?</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input id="no-disability" type="radio" name="disability">
+                            <label for="no-disability">Não</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="auditory" type="radio" name="disability">
+                            <label for="auditory">Sim Auditiva</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="visual" type="radio" name="disability">
+                            <label for="visual">Sim Visual</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="other-disability" type="radio" name="disability">
+                            <label for="other-disability">Outro</label>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="continue-button">
-                    <button><a href="#">Continuar</a> </button>
+                    <button type="submit">Continuar</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Verifica se todos os campos obrigatórios estão preenchidos
+            const inputs = Array.from(document.querySelectorAll('.input-box input'));
+            const allFilled = inputs.every(input => input.value !== '');
+
+            if (allFilled) {
+                // Redireciona para a página de login
+                window.location.href = '/login/login.html';
+            } else {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+            }
+        });
+    </script>
 </body>
 
 </html>

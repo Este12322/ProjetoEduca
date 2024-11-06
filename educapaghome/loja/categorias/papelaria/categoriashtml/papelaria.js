@@ -2,17 +2,16 @@ const carousel = document.querySelector('.carousel');
 const prevBtn = document.querySelector('.carousel-control.prev');
 const nextBtn = document.querySelector('.carousel-control.next');
 let currentSlide = 0;
-let currentHighlightedIndex = -1; // Indica a imagem atualmente em destaque
 
 const totalItems = document.querySelectorAll('.category-item').length;
-const visibleItems = 5; // Número de itens visíveis
-let itemWidth = document.querySelector('.category-item').offsetWidth + 20; // Largura do item + gap
+const visibleItems = 5; // Agora mostra 4 itens visíveis
+const itemWidth = document.querySelector('.category-item').offsetWidth + 20; // Largura do item + gap
 
 // Duplicar os itens para criar o loop
 const firstItems = [...document.querySelectorAll('.category-item')].slice(0, visibleItems);
 firstItems.forEach(item => {
     const clone = item.cloneNode(true);
-    carousel.appendChild(clone); // Clona os primeiros itens no final
+    carousel.appendChild(clone); // Clona os primeiros itens no final para criar o efeito de loop
 });
 
 // Função para mover o carrossel
@@ -30,39 +29,29 @@ prevBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-    if (currentSlide < totalItems - visibleItems) {
-        currentSlide++;
-        moveCarousel();
-    }
-});
-
-// Função para destacar a imagem
-function selectImage(selectedIndex) {
-    const items = document.querySelectorAll('.category-item');
+    currentSlide++;
+    moveCarousel();
     
-    // Destaca a imagem selecionada
-    if (currentHighlightedIndex !== -1) {
-        items[currentHighlightedIndex].classList.remove('selected', 'blur'); // Remove destaque e blur da anterior
+    // Voltar ao início sem transição quando chegar ao final
+    if (currentSlide === totalItems) {
+        setTimeout(() => {
+            carousel.style.transition = 'none'; // Remove a transição
+            currentSlide = 0;
+            carousel.style.transform = `translateX(0px)`; // Volta ao início
+        }, 500); // Tempo igual ao da transição (0.5s)
     }
-
-    currentHighlightedIndex = selectedIndex; // Atualiza o índice da imagem em destaque
-    items[selectedIndex].classList.add('selected'); // Adiciona classe de destaque
-
-    // Aplica blur nas outras imagens
-    items.forEach((item, index) => {
-        if (index !== selectedIndex) {
-            item.classList.add('blur');
-        }
-    });
-}
-
-// Adiciona eventos de clique para cada item do carrossel
-document.querySelectorAll('.category-item').forEach((item, index) => {
-    item.addEventListener('click', () => selectImage(index));
 });
 
-// Atualiza o carrossel na mudança de tamanho da janela
-window.addEventListener('resize', () => {
-    itemWidth = document.querySelector('.category-item').offsetWidth + 20; // Atualiza a largura
-    moveCarousel(); // Ajusta a posição
-});
+// Movimento automático (opcional)
+setInterval(() => {
+    currentSlide++;
+    moveCarousel();
+    
+    if (currentSlide === totalItems) {
+        setTimeout(() => {
+            carousel.style.transition = 'none';
+            currentSlide = 0;
+            carousel.style.transform = `translateX(0px)`;
+        }, 500);
+    }
+}, 3000); // Tempo de 3 segundos para rotação automática

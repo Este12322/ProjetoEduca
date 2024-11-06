@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/educapaghome/inicio/cursos/cursos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="website icon" type="png" href="/img/logotra.png"/>
+    <title>Cursos</title>
+</head>
+<body>
+    <header style="background-image: linear-gradient(rgb(9, 30, 1), rgba(4, 30, 13, 0.078)), url('/educapaghome/inicio/cursos/cursosimg/saude/fundo.jpg'); height: 400px; background-size: cover; background-position: center;">
+        <section class="header">
+            <nav>
+                <img class="cabeçalho-imagem" src="/img/logotra.png" alt="Logo da Educa">
+                <p>Educa</p>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="/educapaghome/inicio/inicial.html"><i class="fa-solid fa-house-chimney"></i> Inicio</a></li>
+                        <li onmouseenter="toggleSubMenu(true)" onmouseleave="toggleSubMenu(false)">
+                            <a href="#cursos">
+                                <i class="fa-solid fa-graduation-cap"></i> Cursos <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <div class="sub-menu" id="subMenu">
+                                <a href="/educapaghome/inicio/cursos/Idiomas.html">Idiomas</a>
+                                <a href="/educapaghome/inicio/cursos/tec.html">Tecnologia</a>
+                                <a href="/educapaghome/inicio/cursos/eja.html">Ensino Eja</a>
+                                <a href="/educapaghome/inicio/cursos/vestibular.html">Preparação para Vestibular</a>
+                                <a href="/educapaghome/inicio/cursos/infantilarea.html">Área Infantil</a>
+                            </div>
+                        </li>
+                        <li><a href="/educapaghome/serviços/serviços.html"><i class="fa-solid fa-chalkboard-user"></i> Serviços</a></li>
+                        <li><a href="/educapaghome/loja/loja.html"><i class="fa-solid fa-shop"></i> Loja</a></li>
+                        <li><a href="/educapaghome/inicio/inicial.html"><i class="fa-solid fa-user-graduate"></i> Meus estudos</a></li>
+                        <li><a href="/educapaghome/jogos/jogos.html"><i class="fa-solid fa-puzzle-piece"></i> Jogos</a></li>
+                        <li><a href="/blog/blog.html"><i class="fa-solid fa-globe"></i> Blog</a></li>
+                        <li><a href="/educapaghome/ajuda/ajuda.html"><i class="fa-solid fa-circle-question"></i> Ajuda</a></li>
+                        <li><a href="perfil"><i class="fa-solid fa-circle-user"></i> Perfil</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="course">
+                <h1>Saúde</h1>
+            </div>
+        </section>
+    </header>
+
+    <div class="row">
+        <div class="course-col" id="curso1">
+            <h3>Enfermagem</h3>
+            <p> Curso que abrange cuidados de saúde, administração de medicamentos, técnicas de enfermagem e atendimento ao paciente, preparando profissionais para atuar em hospitais e clínicas.
+            </p>
+        </div>
+        <div class="course-col" id="curso2">
+            <h3>Medicina</h3>
+            <p>Aulas que envolvem anatomia, fisiologia, farmacologia e práticas clínicas, formando médicos capacitados para diagnóstico e tratamento de doenças.</p>
+        </div>
+        <div class="course-col" id="curso3">
+            <h3>Fisioterapia</h3>
+            <p> Curso que ensina técnicas de reabilitação física, terapia manual e exercícios para ajudar pacientes na recuperação de lesões e na melhora da mobilidade.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="course-col" id="curso1">
+            <h3>Nutrição</h3>
+            <p> Aulas sobre ciência dos alimentos, dietas e nutrição clínica, preparando profissionais para promover a saúde por meio da alimentação adequada</p>
+        </div>
+        <div class="course-col" id="curso2">
+            <h3>Odontologia</h3>
+            <p>Curso que aborda saúde bucal, diagnóstico e tratamento de problemas dentários, incluindo práticas de profilaxia e estética dental.</p>
+        </div>
+        <div class="course-col" id="curso3">
+            <h3>Psicologia </h3>
+            <p>Aulas que exploram o comportamento humano, teorias psicológicas e práticas terapêuticas, formando profissionais para atuar em diversas áreas da saúde mental.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="course-col" id="curso1">
+            <h3>Farmácia</h3>
+            <p> Curso que ensina sobre medicamentos, suas funções e efeitos, além de aspectos legais e de ética, preparando farmacêuticos para atuar em farmácias e hospitais.</p>
+        </div>
+        <div class="course-col" id="curso2">
+            <h3>Biomedicina</h3>
+            <p> Aulas sobre diagnóstico laboratorial e pesquisa biomédica, capacitando profissionais para trabalhar em análises clínicas e pesquisas.</p>
+        </div>
+        <div class="course-col" id="curso3">
+            <h3>Terapia Ocupacional</h3>
+            <p>Foca na reabilitação e integração social de pacientes, utilizando atividades do dia a dia para melhorar a qualidade de vida.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="course-col" id="curso1">
+            <h3>Saúde Pública</h3>
+            <p>Aborda políticas de saúde, epidemiologia e promoção de saúde, formando profissionais para atuar em prevenção e promoção de saúde coletiva.</p>
+        </div>
+        <div class="course-col" id="curso2">
+            <h3>Medicina Veterinária</h3>
+            <p>Estuda a saúde animal, diagnóstico e tratamento de doenças em animais, preparando veterinários para trabalhar em clínicas e hospitais.</p>
+        </div>
+        <div class="course-col" id="curso3">
+            <h3>Gestão em Saúde</h3>
+            <p> Aulas sobre administração de serviços de saúde, abordando planejamento, gestão de recursos e políticas de saúde, formando gestores para hospitais e clínicas.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSubMenu(show) {
+            const subMenu = document.getElementById('subMenu');
+            subMenu.style.display = show ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

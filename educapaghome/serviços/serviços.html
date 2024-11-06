@@ -1,88 +1,425 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+<head>
+    <link rel="stylesheet" href="/educapaghome/serviços/serviços.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="website icon" type="png" href="/img/logotra.png" />
+    <title>Serviços</title>
+</head>
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+<body>
+    <header>
+        <section class="header">
+            <nav>
+                <img class="cabeçalho-imagem" src="/img/logotra.png" alt="Logo da Educa">
+                <p>Educa</p>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="/educapaghome/inicio/inicial.html"><i class="fa-solid fa-arrow-left"></i> Voltar</a></li>
+                        <li><a href="#home"><i class="fa-solid fa-house-chimney"></i> Inicio</a></li>
+                        <li onmouseenter="toggleSubMenu(true)" onmouseleave="toggleSubMenu(false)">
+                            <a href="#cursos">
+                                <i class="fa-solid fa-globe"></i> Explorar <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <div class="sub-menu" id="subMenu">
+                                <a href="#about">Sobre</a>
+                                <a href="#funciona">Como funciona</a>
+                                <a href="#preços">Preços</a>
+                                <a href="#agendar"> Agendamento</a>
+                                <a href="#atividades">Atividades</a>
+                                <a href="#abas">Outras Abas</a>
+                            </div>
+                        </li>
+                        <li><a href="/educapaghome/trabalhe/trabalhando/index.html"><i class="fa-regular fa-handshake"></i> Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
 
-      <title>Responsive travel website - Bedimcode</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-        <nav class="nav container">
-         <a href="#" class="nav__logo">
-            Educa
-         </a>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <img src="/educapaghome/serviços/imgs/home-bg.jpg" alt="imagem de fundo" class="home__bg">
+            <div class="home__shadow"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h3 class="home__subtitle">Bem Vindo a Educa Serviços</h3>
+                    <h1 class="home__tittle">Explore!<br> Veja nossos serviços</h1>
+                    <p class="home__description">A Educa proporciona além de aulas vivenciais, aqui verá profissionais dispostos a desenvolver sua vida acadêmica e seu desenvolvimento pessoal. É o nosso compromisso!</p>
+                    <a href="#funciona" class="button1">Veja as áreas de atendimento <i class="ri-arrow-right-line"></i></a>
+                </div>
+                <div class="home__cards grid">
+                    <article class="home__card">
+                        <a href="#aulinhas">
+                            <img src="/educapaghome/serviços/imgs/aulasparti.png" alt="imagem de serviços" class="home__card-img">
+                            <h3 class="home__card-title">Aulas Particulares</h3>
+                            <div class="home__card-shadow"></div>
+                        </a>
+                    </article>
+                    <article class="home__card">
+                        <a href="#funciona">
+                            <img src="/educapaghome/serviços/imgs/1.png" alt="imagem de serviços" class="home__card-img">
+                            <h3 class="home__card-title">Tutoria e Mentoria</h3>
+                            <div class="home__card-shadow"></div>
+                        </a>
+                    </article>
+                    <article class="home__card">
+                        <a href="#funciona">
+                            <img src="/educapaghome/serviços/imgs//psicologa.png" alt="imagem de serviços" class="home__card-img">
+                            <h3 class="home__card-title">Consultas Psicológicas</h3>
+                            <div class="home__card-shadow"></div>
+                        </a>
+                    </article>
+                    <article class="home__card">
+                        <a href="#funciona">
+                            <img src="/educapaghome/serviços/imgs/palestra.jpeg" alt="imagem de serviços" class="home__card-img">
+                            <h3 class="home__card-title">Palestras Educacionais</h3>
+                            <div class="home__card-shadow"></div>
+                        </a>
+                    </article>
+                    <article class="home__card">
+                        <a href="#palestrante">
+                            <img src="/educapaghome/serviços/imgs/3.png" alt="imagem de serviços" class="home__card-img">
+                            <h3 class="home__card-title">Orientação Vocacional</h3>
+                            <div class="home__card-shadow"></div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-         <li class="nav__item">
-            <a href="#" class="nav__link"></a>
-         </li> 
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title">Sobre Nós</h2>
+                    <p class="about__description">Na Educa, somos uma instituição dedicada ao desenvolvimento integral de nossos alunos, tanto no aspecto acadêmico quanto pessoal. Acreditamos que a educação vai além do aprendizado tradicional; ela envolve a formação de habilidades essenciais, o fortalecimento da autoestima e a construção de um futuro promissor. Com uma equipe de profissionais experientes e comprometidos, oferecemos aulas particulares, tutoria, mentoria e orientações vocacionais personalizadas. Junte-se a nós e comece a transformar sua vida!</p>
+                </div>
+                <div class="about__image">
+                    <img src="/educapaghome/serviços/imgs/estudo.jpg" alt="about image" class="about__img">
+                    <div class="about__shadow"></div>
+                </div>
+            </div>
+        </section>
 
-         <li class="nav__item">
-            <a href="#" class="nav__link"></a>
-         </li>
+        <!--==================== SLIDER ====================-->
+        <div class="slider-container" id="funciona">
+            <div class="slide">
+                <div class="item"
+                    style="background-image: linear-gradient(rgba(9, 30, 1, 0.671), rgba(4, 30, 13, 0.379)), url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+                    <div class="content">
+                        <div class="name">Orientação Vocacional</div>
+                        <div class="des">Ainda não sabe qual o melhor caminho para sua carreira? Com nossa orientação vocacional, você terá clareza para tomar decisões mais assertivas sobre seu futuro. Através de testes, conversas e análises, identificamos seus talentos e interesses, ajudando você a escolher a profissão ou curso que realmente combina com seu perfil. Descubra o seu propósito e conquiste seu lugar no mundo!</div>
+                        <a href="#agendar"><button>Agende seu horário</button></a>
+                    </div>
+                </div>
 
-         <li class="nav__item"></li>
-            <a href="#" class="nav__link"></a>
-         </li>
+                <div class="item" id="como"
+                    style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+                    <div class="content">
+                        <div class="name">Como Funciona?</div>
+                        <div class="des">Nosso processo é simples: escolha o serviço desejado e agende o melhor dia e horário conforme sua disponibilidade. Você pode selecionar um profissional específico e, após definir tudo, escolher a forma de pagamento. O profissional estará preparado para te atender no dia e horário agendado, com qualidade e atenção. É rápido, prático e personalizado! Agende já!</div>
+                        <a href="#agendar"><button>Agende seu horário</button></a>
+                    </div>
+                </div>
+                <div class="item" id="aulinhas"
+                    style="background-image: linear-gradient(rgb(9, 30, 1), rgba(4, 30, 13, 0.379)),url(https://i.ibb.co/jrRb11q/img2.jpg);">
+                    <div class="content">
+                        <div class="name">Aulas Particulares</div>
+                        <div class="des">Quer aprender no seu ritmo e com foco nas suas necessidades? Nossas aulas particulares oferecem um acompanhamento exclusivo, feito sob medida para você. Com a atenção de um professor dedicado, você poderá tirar todas as suas dúvidas, reforçar pontos específicos e garantir o seu sucesso, seja na escola, faculdade ou em temas específicos. A educação personalizada que você merece!</div>
+                        <a href="#agendar"><button>Agende seu horário</button></a>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: linear-gradient(rgba(9, 30, 1, 0.662), rgba(4, 30, 13, 0)), url(https://i.ibb.co/NSwVv8D/img3.jpg);">
+                    <div class="content">
+                        <div class="name">Tutoria e Mentoria</div>
+                        <div class="des">Está em busca de orientação para crescer profissionalmente ou alcançar objetivos pessoais? A tutoria e mentoria proporciona uma relação próxima e guiada com quem já trilhou esse caminho. Nós ajudamos você a desenvolver estratégias eficazes, superar obstáculos e acelerar seu progresso, seja na vida acadêmica, profissional ou pessoal. Caminhe com confiança ao lado de um mentor experiente.</div>
+                        <a href="#agendar"><button>Agende seu horário</button></a>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
+                    <div class="content">
+                        <div class="name">Consultas Psicológicas</div>
+                        <div class="des">O seu bem-estar emocional merece atenção. Nossas consultas psicológicas oferecem um ambiente acolhedor, onde você pode expressar suas preocupações, explorar seus sentimentos e encontrar soluções para os desafios do dia a dia. Com o apoio de profissionais qualificados, você poderá desenvolver sua saúde mental e viver de forma mais equilibrada e feliz. Cuide de você!
 
-         <li class="nav__item"></li>
-            <a href="#" class="nav__link"></a>
-         </li>
-         </div>
-        </nav>
-         
-      </header>
+                        </div>
+                        <a href="#agendar"><button>Agende seu horário</button></a>
+                    </div>
+                </div>
+                <div class="item" id="palestrante"
+                    style="background-image:linear-gradient(rgba(9, 30, 1, 0.68), rgba(4, 30, 13, 0.379)), url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+                    <div class="content">
+                        <div class="name">Palestras Educacionais</div>
+                        <div class="des">Inspirar e transformar através do conhecimento. Nossas palestras educacionais abordam temas atuais e relevantes para diferentes públicos, com foco no crescimento pessoal, profissional e social. Ministradas por especialistas, nossas palestras são ricas em conteúdo prático, motivacional e interativo, ideal para quem busca aprendizado contínuo e insights inovadores. Participe e expanda seus horizontes!</div>
+                        <a href="#agendar"><button>Agende seu horário</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="prev"><span>&#9664;</span></button>
+                <button class="next"><span>&#9654;</span></button>
+            </div>
+        </div>
 
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
+        <script> let next = document.querySelector('.next')
+            let prev = document.querySelector('.prev')
             
-         </section>
-
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
+            next.addEventListener('click', function(){
+                let items = document.querySelectorAll('.item')
+                document.querySelector('.slide').appendChild(items[0])
+            })
             
-         </section>
-
-         <!--==================== POPULAR ====================-->
-         <section class="popular section" id="popular">
+            prev.addEventListener('click', function(){
+                let items = document.querySelectorAll('.item')
+                document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+            })
             
-         </section>
-         
-         <!--==================== EXPLORE ====================-->
-         <section class="explore section" id="explore">
             
-         </section>
-         
-         <!--==================== JOIN ====================-->
-         <section class="join section">
+            </script>
+
+        <!--==================== PREÇOS ====================-->
+        <section class="preços section" id="preços">
+            <div class="preços__container container">
+                <h2 class="section__title">Nossos Preços</h2>
+                <p class="preços__description">Na Educa, oferecemos preços justos e acessíveis para todos os nossos serviços. Acreditamos que a educação de qualidade deve estar ao alcance de todos. Confira nossos preços e veja como podemos ajudar você a alcançar seus objetivos acadêmicos e pessoais.</p>
+                <table class="preços__table">
+                    <tr>
+                        <th>Serviço</th>
+                        <th>Preço</th>
+                    </tr>
+                    <tr>
+                        <td>Aulas Particulares</td>
+                        <td>R$75,00/hora</td>
+                    </tr>
+                    <tr>
+                        <td>Tutoria</td>
+                        <td>R$85,00/hora</td>
+                    </tr>
+                    <tr>
+                        <td>Consultas Psicológicas</td>
+                        <td>R$100,00/sessão</td>
+                    </tr>
+                    <tr>
+                        <td>Palestras</td>
+                        <td>R$150,00/evento</td>
+                    </tr>
+                    <tr>
+                        <td>Orientação Vocacional</td>
+                        <td>R$75,00/sessão</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+
+        <div class="agendamento-container" id="agendar">
+            <h1 class="agendamento-title">Agendamento</h1><br>
+            <form class="agendamento-form" id="appointment-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="area">Escolha a Área de Atendimento:</label>
+                    <select id="area" name="area" required onchange="updateProfessionals()">
+                        <option value="">Selecione...</option>
+                        <option value="aulas-particulares">Aulas Particulares</option>
+                        <option value="tutoria-mentoria">Tutoria e Mentoria</option>
+                        <option value="consultas-psicologicas">Consultas Psicológicas</option>
+                        <option value="palestras-educacionais">Palestras Educacionais</option>
+                        <option value="orientacao-vocacional">Orientação Vocacional</option>
+                    </select>
+                </div><br>
+                <div class="form-group">
+                    <label for="professional">Escolha um Profissional:</label>
+                    <select id="professional" name="professional" required>
+                        <option value="">Selecione uma área primeiro...</option>
+                    </select>
+                </div><br>
+                <div class="form-group">
+                    <label for="date">Data do Agendamento:</label>
+                    <input type="date" id="date" name="date" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="time">Horário:</label>
+                    <input type="time" id="time" name="time" required>
+                </div><br>
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <label for="payment">Opções de Pagamento:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="">Selecione uma opção...</option>
+                        <option value="pix">Pix</option>
+                        <option value="credit-card">Cartão de Crédito</option>
+                        <option value="debit-card">Cartão de Débito</option>
+                        <option value="boleto">Boleto</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="agendamento-button">Agendar</button>
+                </div>
+            </form>
             
-         </section>
-      </main>
+            <div id="confirmation-message" style="display: none; text-align: center; margin-top: 20px;">
+                <h2>✔️ Agendamento Confirmado!</h2>
+                <p>Seu agendamento foi realizado com sucesso. Em breve, você receberá mais informações no seu e-mail.</p>
+            </div>
+        </div>
+        
+        
+    
+    <script>
+        const professionals = {
+            "aulas-particulares": ["Sem Preferência", "Prof. João Silva", "Prof. Ana Lima", "Prof. Lucas Costa", "Prof. Beatriz Rocha", "Prof. Felipe Almeida"],
+            "tutoria-mentoria": ["Sem Preferência", "Mentor Carlos Souza", "Mentora Juliana Ferreira", "Mentor Pedro Gomes", "Mentora Fernanda Lima", "Mentor Ricardo Alves"],
+            "consultas-psicologicas": ["Sem Preferência", "Dra. Mariana Costa", "Dr. Felipe Almeida", "Dr. Carlos Silva", "Dra. Ana Oliveira", "Dr. Pedro Santos", "Dra. Maria Ferreira", "Dr. Lucas Ribeiro"],
+            "palestras-educacionais": ["Sem Preferência", "Palestrante Ricardo Oliveira", "Palestrante Gabriela Santos", "Palestrante Ana Paula Mendes", "Palestrante Bruno Ribeiro", "Palestrante Luana Martins"],
+            "orientacao-vocacional": ["Sem Preferência", "Orientador Tiago Martins", "Orientadora Vanessa Pereira", "Orientador Felipe Cruz", "Orientadora Juliana Costa", "Orientador André Lima"],
+        };
+    
+        function updateProfessionals() {
+            const areaSelect = document.getElementById('area');
+            const professionalSelect = document.getElementById('professional');
+            const selectedArea = areaSelect.value;
+    
+            professionalSelect.innerHTML = ""; // Limpa opções anteriores
+            if (selectedArea) {
+                professionals[selectedArea].forEach(professional => {
+                    const option = document.createElement('option');
+                    option.value = professional.toLowerCase().replace(/\s+/g, '-'); // Substitui espaços por hífens
+                    option.textContent = professional;
+                    professionalSelect.appendChild(option);
+                });
+            } else {
+                professionalSelect.innerHTML = "<option value=''>Selecione uma área primeiro...</option>";
+            }
+        }
+    
+        function handleSubmit(event) {
+            event.preventDefault(); // Impede o envio do formulário
+    
+            const dateInput = document.getElementById('date').value;
+            const selectedDate = new Date(dateInput);
+            const currentDate = new Date();
+    
+            // Verifica se a data é antes de 2024 ou se o mês já passou
+            if (selectedDate.getFullYear() < 2024 || 
+                (selectedDate.getFullYear() === 2024 && selectedDate.getMonth() < currentDate.getMonth())) {
+                alert("Não é possível agendar antes de 2024 ou para meses já passados.");
+                return;
+            }
+    
+            // Exibe a mensagem de confirmação
+            document.getElementById('confirmation-message').style.display = 'block';
+        }
+    </script>
+    
+    
+    
+        <!--==================== POPULAR ====================-->
+        <section class="campus" id="atividades">
+            <div class="campus-container"> <!-- Novo contêiner -->
+                <h1>Veja nossas atividades:</h1>
+                <div class="campus-row">
+                    <div class="campus-col">
+                        <img src="/img/entrevistas.png">
+                        <div class="layer">
+                            <a href="/educapaghome/inicio/entrevista/entrevista.html">
+                                <h3>Entrevistas de profissões</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="campus-col">
+                        <img src="/img/reunião.png">
+                        <div class="layer">
+                            <a href="/educapaghome/inicio/reunioes/reunioes.htm">
+                                <h3>Reuniões ao vivo sobre estudos</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="campus-col">
+                        <img src="/img/quiz.png">
+                        <div class="layer">
+                            <a href="/quiz/quiz.html">
+                                <h3>Quiz de conhecimentos gerais</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
 
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         
-      </footer>
+        <section class="container-principal" id="abas">
+            <h1>Conheça nossas outras abas:</h1>
+            <div class="container1">
+                <a href="/educapaghome/jogos/jogos.html"><img src="/img/jogosimg.png" alt=""></a>
+                <a href="/educapaghome/trabalhe/trabalhando/index.html"><img src="/img/trabalhoimg.png" alt=""></a>
+            </div>
+            <div class="container2">
+                <a href="/blog/blog.html"><img src="/img/blogimg.png" alt=""></a>
+                <a href="/educapaghome/loja/loja.html"><img src="/img/lojaimg.png" alt=""></a>
+            </div>
+        </section>
 
-      <!--========== SCROLL UP ==========-->
-      
+        <script>
+            function showMenu() {
+                navLinks.style.right = "0";
 
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src=""></script>
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+//navbar 
+            window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        </script>
+</body>
 
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
 </html>
+
+<script>
+    function showMenu() {
+        navLinks.style.right = "0";
+
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+
+    }
+
+
+    function toggleSubMenu(show) {
+        const subMenu = document.getElementById('subMenu');
+        subMenu.style.display = show ? 'block' : 'none';
+    }    
+</script>
+<!--=============== MAIN JS ===============-->
+<script src="/educapaghome/serviços/serviços.js"></script>

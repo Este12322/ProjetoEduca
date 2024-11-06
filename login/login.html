@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../login/login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    
-    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/login/login.css">
+    <title>Animated login form</title>
 </head>
 <body>
-    <div class="main-login">
-        <div class="left-login">
-            <h1>Faça o login <br> Entre para nossa família</h1>
-            <img src="/login/givlog.svg" class="left-login-image" alt="animação de uma menina estudando">
-        </div>
-        <div class="right-login">
-            <div class="card-login">
-                <h1>LOGIN</h1>
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" id="usuario" name="usuario" placeholder="Usuário">
+    <div class="login">
+        <img src="/login/login-bg.png" alt="login image" class="login__img">
+        <form action="" class="login__form">
+            <h1 class="login__title">Login</h1>
+            <div class="login__content">
+                <div class="login__box">
+                    <i class="ri-user-3-line login__icon"></i>
+                    <div class="login__box-input">
+                        <input type="email" required class="login__input" id="login-email" placeholder=" ">
+                        <label for="login-email" class="login__label">Email</label>
+                    </div>
                 </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" placeholder="Senha">
+                <div class="login__box">
+                    <i class="ri-lock-2-line login__icon"></i>
+                    <div class="login__box-input">
+                        <input type="password" required class="login__input" id="login-pass" placeholder=" ">
+                        <label for="login-pass" class="login__label">Senha</label>
+                    </div>
                 </div>
-                <a href="/educapaghome/inicio/inicio.html" class="btn-login">Login</a>
             </div>
-        </div>
+            <div class="login__check">
+                <div class="login__check-group">
+                    <input type="checkbox" class="login__check-input" id="login-check">
+                    <label for="login-check" class="login__check-label">Lembre-me</label>
+                </div>
+                <a href="#" class="login__forgot">Esqueceu sua senha?</a>
+            </div>
+            <button type="submit" class="login__button">Login</button>
+            <p class="login__register">
+                Não tem cadastro? <a href="/cadastro/cadastro.html">Cadastra-se</a>
+            </p>
+        </form>
     </div>
+    
+    <script>
+        document.querySelector('.login__form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne a submissão padrão do formulário
+            // Aqui você pode adicionar a lógica de validação do login
+            window.location.href = '/educapaghome/inicio/inicial.html'; // Redireciona após a validação
+        });
+    </script>
 </body>
 </html>

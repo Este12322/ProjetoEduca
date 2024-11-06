@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif Oriya", serif;
+}
+
+body {
+    background-color: #7fab6176;
+}
+
+
+.header p {
+    font-size: 100px;
+    color: #f8f8f8e2;
+    margin: 0;
+    font-size: 1.8rem;
+    margin-top: -2rem;
+    font-family: "Noto Serif Oriya", sans-serif;
+    margin-left: -10px;
+}
+
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav img {
+    width: 130px;
+    margin-top: -2rem;
+    margin-left: -80px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-top: -2rem;
+    margin-right: -70px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #ffffffe4;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.nav-links ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #57b17b;
+    display: block;
+    transition: width 0.5s;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links ul li:hover::after {
+    width: 50%;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: #57b17b79;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #57b17b;
+    background: #57b17b;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #fcfcfc;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0rem
+}
+
+.course-col {
+    flex-basis: 31%;
+    background: #184320;
+    border-radius: 10px;
+    margin: 1%;
+    padding: 20px 12px;
+    transition: 0.5s;
+}
+
+.course-col h3 {
+    color: #fff;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.course-col h2 {
+    color: #fff;
+    margin: 10px 0;
+    margin-left: 5rem;
+}
+
+.course-col p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px rgba(6, 47, 4, 0.783);
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #67a973;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    z-index: 10;
+}
+
+.sub-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 15px; /* Adiciona arredondamento aos links */
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição suave */
+}
+
+.sub-menu a:hover {
+    background-color: #7ae8a6; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de leve aumento */
+}
+
+/* Adiciona estilo quando o item é selecionado (ativo) */
+.sub-menu a:active {
+    background-color: #4a9e6a; /* Cor ao selecionar */
+}
+
+.course-col img{
+    width: 400px;
+    margin-left: 1.6rem;
+    border-radius: 10px;
+}
+
+.course-col button{
+    margin-top: -10px;
+    display: flex;
+       
+}
+
+
+        .overlay {
+            display: none; /* Oculta o overlay inicialmente */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }

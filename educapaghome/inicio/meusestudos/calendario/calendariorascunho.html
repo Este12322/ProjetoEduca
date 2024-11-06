@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calendário Interativo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div id="app" class="grid grid-cols-7 grid-rows-14 gap-5 m-10 h-screen max-h-[calc(100vh-5rem)] w-screen max-w-[calc(100vw-5rem)]">
+  </div>
+
+  <script>
+    let now = new Date();
+
+    function getDayOfTheWeek(year, month, day) {
+      return new Date(year, month, day).getDay();
+    }
+
+    function numDaysInMonth(year, month) {
+      return new Date(year, month, 0).getDate();
+    }
+
+    function prevDate() {
+      if (now.getMonth() === 0) {
+        now = new Date(now.getFullYear() - 1, 11);
+      } else {
+        now = new Date(now.getFullYear(), now.getMonth() - 1);
+      }
+      render();
+    }
+
+    function nextDate() {
+      if (now.getMonth() === 11) {
+        now = new Date(now.getFullYear() + 1, 0);
+      } else {
+        now = new Date(now.getFullYear(), now.getMonth() + 1);
+      }
+      render();
+    }
+
+    function render() {
+      const month = now.getMonth();
+      const year = now.getFullYear();
+      const firstDay = getDayOfTheWeek(year, month, 1)
+      const currentMonthDays = numDaysInMonth(year, month + 1)
+
+      const lastMonth = new Date(year, month - 1);
+      const nextMonth = new Date(year, month + 1);
+      const lastMonthDays = numDaysInMonth(lastMonth.getFullYear(), lastMonth.getMonth() + 1);
+
+      month_names = [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro",
+      ];
+
+      const app = document.getElementById("app");
+      app.innerHTML = `
+      <div class="flex items-center justify-between col-span-7 text-gray-600">
+        <button id="prev" type="button" onclick="prevDate()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <h1 id="title" class="font-light text-2xl text-center">${month_names[month]}/${year}</h1>
+        <button id="next" type="button" onclick="nextDate()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+      <span class="font-extrabold text-lg text-center">Domingo</span>
+      <span class="font-extrabold text-lg text-center">Segunda</span>
+      <span class="font-extrabold text-lg text-center">Terça</span>
+      <span class="font-extrabold text-lg text-center">Quarta</span>
+      <span class="font-extrabold text-lg text-center">Quinta</span>
+      <span class="font-extrabold text-lg text-center">Sexta</span>
+      <span class="font-extrabold text-lg text-center">Sábado</span>
+      `;
+
+      for (let i = 0; i < firstDay; i++) {
+        app.innerHTML += `<div id="${lastMonth.getMonth() === 11 ? year - 1 : year}-${lastMonth.getMonth() + 1}-${lastMonthDays - firstDay + i + 1}" class="row-span-2 border-2 border-black bg-gray-100 rounded font-bold flex items-center justify-center">${lastMonthDays - firstDay + i + 1}</div>`;
+      }
+
+      for (let i = 1; i <= currentMonthDays; i++) {
+        app.innerHTML += `<div id="${year}-${month + 1}-${i}" class="row-span-2 border-2 border-black bg-blue-200 rounded font-bold flex items-center justify-center">${i}</div>`;
+      }
+
+      if ((currentMonthDays + firstDay) % 7 !== 0) {
+        for (let i = 0; i < 7 - (currentMonthDays + firstDay) % 7; i++) {
+          app.innerHTML += `<div id="${nextMonth.getMonth() === 0 ? year + 1 : year}-${nextMonth.getMonth() + 1}-${i + 1}" class="row-span-2 border-2 border-black bg-gray-100 rounded font-bold flex items-center justify-center">${i + 1}</div>`;
+        }
+      }
+    }
+
+    render();
+  </script>
+</body>
+
+</html>

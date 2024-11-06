@@ -5,17 +5,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .container {
     width: 100%;
     height: 100vh;
-    background: #f8f8f8;
+    background: #f8f8f8; /* Cor de fundo */
+    background-image: url("/educapaghome/ajuda/fundoteste.png"); /* Altere para o caminho da sua imagem */
+    background-size: 100% auto; /* Ajusta a largura para 100% e altura proporcional */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
+
 .popup {
-    background-color: #c9ecc9; /* Verde claro */
+    background-color: #c9ecc961; /* Verde claro */
     padding: 30px;
     border-radius: 10px;
     text-align: center;

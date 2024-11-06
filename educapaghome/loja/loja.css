@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@400..700&display=swap');
+
 body{
     background-color: #c3efcb;
 }
@@ -8,8 +10,9 @@ body{
     margin: 0;
     padding: 0;
     outline: none;
-    font-family: 'Tw Cen MT', sans-serif;
+    font-family: "Noto Serif Oriya", serif;
 }
+
 
 .container {
     position: relative;
@@ -41,8 +44,8 @@ nav {
 }
 
 nav .logo {
-    width: 120px;
-    cursor: pointer;
+    width: 130px;
+    margin-left: -80px;
 }
 
 nav p {
@@ -72,7 +75,7 @@ ul li a {
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 ul li a::after {
@@ -123,6 +126,90 @@ ul li a:hover::after {
     animation: animate 20s linear 2s infinite alternate;
 }
 
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-top: -2rem;
+    margin-right: -70px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px; 
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #ffffffe4;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.nav-links ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 3px; 
+    background: #57b17b;
+    display: block;
+    transition: width 0.5s;
+    position: absolute;
+    bottom: -3px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.nav-links ul li:hover::after {
+    width: 50%; 
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: #57b17b79;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #57b17b;
+    background: #57b17b;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
 /* categorias */
 .categorias {
     display: flex;
@@ -147,8 +234,8 @@ ul li a:hover::after {
 }
 
 .container-categorias {
-    background-color: #1e5328;
-    padding: 2rem 0; /* Adiciona um espaçamento ao redor da seção */
+    background-color: #1e3a08;
+    margin-top: -20px;
 }
 
 .container-categorias p {
@@ -156,6 +243,7 @@ ul li a:hover::after {
     display: flex;
     justify-content: center;
     color: #fff;
+    /* margin-top: 30px; */
 }
 
 .categorias a {
@@ -200,45 +288,253 @@ ul li a:hover::after {
 
 /* produto */
 /* Certifique-se que o container tenha a propriedade display: grid */
-.cols-4 {
-    
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas de igual tamanho */
-    gap: 1rem; /* Espaçamento entre os produtos */
-}
-
-.product img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-}
-
-.product {
+.produto {
+    padding: 40px;
+    background-color: #f8f8f8;
     text-align: center;
-}
-
-.cols>* {
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.cols>*:hover {
-    transform: translateY(-5px);
 }
 
 .section-title {
-    text-align: center;
-    margin-top: 4em;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    color: #333;
 }
 
 .subtitle-underline {
     width: 100px;
     height: 5px;
-    background: #1e5328;
+    background-color: #1e5328;
     border-radius: 9999px;
-    margin: 8px auto 0 auto;
+    margin: 10px auto;
 }
+
+.sub-category-title {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #444;
+    margin-left: 38rem;
+}
+
+/* Estilos para o carrossel e interação */
+/* Estilos para o carrossel e interação */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.category-item {
+    min-width: calc(20% - 20px);
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+/* Estilos das imagens */
+.category-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, filter 0.3s;
+}
+
+/* Imagem em destaque */
+.category-item.selected img {
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+/* Efeito de desfoque nas outras imagens */
+.category-item.blur img {
+    filter: blur(5px);
+}
+
+/* Mantenha o estilo de hover */
+.category-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Controle das setas */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Estilo para setas de controle */
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+/* Controle das setas */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Efeitos de hover */
+.category-item:hover img {
+    transform: scale(1.1); /* Escala a imagem ao passar o mouse */
+}
+
+/* Correção adicional para garantir que a imagem não corte */
+.category-item {
+    position: relative;
+    z-index: 0; /* Garante que o item tenha uma camada apropriada */
+}
+
+.category-item img {
+    transition: transform 0.3s ease-in-out;
+    will-change: transform; /* Otimiza o efeito */
+}
+
+.category-item:hover {
+    z-index: 1; /* Garante que o item fica em destaque */
+}
+
+.category-item a {
+    text-decoration: none; /* Remove a linha de sublinhado */
+    color: #000; /* Mantém a cor do texto */
+}
+
+.category-item a:hover {
+    color: #1e5328; /* Cor no hover (se quiser manter o efeito) */
+    text-decoration: none; /* Garante que não haja sublinhado ao passar o mouse */
+}
+
+/* Grid de produtos */
+.cols-4 {
+    margin-left: 10px;
+    width: 93rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Para telas menores, ajustar o número de colunas */
+@media (max-width: 1200px) {
+    .cols-4 {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas para telas médias */
+    }
+}
+
+@media (max-width: 900px) {
+    .cols-4 {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para telas pequenas */
+    }
+}
+
+@media (max-width: 600px) {
+    .cols-4 {
+        grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
+    }
+}
+
+.product {
+    background-color: #f9f9f9; /* Um tom de cinza claro */
+    border: 1px solid #C7C7C7; /* Borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeito de hover */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Eleva o produto no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.product img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do cartão */
+    height: 200px; /* Altura fixa */
+    object-fit: contain; /* Mantém a proporção da imagem sem cortar */
+    border-radius: 5px; /* Bordas arredondadas na imagem */
+}
+
+.product-name {
+    font-size: 1.5rem; /* Aumenta o tamanho do nome do produto */
+    color: #1e5328; /* Cor verde escuro */
+    margin-top: 10px;
+}
+
+.product-description {
+    font-size: 1rem; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #666; /* Cor da descrição */
+    margin: 10px 0;
+    min-height: 40px; /* Garante espaço para a descrição */
+}
+
+.rate {
+    margin: 10px 0;
+    color: #f39c12;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.product-price span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.availability {
+    font-size: 1rem; /* Tamanho da fonte para a disponibilidade */
+    color: #28a745; /* Cor verde para disponível */
+    margin: 10px 0; /* Espaçamento */
+}
+
+.buy-button {
+    background-color: #1e5328; /* Cor do botão */
+    color: #FFFFFF; /* Cor do texto do botão */
+    padding: 10px 15px; /* Espaçamento do botão */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    margin-top: 10px; /* Espaçamento acima do botão */
+    display: inline-block; /* Para permitir margens */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.buy-button:hover {
+    background-color: #155724; /* Cor do botão no hover */
+}
+
+
 
 
 /* contato */

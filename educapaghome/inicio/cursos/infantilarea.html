@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/educapaghome/inicio/cursos/infantil.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS separado -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="website icon" type="png" href="/img/logotra.png" />
+    <title>Educa</title>
+</head>
+
+<body>
+    <div id="inicio">
+        <header>
+            <section class="header">
+                <nav>
+                    <img class="cabeçalho-imagem" src="/img/logotra.png" alt="Logo da Educa">
+                    <p>Educa</p>
+                    <div class="nav-links" id="navLinks">
+                        <ul>
+                            <li><a href="/educapaghome/inicio/inicial.html"><i class="fa-solid fa-house-chimney"></i>
+                                    Inicio</a></li>
+                            <li onmouseenter="toggleSubMenu(true)" onmouseleave="toggleSubMenu(false)">
+                                <a href="#cursos">
+                                    <i class="fa-solid fa-graduation-cap"></i> Cursos <i
+                                        class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <div class="sub-menu" id="subMenu">
+                                    <a href="/educapaghome/inicio/cursos/tec.html">Tecnologia</a>
+                                    <a href="/educapaghome/inicio/cursos/saude.html">Saúde</a>
+                                    <a href="/educapaghome/inicio/cursos/eja.html">Ensino Eja</a>
+                                    <a href="/educapaghome/inicio/cursos/vestibular.html">Preparação para Vestibular</a>
+                                    <a href="/educapaghome/inicio/cursos/infantilarea.html">Área Infantil</a>
+                                </div>
+                            </li>
+                            <li><a href="/educapaghome/serviços/serviços.html"><i
+                                        class="fa-solid fa-chalkboard-user"></i> Serviços</a></li>
+                            <li><a href="/educapaghome/loja/loja.html"><i class="fa-solid fa-shop"></i> Loja</a></li>
+                            <li><a href="/educapaghome/inicio/inicial.html"><i class="fa-solid fa-user-graduate"></i>
+                                    Meus estudos</a></li>
+                            <li><a href="/educapaghome/jogos/jogos.html"><i class="fa-solid fa-puzzle-piece"></i>
+                                    Jogos</a></li>
+                            <li><a href="/blog/blog.html"><i class="fa-solid fa-globe"></i> Blog</a></li>
+                            <li><a href="/educapaghome/ajuda/ajuda.html"><i class="fa-solid fa-circle-question"></i>
+                                    Ajuda</a></li>
+                            <li><a href="perfil"><i class="fa-solid fa-circle-user"></i> Perfil</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="text-box">
+                    <h1>Educa Kids</h1>
+                    <a href="#atividades" class="hero-btn">Explore nossas Atividades</a>
+                </div>
+            </section>
+        </header>
+        <div class="container-princ" id="atividades">
+            <div class="conteudo">
+                <h2>Vamos Aprender!</h2>
+                <p>Assista nossos vídeos educativos para a alfabetização de forma divertida e animada com músicas!</p>
+            </div>
+
+            <div class="videos">
+                <div class="video" onclick="abrirVideo('/educapaghome/inicio/cursos/cursosimg/infantil/videos/Música Indiozinho em Libras (legendado).mp4')">
+                    <img src="/educapaghome/inicio/cursos/cursosimg/infantil/indiozinho.jpg" alt="Capa do Video 1">
+                    <h1>Aprendendo a contar com bob zoom</h1>
+                    <p class="descricao">Música Indiozinho em Libras aprenda a contar com os indiozinhos.</p>
+                </div>
+                <div class="video" onclick="abrirVideo('/educapaghome/inicio/cursos/cursosimg/infantil/videos/videoplayback.mp4')">
+                    <img src="/educapaghome/inicio/cursos/cursosimg/infantil/xuxa.jpeg" alt="Capa do Video 2">
+                    <h1>Aprendendo o alfabeto com a Xuxa</h1>
+                    <p class="descricao">Aprenda o alfabeto de uma forma divertida com musicas interativas</p>
+                </div>
+                <div class="video" onclick="abrirVideo('/educapaghome/inicio/cursos/cursosimg/infantil/videos/Mundo Bita em Libras - A Diferença é o Que Nos Une.mp4')">
+                    <img src="/educapaghome/inicio/cursos/cursosimg/infantil/bita.jpeg" alt="Capa do Video 3">
+                    <h1>Aprenda a diversidade com o Mundo Bita</h1>
+                    <p class="descricao">De uma forma divertida a parte do corpo vendos como a diversidade é bonita.</p>
+                </div>
+            </div>
+            <div id="modal" class="modal" onclick="fecharModal()">
+                <video id="videoPlayer" controls>
+                    <source id="videoSource" src="" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+        <script>
+            function abrirVideo(video) {
+                document.getElementById('videoSource').src = video;
+                document.getElementById('modal').style.display = 'flex';
+                document.getElementById('videoPlayer').load();
+                document.getElementById('videoPlayer').play();
+            }
+
+            function fecharModal() {
+                document.getElementById('modal').style.display = 'none';
+                document.getElementById('videoPlayer').pause();
+            }
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+
+            function toggleSubMenu(show) {
+                const subMenu = document.getElementById('subMenu');
+                subMenu.style.display = show ? 'block' : 'none';
+            }    
+        </script>
+    </div>
+
+    <section class="ingles"><br>
+        <h2>Hora do <span>Inglês</span></h2>
+        <div class="inglesvideos">
+            <div class="videoingles" onclick="abrirVideo('/educapaghome/inicio/cursos/cursosimg/infantil/videos/ASL ABC Song ｜ NEW with ASL Letters and Signs.mp4')">
+                <img src="/educapaghome/inicio/cursos/cursosimg/infantil/abc.jpeg" alt="Capa do Video 3">
+                <h1>Aprendendo o abc</h1>
+                <p class="descricaoingles">Prepare-se para uma aventura incrível e aprenda<br> a os alfabeto em inglês de um jeito divertido! Let’s go!!!</p><br>
+            </div>
+            <div class="videoingles" onclick="abrirVideo('/educapaghome/inicio/cursos/cursosimg/infantil/videos/colors SONG - learn your ASL colors.mp4')">
+                <img src="/educapaghome/inicio/cursos/cursosimg/infantil/cores.jpeg" alt="Capa do Video 3">
+                <h1>Cores em inglês</h1>
+                <p class="descricaoingles">Descubra o mundo vibrante das cores em inglês <br>e transforme seu vocabulário!</p>
+            </div>
+            <div class="videoingles" onclick="abrirVideo('/educapaghome/inicio/cursos/cursosimg/infantil/videos/ASL Animals Song - Song only.mp4')">
+                <img src="/educapaghome/inicio/cursos/cursosimg/infantil/animais.jpg" alt="Capa do Video 3">
+                <h1>Animais em inglês</h1>
+                <p class="descricaoingles">Explore o fascinante reino dos animais em inglês e amplie seu vocabulário! </p>
+            </div>
+    </div>
+    </section>
+ 
+ <section class="jogos">
+    <h2>Se divirta com Nossos<span> Jogos</span></h2>
+
+    <!-- Primeira linha de jogos -->
+
+    <div class="jogo">
+        <div class="jogo">
+            <a href="/educapaghome/inicio/cursos/cursosimg/infantil/jogos/Memory Game/index.html"><img src="/educapaghome/jogos/images/jogodamemoria.jpeg" alt="Jogo da Memória"></a>
+            <p class="titulo">Jogo da Memória</p> <!-- Título abaixo da imagem -->
+        </div>
+        <div class="jogo">
+            <a href="/educapaghome/inicio/cursos/cursosimg/infantil/jogos/jogoDaForca-master/jogoDaForca-master/forca.html"><img src="/educapaghome/inicio/cursos/cursosimg/infantil/jogodaforca.png" alt="Jogo da Forca"></a>
+            <p class="titulo">Jogo da Forca</p> <!-- Título abaixo da imagem -->
+        </div>
+        <div class="jogo">
+            <a href="/educapaghome/inicio/cursos/cursosimg/infantil/jogos/Math-Game/Math Game/index.html"><img src="/educapaghome/inicio/cursos/cursosimg/infantil/jogodaforca.png" alt="Jogo da Forca"></a>
+            <p class="titulo">Jogo de Matematica</p> <!-- Título aebaixo da imagem -->
+        </div>
+    </div>
+<br>
+    <!-- Segunda linha de jogos -->
+    <div class="jogo">
+        <div class="jogo">
+         <a href="/educapaghome/inicio/cursos/cursosimg/infantil/jogos/2048/index.html"><img src="/educapaghome/jogos/images/jogodamemoria.jpeg" alt="Jogo da Memória"></a>
+        <p class="titulo">Jogo 2048</p> <!-- Título abaixo da imagem --> 
+        </div>
+        <div class="jogo">
+         <a href=""><img src="/educapaghome/jogos/images/jogodamemoria.jpeg" alt="Jogo da Memória"></a>
+        <p class="titulo">Jogo da Velha</p> <!-- Título abaixo da imagem --> 
+        </div>
+        <div class="jogo">
+         <a href=""><img src="/educapaghome/jogos/images/jogodamemoria.jpeg" alt="Jogo da Memória"></a>
+        <p class="titulo">Jogo puzzle game</p> <!-- Título abaixo da imagem --> 
+        </div>
+    </div>
+<br>
+</section>
+       
+<br>
+<section class="desenhos">
+    <h1>aprenda assistindo</h1>
+</section>
+</body>
+</html>

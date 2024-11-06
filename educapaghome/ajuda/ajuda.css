@@ -9,13 +9,17 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
+    background-image: url("/educapaghome/ajuda/fundo.jpeg"); /* Substitua pelo seu caminho */
+    background-size: cover; /* Faz com que a imagem cubra toda a área do background */
+    background-position: center; /* Centraliza a imagem */
 }
+
 
 .container {
     display: flex;
     max-width: 700px;
     width: 100%;
-    background-color: #bfd1bf;
+    background-color: #bfd1bfb6;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -36,16 +40,24 @@ body {
 }
 
 .cabeçalho-imagem {
+    margin-top: 3rem;
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    transform: scale(1.7); /* Aumenta a imagem */
 }
+
 
  h3, h2, h4 {
     margin: 10px 0;
+    color: #154e0d
 }
 
+h1{
+    color: #2c740f;
+}
 .div h1{
+    color: #f5f5f5;
     margin: 10px 0;
     font-family: "Bungee Tint", sans-serif;
     font-weight: 400;
@@ -84,7 +96,7 @@ body {
 
 .botoes {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 10px;
     margin-top: 20px;
 }
@@ -93,7 +105,7 @@ body {
     text-decoration: none;
     color: #ffffff;
     padding: 9px 20px;
-    background-color: #94b260;
+    background-color: #60b294;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -108,9 +120,14 @@ body {
 }
 
 .button:hover {
-    background-color: #218838;
+    background-color: #5caf6e;
 }
 
-.button1.button {
-    background-color: #218838;
+.button1:hover {
+    background-color: #5caf6e;
+}
+
+h5{
+    color: #0e412c;
+    font-size: 20px;
 }

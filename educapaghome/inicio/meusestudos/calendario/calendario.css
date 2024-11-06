@@ -1,0 +1,633 @@
+:root {
+  --primary-clr: #76c168f8;
+}
+
+/* Estilização global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Nice scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-clr);
+}
+
+
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center; /* Mudado para center para alinhar verticalmente ao centro */
+  justify-content: center; /* Mantido para centralizar horizontalmente */
+  padding: 20px 0; /* Ajuste o padding superior conforme necessário */
+  background-color: #e2e1dc;
+}
+
+.container {
+  margin-left: 18rem;
+  margin-top: 1rem; /* Reduzido para trazer mais para cima */
+  padding: 10px;
+  width: 960px;
+  color: #fff;
+  display: flex;
+  border-radius: 10px;
+  background-color: #1d7143b3;
+}
+
+.left {
+  width: 60%;
+  padding: 20px; /* Aumentado */
+}
+
+.calendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #878895;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 0; /* Remover espaço acima do calendário */
+  }
+  
+
+.calendar::before,
+.calendar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 10px;
+  height: 90%;
+  border-radius: 0 5px 5px 0;
+  background-color: #d3d4d6d7;
+  transform: translateY(-50%);
+}
+
+.calendar::before {
+  height: 85%;
+  left: calc(100% + 10px);
+  background-color: rgb(153, 153, 153);
+}
+
+.calendar .month {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-size: 1.2rem; /* Aumentado */
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+  cursor: pointer;
+}
+
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+  color: var(--primary-clr);
+}
+
+.calendar .weekdays {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-size: 1.2rem; /* Aumentado */
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.weekdays div {
+  width: 14.28%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar .days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-size: 1.2rem; /* Aumentado */
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.calendar .days .day {
+  width: 14.28%;
+  height: 60px; /* Aumentado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-clr);
+  border: 1px solid #f5f5f5;
+}
+
+.calendar .days .day:hover {
+  color: #fff;
+  background-color: var(--primary-clr);
+}
+
+.calendar .days .prev-date,
+.calendar .days .next-date {
+  color: #b3b3b3;
+}
+
+.calendar .days .active {
+  position: relative;
+  font-size: 1.5rem; /* Aumentado */
+  color: #fff;
+  background-color: var(--primary-clr);
+}
+
+.calendar .days .today {
+  font-size: 1.5rem; /* Aumentado */
+}
+
+.events {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4px;
+}
+.events .event {
+  position: relative;
+  width: 95%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 20px;
+  padding-left: 50px;
+  color: #fff;
+  background: linear-gradient(90deg, #3f4458, transparent);
+  cursor: pointer;
+}
+/* even event */
+.events .event:nth-child(even) {
+  background: transparent;
+}
+.events .event:hover {
+  background: linear-gradient(90deg, var(--primary-clr), transparent);
+}
+.events .event .title {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.events .event .title .event-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 20px;
+}
+.events .event i {
+  color: var(--primary-clr);
+  font-size: 0.5rem;
+}
+.events .event:hover i {
+  color: #fff;
+}
+.events .event .event-time {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #878895;
+  margin-left: 15px;
+  pointer-events: none;
+}
+.events .event:hover .event-time {
+  color: #fff;
+}
+/* add tick in event after */
+.events .event::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 3rem;
+  line-height: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+  color: var(--primary-clr);
+  transform: translateY(-50%);
+}
+.events .event:hover::after {
+  display: flex;
+}
+.add-event {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #878895;
+  border: 2px solid #878895;
+  opacity: 0.5;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+.add-event:hover {
+  opacity: 1;
+}
+.add-event i {
+  pointer-events: none;
+}
+
+.add-event-wrapper {
+  display: none; /* Oculta inicialmente */
+}
+.add-event-wrapper.active {
+  display: block; /* Mostra quando a classe active é adicionada */
+}
+
+.events .no-event {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #878895;
+}
+.add-event-wrapper {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  width: 90%;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  transition: max-height 0.5s ease;
+}
+.add-event-wrapper.active {
+  max-height: 300px;
+}
+.add-event-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #373c4f;
+  border-bottom: 1px solid #f5f5f5;
+}
+.add-event-header .close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.add-event-header .close:hover {
+  color: var(--primary-clr);
+}
+.add-event-header .title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.add-event-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+}
+.add-event-body .add-event-input {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.add-event-body .add-event-input input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #373c4f;
+}
+.add-event-body .add-event-input input::placeholder {
+  color: #a5a5a5;
+}
+.add-event-body .add-event-input input:focus {
+  border-bottom: 1px solid var(--primary-clr);
+}
+.add-event-body .add-event-input input:focus::placeholder {
+  color: var(--primary-clr);
+}
+.add-event-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.add-event-footer .add-event-btn {
+  height: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: var(--primary-clr);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid var(--primary-clr);
+}
+.add-event-footer .add-event-btn:hover {
+  background-color: transparent;
+  color: var(--primary-clr);
+}
+
+/* Media queries */
+@media screen and (max-width: 1000px) {
+  body {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .container {
+    min-height: 100vh;
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .calendar::before,
+  .calendar::after {
+    top: 100%;
+    left: 50%;
+    width: 97%;
+    height: 12px;
+    border-radius: 0 0 5px 5px;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .calendar .month {
+    height: 75px;
+  }
+  .calendar .weekdays {
+    height: 50px;
+  }
+  .calendar .days .day {
+    height: 50px; /* Aumentado */
+    font-size: 1rem; /* Aumentado */
+  }
+}
+
+/* Estilos para o sub-menu */
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #67a973;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  z-index: 10;
+}
+
+.sub-menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  border-radius: 15px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.sub-menu a:hover {
+  background-color: #7ae8a6;
+  transform: scale(1.05);
+}
+
+.sub-menu a:active {
+  background-color: #4a9e6a;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif Oriya", serif;
+    box-sizing: border-box;
+
+}
+
+/* Certifique-se que o html e body ocupam 100% da altura */
+html, body {
+  height: 100%;
+  overflow: hidden; /* Remove rolagem */
+}
+
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(9, 30, 1), rgba(4, 30, 13, 0.379)), url('/educapaghome/inicio/meusestudos/listadetarefas/img//img/fundoinicial1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.header p {
+    font-size: 110px;
+    color: #f8f8f8e2;
+    margin: 0;
+    font-size: 1.9rem;
+    margin-top: -2rem;
+    font-family: "Noto Serif Oriya", serif;
+    margin-left: -10px;
+    background-size: cover; /* Tamanho padrão */
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav img {
+    width: 130px;
+    margin-top: -2rem;
+    margin-left: -80px;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-top: -2rem;
+    margin-right: -70px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #ffffffe4;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.nav-links ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #57b17b;
+    display: block;
+    transition: width 0.5s;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links ul li:hover::after {
+    width: 50%;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 99px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 23px;
+    color: #fff;
+}
+
+.text-box h1{
+    color: #fff;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: #57b17b79;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #57b17b;
+    background: #57b17b;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #fcfcfc;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: -2rem;
+  align-items: center;
+  margin-left: 43rem;
+}

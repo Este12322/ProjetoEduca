@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/quiz/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/img/logotra.png">
+    <title>Quiz</title>
+</head>
+<body>
+    <div id="inicio">
+        <header>
+            <nav>
+                <img src="/img/logotra.png" alt="Logo da Educa">
+                <p class="texto">Educa Quiz</p>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="/educapaghome/inicio/inicial.html"><i class="fa-solid fa-house-chimney"></i> Inicio</a></li>
+                        <li><a href="/educapaghome/inicio/inicial.html#cursos"><i class="fa-solid fa-graduation-cap"></i> Cursos</a></li>
+                        <li><a href="/educapaghome/serviços/serviços.html"><i class="fa-solid fa-chalkboard-user"></i> Serviços</a></li>
+                        <li><a href="/educapaghome/loja/loja.html"><i class="fa-solid fa-shop"></i> Loja</a></li>
+                        <li onmouseenter="toggleSubMenu(true)" onmouseleave="toggleSubMenu(false)">
+                            <a href="#subMenu">
+                                <i class="fa-solid fa-user-graduate"></i> Meus Estudos <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <div class="sub-menu" id="subMenu">
+                                <a href="/educapaghome/inicio/inicial.html#cursos">Meus Cursos</a>
+                                <a href="/educapaghome/inicio/mapasmentais/mapasmentais.html">Mapas Mentais</a>
+                                <a href="/quiz/quiz.html">Quiz da Educa</a>
+                                <a href="/educapaghome/inicio/meusestudos/calculadora/calculadora.html">Calculadora</a>
+                                <a href="/educapaghome/inicio/meusestudos/listadetarefas/lista.html">Fazer lista de tarefas</a>
+                                <a href="/educapaghome/inicio/meusestudos/calendario/calendario.html">Calendário</a>
+                                <a href="/educapaghome/inicio/entrevista/entrevista.html">Entrevistas Com Profissiões</a>
+                                <a href="/educapaghome/inicio/inicial.html#atividades">Outras Atividades</a>
+                            </div>
+                        </li>
+                        <li><a href="/educapaghome/jogos/jogos.html"><i class="fa-solid fa-puzzle-piece"></i> Jogos</a></li>
+                        <li><a href="/blog/blog.html"><i class="fa-solid fa-globe"></i> Blog</a></li>
+                        <li><a href="/educapaghome/ajuda/ajuda.html"><i class="fa-solid fa-circle-question"></i> Ajuda?</a></li>
+                        <li><a href="/educapaghome/"><i class="fa-solid fa-circle-user"></i> Perfil</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </header>
+        <main class="header">
+            <section class="home">
+                <div class="home-content">
+                    <h1>Educa Quiz</h1>
+                    <p>Aprimore seus conhecimentos de forma divertida com nosso quiz de cultura geral e matérias específicas,<br> testando suas habilidades a cada pergunta!</p>
+                    <a href="#row"><button class="hero-btn" id="scrollButton">Veja nossas categorias de quizes</button></a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="row" id="row">
+        <div class="course-col" id="curso1">
+            <a href="/quiz/categoriasdequiz/cultura/cultura.html" class="course-link">
+                <h3>Quiz de Cultura Geral</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/1.png">
+                <p>Descubra o quanto você sabe sobre o mundo!</p>
+            </a>
+        </div>
+        <div class="course-col" id="curso2">
+            <a href="/quiz/categoriasdequiz/historia/historia.html" class="course-link">
+                <h3>Desafio de História</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/2.png">
+                <p>Teste seus conhecimentos sobre eventos históricos importantes.</p>
+            </a>
+        </div>
+        <div class="course-col" id="curso3">
+            <a href="/quiz/categoriasdequiz/cinema/cinema.html" class="course-link">
+                <h3>Quiz Sobre Cinema</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/3.png">
+                <p>Você é um verdadeiro cinéfilo? Vamos descobrir!</p>
+            </a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="course-col" id="curso4">
+            <a href="/quiz/categoriasdequiz/musica/musica.html" class="course-link">
+                <h3>Desvendando a Música</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/4.png">
+                <p>Qual é a sua familiaridade com hits e clássicos musicais?</p>
+            </a>
+        </div>
+        <div class="course-col" id="curso5">
+            <a href="/quiz/categoriasdequiz/geografia/geo.html" class="course-link">
+                <h3>Quiz de Geografia</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/5.png">
+                <p>Quão bem você conhece os países e suas capitais?</p>
+            </a>
+        </div>
+        <div class="course-col" id="curso6">
+            <a href="/quiz/categoriasdequiz/ciencia/ciencias.html" class="course-link">
+                <h3>Desafio de Ciência</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/6.png">
+                <p>Avalie seu conhecimento sobre o mundo da ciência e tecnologia!</p>
+            </a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="course-col" id="curso7">
+            <a href="/quiz/categoriasdequiz/literatura/li.html" class="course-link">
+                <h3>Quiz de Literatura</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/7.png">
+                <p>Teste seu amor pela leitura e descubra seus conhecimentos literários!</p>
+            </a>
+        </div>
+        <div class="course-col" id="curso8">
+            <a href="/quiz/categoriasdequiz/culinaria/culinaria.html" class="course-link">
+                <h3>Quiz de Culinária</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/8.png">
+                <p>Será que você conhece pratos e receitas do mundo todo?</p>
+            </a>
+        </div>
+        <div class="course-col" id="curso9">
+            <a href="/quiz/categoriasdequiz/esportes/esporte.html" class="course-link">
+                <h3>Desafio de Esportes</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/9.png">
+                <p>Mostre seu conhecimento sobre esportes e atletas famosos!</p>
+            </a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="course-col" id="curso10">
+            <a href="/quiz/categoriasdequiz/moda/moda.html" class="course-link">
+                <h3>Desafio de Moda</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/10.png">
+                <p>Você está por dentro das últimas tendências e ícones da moda?</p>
+            </a>
+        </div>
+        <div class="course-col" id="curso11">
+            <a href="/quiz/categoriasdequiz/tecnologia/tec.html" class="course-link">
+                <h3>Quiz de Tecnologia</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/11.png">
+                <p>Quão atualizado você está sobre inovações e gadgets?</p>
+            </a>
+        </div>
+        <div class="course-col" id="curso12">
+            <a href="/quiz/categoriasdequiz/animais/animais.html" class="course-link">
+                <h3>Desafio de Animais</h3>
+                <img src="/quiz/categoriasdequiz/imgcategorias/12.png">
+                <p>Descubra o quanto você sabe sobre a vida animal e suas curiosidades!</p>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function showMenu() {
+            navLinks.style.right = "0";
+
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+
+        }
+
+
+        function toggleSubMenu(show) {
+            const subMenu = document.getElementById('subMenu');
+            subMenu.style.display = show ? 'block' : 'none';
+        }    
+    </script>
+    <script>
+        document.getElementById("scrollButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            document.getElementById("row").scrollIntoView({
+                behavior: "smooth" // Rolagem suave
+            });
+        });
+    </script>
+    
+</body>
+</html>
