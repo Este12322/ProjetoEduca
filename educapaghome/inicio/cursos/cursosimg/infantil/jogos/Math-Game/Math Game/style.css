@@ -116,3 +116,32 @@ body {
 .hide {
   display: none;
 }
+
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 23px;
+  z-index: 9999;
+  font-size: 5.8em;
+  color: #313030;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.back-button i {
+  transition: transform 0.3s ease;
+}
+.back-button:hover i {
+  transform: scale(1.2);
+  color: #313030;
+}
+.logo {
+  position: fixed;
+  top: 10px;   /* Distância do topo da tela */
+  right: 10px; /* Distância da borda direita */
+  width: 180px; /* Largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  z-index: 1000; /* Garante que a logo fique acima de outros elementos */
+}

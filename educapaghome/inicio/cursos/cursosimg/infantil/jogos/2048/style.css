@@ -4,32 +4,40 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
-  background-color: #faf8ef;
+  background-color: #f0c232;
 }
+
 .heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 h1 {
   color: #776e65;
 }
+
 .container {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
 }
+
 h1 {
   font-size: 4em;
 }
+
 .score-container {
   color: #776e65;
 }
+
 #score {
   font-weight: 600;
 }
+
 .grid {
   width: 25em;
   height: 25em;
@@ -40,6 +48,7 @@ h1 {
   flex-wrap: wrap;
   border-radius: 0.5em;
 }
+
 .box {
   width: 97.5px;
   height: 97.5px;
@@ -50,11 +59,12 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
 .cover-screen {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #faf8ef;
+  background-color: #f0c232;
   height: 100%;
   width: 100%;
   display: flex;
@@ -62,22 +72,26 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+
 #start-button {
-  background-color: #8f7a66;
+  background-color: #ffffff;
   padding: 1em 2em;
   border: none;
   border-radius: 0.5em;
   font-size: 1em;
   letter-spacing: 0.2px;
-  color: #ffffff;
+  color: #000000;
 }
+
 .hide {
   display: none;
 }
+
 .box-2 {
   background-color: #eee4da;
   color: #727371;
 }
+
 .box-4 {
   background-color: #eee1c9;
   color: #727371;
@@ -126,4 +140,68 @@ h1 {
 .box-2048 {
   background-color: #ecc230;
   color: white;
+}
+
+
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 23px;
+  z-index: 9999;
+  font-size: 5.8em;
+  color: #313030;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.back-button i {
+  transition: transform 0.3s ease;
+}
+.back-button:hover i {
+  transform: scale(1.2);
+  color: #313030;
+}
+.logo {
+  position: fixed;
+  top: 10px;   /* Distância do topo da tela */
+  right: 10px; /* Distância da borda direita */
+  width: 180px; /* Largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  z-index: 1000; /* Garante que a logo fique acima de outros elementos */
+}
+
+.cover-screen {
+  text-align: center; /* Para centralizar o conteúdo dentro do <div> */
+  padding: 20px;
+}
+
+#over-text {
+  font-size: 4rem; /* Aumenta o tamanho do texto "Game Over" */
+  font-weight: bold; /* Deixa o texto em negrito */
+  color: #000000; /* Altera a cor para vermelho (opcional) */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+button {
+  font-size: 1.5rem; /* Aumenta o tamanho da fonte do botão */
+  padding: 4px 30px; /* Aumenta o tamanho do botão */
+  background-color: #000000; /* Cor de fundo verde */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  transition: background-color 0.3s ease; /* Transição suave para a cor do fundo */
+}
+
+button:hover {
+  background-color: #3f3f3c; /* Cor do botão quando passar o mouse */
+}
+
+#result {
+  font-size: 2.5rem; /* Aumenta o tamanho da pontuação */
+  font-weight: bold; /* Deixa a pontuação em negrito */
+  color: #333; /* Cor escura, ou escolha a cor que preferir */
+  margin-top: -30px; /* Adiciona um espaço acima da pontuação */
 }

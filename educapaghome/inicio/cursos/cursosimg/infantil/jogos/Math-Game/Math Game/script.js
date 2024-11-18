@@ -52,7 +52,7 @@ const questionGenerator = () => {
     if (userInput) {
       //If the user guessed correct answer
       if (userInput == answerValue) {
-        stopGame(`Yippie!! <span>Correct</span> Answer`);
+        stopGame(`Correto <span>  Continue Assim!</span>`);
       }
       //If user inputs operator other than +,-,*
       else if (operatorQuestion && !operators.includes(userInput)) {
@@ -61,7 +61,7 @@ const questionGenerator = () => {
       }
       //If user guessed wrong answer
       else {
-        stopGame(`Opps!! <span>Wrong</span> Answer`);
+        stopGame(`Tente<span> Novamente</span>`);
       }
     }
     //If user input is empty
@@ -87,7 +87,7 @@ startBtn.addEventListener("click", () => {
 //Stop Game
 const stopGame = (resultText) => {
   result.innerHTML = resultText;
-  startBtn.innerText = "Restart";
+  startBtn.innerText = "Reiniciar";
   controls.classList.remove("hide");
   startBtn.classList.remove("hide");
 };

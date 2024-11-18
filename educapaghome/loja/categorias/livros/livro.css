@@ -147,6 +147,7 @@ ul li a:hover::after {
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 20px; /* Espaço entre os itens */
+    margin-top: 50px;
 }
 
 .category-item {
@@ -311,6 +312,7 @@ ul li a:hover::after {
     margin-top: 10px; /* Espaçamento acima do botão */
     display: inline-block; /* Para permitir margens */
     transition: background-color 0.3s; /* Transição suave */
+    border: none;
 }
 
 .buy-button:hover {

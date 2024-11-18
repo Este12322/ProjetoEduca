@@ -1,29 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tetris </title>
+  <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  <title>Tetris</title>
   <meta charset="UTF-8">
+  <h1>Tetris</h1>
   <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
 
-  body {
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    body {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+      position: relative;
+    }
 
-  canvas {
-    border: 1px solid white;
-  }
+    canvas {
+      border: 1px solid white;
+      margin-left: 2rem;
+      margin-top: 0rem;
+    }
+
+    .score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 10px;
+      left: 23px;
+      z-index: 9999;
+      font-size: 5.8em;
+      color: #313030;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .logo {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 180px;
+      height: auto;
+      z-index: 1000;
+    }
+
+    .reiniciar-link {
+      text-decoration: none;
+    }
+
+    .reiniciar-button {
+      margin-top: 43rem;
+      margin-left: -13rem;
+      background-color: #131311;
+      color: white;
+      font-size: 40px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .reiniciar-button:hover {
+      background-color: #427434;
+    }
+
+    h1 {
+      position: absolute;
+      margin-top:-37.5rem;
+      left: 50.5%;
+      transform: translate(-50%, -50%);
+      color: rgb(253, 254, 255);
+      font-size: 3rem;
+    }
+
+    .score{
+      margin-top: 0rem;
+      margin-left: 27rem;
+    }
   </style>
 </head>
 <body>
-<canvas width="320" height="640" id="game"></canvas>
+  <a href="/educapaghome/jogos/jogos.html#jogos" id="back-button" class="back-button">
+    <i class="fa-solid fa-circle-arrow-left"></i>
+  </a>
+  <img src="/img/logotra.png" class="logo" alt="Logo" />
+  <canvas width="320" height="640" id="game"></canvas>
+  <a href="/educapaghome/jogos/jogoscodigo/tetris/tetris.html" class="reiniciar-link">
+    <button class="reiniciar-button">Reiniciar</button>
+  </a>
 
+  <div class="highscore">
+    Highscore: <span id="highscore">0</span>
+  </div>
 <script>
 // https://tetris.fandom.com/wiki/Tetris_Guideline
 
@@ -317,6 +401,38 @@ document.addEventListener('keydown', function(e) {
 rAF = requestAnimationFrame(loop);
 
 
+let score = 0;  // Pontuação atual
+let highscore = 0;  // Recorde de pontuação
+
+// Atualiza a pontuação na tela
+function updateScore() {
+  document.getElementById('score').innerText = score;
+}
+
+// Atualiza o recorde de pontuação
+function updateHighscore() {
+  if (score > highscore) {
+    highscore = score;
+  }
+  document.getElementById('highscore').innerText = highscore;
+}
+
+// Dentro da função 'placeTetromino()', onde as linhas são removidas:
+for (let row = playfield.length - 1; row >= 0; ) {
+  if (playfield[row].every(cell => !!cell)) {
+    score++;  // Aumenta a pontuação por cada linha removida
+    updateHighscore(); // Atualiza o recorde de pontuação
+    for (let r = row; r >= 0; r--) {
+      for (let c = 0; c < playfield[r].length; c++) {
+        playfield[r][c] = playfield[r-1][c];
+      }
+    }
+  } else {
+    row--;
+  }
+}
+
+updateScore();  // Atualiza a pontuação na tela
 
 </script>
 </body>

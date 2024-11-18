@@ -43,6 +43,25 @@
             <div class="carousel-container">
                 <button class="carousel-control prev">&#x276E;</button>
                 <div class="carousel">
+                    
+                    <div class="category-item">
+                        <a href="/educapaghome/loja/categorias/livros/livroscategoria/psicologia.html">
+                            <img src="/educapaghome/loja/categorias/livros/generodelivros/psicologa.jpg" alt="Psicologia e Filosofia">
+                            <p>Psicologia e Filosofia</p>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="/educapaghome/loja/categorias/livros/livroscategoria/culinaria.html">
+                            <img src="/educapaghome/loja/categorias/livros/generodelivros/culinaria.jpg" alt="Culinária e Gastronomia">
+                            <p>Culinária e Gastronomia</p>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="/educapaghome/loja/categorias/livros/livroscategoria/infantil.html">
+                            <img src="/educapaghome/loja/categorias/livros/generodelivros/infantil.jpg" alt="Infantil e Juvenil">
+                            <p>Infantil e Juvenil</p>
+                        </a>
+                    </div>
                     <div class="category-item">
                         <a href="/educapaghome/loja/categorias/livros/livroscategoria/educacionais.html">
                             <img src="/educapaghome/loja/categorias/livros/generodelivros/estudo.jpg" alt="Livros Escolares">
@@ -95,24 +114,6 @@
                         <a href="/educapaghome/loja/categorias/livros/livroscategoria/negocios.html">
                             <img src="/educapaghome/loja/categorias/livros/generodelivros/negocio.jpg" alt="Negócios e Economia">
                             <p>Negócios e Economia</p>
-                        </a>
-                    </div>
-                    <div class="category-item">
-                        <a href="/educapaghome/loja/categorias/livros/livroscategoria/psicologia.html">
-                            <img src="/educapaghome/loja/categorias/livros/generodelivros/psicologa.jpg" alt="Psicologia e Filosofia">
-                            <p>Psicologia e Filosofia</p>
-                        </a>
-                    </div>
-                    <div class="category-item">
-                        <a href="/educapaghome/loja/categorias/livros/livroscategoria/culinaria.html">
-                            <img src="/educapaghome/loja/categorias/livros/generodelivros/culinaria.jpg" alt="Culinária e Gastronomia">
-                            <p>Culinária e Gastronomia</p>
-                        </a>
-                    </div>
-                    <div class="category-item">
-                        <a href="/educapaghome/loja/categorias/livros/livroscategoria/infantil.html">
-                            <img src="/educapaghome/loja/categorias/livros/generodelivros/infantil.jpg" alt="Infantil e Juvenil">
-                            <p>Infantil e Juvenil</p>
                         </a>
                     </div>
                 </div>
@@ -227,74 +228,11 @@
     </main>
 
     <!-- Rodapé da página -->
-    <footer>
-        <p>&copy; 2024 Loja de Livros. Todos os direitos reservados.</p>
-        <div class="social-icons">
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://instagram.com">Instagram</a>
-        </div>
+   <footer>
+        <p>&copy; 2024 Educa Loja. Todos os direitos reservados.</p>
     </footer>
-<script>
-    const carousel = document.querySelector('.carousel');
-const prevBtn = document.querySelector('.carousel-control.prev');
-const nextBtn = document.querySelector('.carousel-control.next');
-let currentSlide = 0;
-
-const totalItems = document.querySelectorAll('.category-item').length;
-const visibleItems = 5; // Agora mostra 4 itens visíveis
-const itemWidth = document.querySelector('.category-item').offsetWidth + 20; // Largura do item + gap
-
-// Duplicar os itens para criar o loop
-const firstItems = [...document.querySelectorAll('.category-item')].slice(0, visibleItems);
-firstItems.forEach(item => {
-    const clone = item.cloneNode(true);
-    carousel.appendChild(clone); // Clona os primeiros itens no final para criar o efeito de loop
-});
-
-// Função para mover o carrossel
-function moveCarousel() {
-    carousel.style.transition = 'transform 0.5s ease-in-out';
-    carousel.style.transform = `translateX(-${currentSlide * itemWidth}px)`;
-}
-
-// Setas de controle
-prevBtn.addEventListener('click', () => {
-    if (currentSlide > 0) {
-        currentSlide--;
-        moveCarousel();
-    }
-});
-
-nextBtn.addEventListener('click', () => {
-    currentSlide++;
-    moveCarousel();
-    
-    // Voltar ao início sem transição quando chegar ao final
-    if (currentSlide === totalItems) {
-        setTimeout(() => {
-            carousel.style.transition = 'none'; // Remove a transição
-            currentSlide = 0;
-            carousel.style.transform = `translateX(0px)`; // Volta ao início
-        }, 500); // Tempo igual ao da transição (0.5s)
-    }
-});
-
-// Movimento automático (opcional)
-setInterval(() => {
-    currentSlide++;
-    moveCarousel();
-    
-    if (currentSlide === totalItems) {
-        setTimeout(() => {
-            carousel.style.transition = 'none';
-            currentSlide = 0;
-            carousel.style.transform = `translateX(0px)`;
-        }, 500);
-    }
-}, 3000); // Tempo de 3 segundos para rotação automática
-
-</script>                  
+    <script src="/educapaghome/loja/categorias/produtos.js"></script>                  
+              
 
 </body>
 </html>

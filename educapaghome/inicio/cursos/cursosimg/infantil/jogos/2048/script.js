@@ -1,5 +1,4 @@
 let grid = document.querySelector(".grid");
-const startButton = document.getElementById("start-button");
 const container = document.querySelector(".container");
 const coverScreen = document.querySelector(".cover-screen");
 const result = document.getElementById("result");
@@ -80,8 +79,7 @@ const gameOverCheck = () => {
     coverScreen.classList.remove("hide");
     container.classList.add("hide");
     overText.classList.remove("hide");
-    result.innerText = `Final score: ${score}`;
-    startButton.innerText = "Restart Game";
+    result.innerText = `Pontuação: ${score}`;
   }
 };
 
@@ -94,13 +92,9 @@ const generateTwo = () => {
       let element = document.querySelector(
         `[data-position = '${randomRow}_${randomCol}']`
       );
-      element.innerHTML = 2;
       element.classList.add("box-2");
-    } else {
-      generateTwo();
+      element.innerText = "2";
     }
-  } else {
-    gameOverCheck();
   }
 };
 
@@ -113,13 +107,9 @@ const generateFour = () => {
       let element = document.querySelector(
         `[data-position= '${randomRow}_${randomCol}']`
       );
-      element.innerHTML = 4;
       element.classList.add("box-4");
-    } else {
-      generateFour();
+      element.innerText = "4";
     }
-  } else {
-    gameOverCheck();
   }
 };
 
@@ -298,14 +288,12 @@ const startGame = () => {
     [0, 0, 0, 0],
     [0, 0, 0, 0],
   ];
-  container.classList.remove("hide");
-  coverScreen.classList.add("hide");
   createGrid();
   generateTwo();
   generateTwo();
 };
 
-startButton.addEventListener("click", () => {
+window.onload = () => {
   startGame();
-  swipeDirection = "";
-});
+  setInterval(gameOverCheck, 200);
+};

@@ -308,18 +308,18 @@ video {
 }
 
 .ingles{
-    background-color: #5ca369;
+    background-color: #064438;
 }
 
 .ingles span {
-    color: #007073;
+    color: #30999d;
     font-size: 45px;
 }
 
 .videoingles h1{
-    color: #9ce27e;
+    color: #7ed6e2;
     margin-left: 6.5rem;
-    margin-top: -38px;
+    margin-top: -48px;
     font-size: 30px;
     
 }
@@ -331,9 +331,11 @@ video {
 
 .jogos {
     background-color: #007073;
+    text-decoration: none;
 }
 
 .jogos img {
+    border: #9ce27e;
     width: 400px;
     height: 280px;
     border-radius: 40px;
@@ -343,10 +345,10 @@ video {
 
 .jogo {
     display: flex;
-    gap: 70px; /* Espaço entre as imagens */
+    gap: 30px; 
     margin-left: 10px;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza as imagens */
+    justify-content: center; 
 }
 
 .jogo a {
@@ -361,7 +363,7 @@ video {
     margin-top: 250px;
     margin-bottom: 0px;
     gap: 30px;
-    margin-left: -240px; /* Espaçamento abaixo do título */
+    margin-left: -210px; /* Espaçamento abaixo do título */
 }
 
 .jogos span {

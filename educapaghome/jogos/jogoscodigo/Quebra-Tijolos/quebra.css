@@ -1,10 +1,72 @@
 body {
     text-align: center;
+    background-color: #000;
 }
 
 #board {
+    margin-top: 0rem;
     background-color: black;
     border-top: 5px solid skyblue;
     border-left: 5px solid skyblue;
     border-right: 5px solid skyblue;
 }
+
+h1{
+  margin-top: 2rem;
+  font-size: 45px;
+  color: #fff;
+}
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 23px;
+    z-index: 9999;
+    font-size: 5.8em;
+    color: #313030;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .back-button i {
+    transition: transform 0.3s ease;
+  }
+  .back-button:hover i {
+    transform: scale(1.2);
+    color: #313030;
+  }
+  .logo {
+    position: fixed;
+    top: 10px;   /* Distância do topo da tela */
+    right: 10px; /* Distância da borda direita */
+    width: 180px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 1000; /* Garante que a logo fique acima de outros elementos */
+  }
+
+.reiniciar-link {
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+  }
+  
+  /* Estiliza o botão dentro do link */
+  .reiniciar-button {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 46.6%;
+    background-color: skyblue ; /* Cor de fundo do botão */
+    color: rgb(0, 0, 0);
+    font-size: 40px;              /* Cor do texto */
+    padding: 10px 20px;        /* Padding para ajustar o tamanho */
+    border: none;              /* Remove a borda do botão */
+    border-radius: 5px;        /* Bordas arredondadas */
+    font-size: 16px;           /* Tamanho da fonte */
+    cursor: pointer;          /* Aponta o cursor como mãozinha */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+  }
+  
+  /* Efeito de hover no botão */
+  .reiniciar-button:hover {
+    color: #fff;
+    background-color: #131311; /* Cor mais escura quando o botão for hover */
+  }

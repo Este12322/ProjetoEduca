@@ -10,7 +10,7 @@ let interval;
 let firstCard = false;
 let secondCard = false;
 
-//Items array
+// Itens do jogo (cartas)
 const items = [
   { name: "bee", image: "bee.png" },
   { name: "crocodile", image: "crocodile.png" },
@@ -26,118 +26,95 @@ const items = [
   { name: "toucan", image: "toucan.png" },
 ];
 
-//Initial Time
+// Variáveis do tempo e movimentos
 let seconds = 0,
   minutes = 0;
-//Initial moves and win count
 let movesCount = 0,
   winCount = 0;
 
-//For timer
+// Função para gerar o tempo
 const timeGenerator = () => {
   seconds += 1;
-  //minutes logic
   if (seconds >= 60) {
     minutes += 1;
     seconds = 0;
   }
-  //format time before displaying
   let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
   let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-  timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+  timeValue.innerHTML = `<span>Tempo:</span>${minutesValue}:${secondsValue}`;
 };
 
-//For calculating moves
+// Função para contar os movimentos
 const movesCounter = () => {
   movesCount += 1;
-  moves.innerHTML = `<span>Moves:</span>${movesCount}`;
+  moves.innerHTML = `<span>Movimentos:</span>${movesCount}`;
 };
 
-//Pick random objects from the items array
+// Função para gerar cartas aleatórias (embaralhamento)
 const generateRandom = (size = 4) => {
-  //temporary array
   let tempArray = [...items];
-  //initializes cardValues array
   let cardValues = [];
-  //size should be double (4*4 matrix)/2 since pairs of objects would exist
-  size = (size * size) / 2;
-  //Random object selection
+  size = (size * size) / 2; // O número de pares de cartas será metade do tamanho
   for (let i = 0; i < size; i++) {
     const randomIndex = Math.floor(Math.random() * tempArray.length);
     cardValues.push(tempArray[randomIndex]);
-    //once selected remove the object from temp array
-    tempArray.splice(randomIndex, 1);
+    tempArray.splice(randomIndex, 1); // Remove o item para não repetir
   }
   return cardValues;
 };
 
+// Função para criar o grid de cartas
 const matrixGenerator = (cardValues, size = 4) => {
-  gameContainer.innerHTML = "";
-  cardValues = [...cardValues, ...cardValues];
-  //simple shuffle
-  cardValues.sort(() => Math.random() - 0.5);
+  gameContainer.innerHTML = ""; // Limpa as cartas anteriores
+  cardValues = [...cardValues, ...cardValues]; // Duplicamos as cartas para ter pares
+  cardValues.sort(() => Math.random() - 0.5); // Embaralha as cartas
+
+  // Cria o grid de cartas
   for (let i = 0; i < size * size; i++) {
-    /*
-        Create Cards
-        before => front side (contains question mark)
-        after => back side (contains actual image);
-        data-card-values is a custom attribute which stores the names of the cards to match later
-      */
     gameContainer.innerHTML += `
-     <div class="card-container" data-card-value="${cardValues[i].name}">
+      <div class="card-container" data-card-value="${cardValues[i].name}">
         <div class="card-before">?</div>
         <div class="card-after">
-        <img src="${cardValues[i].image}" class="image"/></div>
-     </div>
-     `;
+          <img src="${cardValues[i].image}" class="image" />
+        </div>
+      </div>
+    `;
   }
-  //Grid
-  gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
 
-  //Cards
+  // Organiza o grid de cartas
+  gameContainer.style.gridTemplateColumns = `repeat(${size}, auto)`;
+
+  // Adiciona eventos de clique nas cartas
   cards = document.querySelectorAll(".card-container");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      //If selected card is not matched yet then only run (i.e already matched card when clicked would be ignored)
-      if (!card.classList.contains("matched")) {
-        //flip the cliked card
-        card.classList.add("flipped");
-        //if it is the firstcard (!firstCard since firstCard is initially false)
-        if (!firstCard) {
-          //so current card will become firstCard
+      if (!card.classList.contains("matched")) { // Ignora as cartas já pareadas
+        card.classList.add("flipped"); // Vira a carta
+        if (!firstCard) { // Se não há uma primeira carta
           firstCard = card;
-          //current cards value becomes firstCardValue
           firstCardValue = card.getAttribute("data-card-value");
         } else {
-          //increment moves since user selected second card
-          movesCounter();
-          //secondCard and value
+          movesCounter(); // Conta o movimento
           secondCard = card;
           let secondCardValue = card.getAttribute("data-card-value");
-          if (firstCardValue == secondCardValue) {
-            //if both cards match add matched class so these cards would beignored next time
+          if (firstCardValue === secondCardValue) { // Se as cartas combinarem
             firstCard.classList.add("matched");
             secondCard.classList.add("matched");
-            //set firstCard to false since next card would be first now
             firstCard = false;
-            //winCount increment as user found a correct match
             winCount += 1;
-            //check if winCount ==half of cardValues
-            if (winCount == Math.floor(cardValues.length / 2)) {
-              result.innerHTML = `<h2>You Won</h2>
-            <h4>Moves: ${movesCount}</h4>`;
+            if (winCount === Math.floor(cardValues.length / 2)) { // Se todas as cartas forem combinadas
+              result.innerHTML = `<h2>Parabéns Você Ganhou!</h2>
+                                  <h4>Movimentos: ${movesCount}</h4>`;
               stopGame();
             }
-          } else {
-            //if the cards dont match
-            //flip the cards back to normal
+          } else { // Se as cartas não combinarem
             let [tempFirst, tempSecond] = [firstCard, secondCard];
             firstCard = false;
             secondCard = false;
-            let delay = setTimeout(() => {
+            setTimeout(() => {
               tempFirst.classList.remove("flipped");
               tempSecond.classList.remove("flipped");
-            }, 900);
+            }, 1000); // Dá tempo para o jogador ver a carta
           }
         }
       }
@@ -145,38 +122,58 @@ const matrixGenerator = (cardValues, size = 4) => {
   });
 };
 
-//Start game
-startButton.addEventListener("click", () => {
-  movesCount = 0;
+// Função para parar o jogo
+const stopGame = () => {
+  clearInterval(interval); // Para o cronômetro
+  stopButton.classList.remove("hide"); // Mostra o botão de reiniciar
+};
+
+// Função para reiniciar o jogo
+stopButton.addEventListener("click", () => {
+  // Resetar variáveis de tempo, movimentos e estado do jogo
   seconds = 0;
   minutes = 0;
-  //controls amd buttons visibility
-  controls.classList.add("hide");
-  stopButton.classList.remove("hide");
-  startButton.classList.add("hide");
-  //Start timer
+  movesCount = 0;
+  winCount = 0;
+  result.innerHTML = "";
+  timeValue.innerHTML = `<span>Tempo:</span>00:00`;
+
+  // Vira todas as cartas de volta
+  cards.forEach(card => {
+    card.classList.remove("flipped", "matched");
+  });
+
+  // Reiniciar o jogo com um novo conjunto de cartas
+  matrixGenerator(generateRandom(), 4);
+
+  // Reiniciar o cronômetro
   interval = setInterval(timeGenerator, 1000);
-  //initial moves
-  moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
-  initializer();
+
+  // Esconder o botão de reiniciar
+  stopButton.classList.add("hide");
 });
 
-//Stop game
-stopButton.addEventListener(
-  "click",
-  (stopGame = () => {
-    controls.classList.remove("hide");
-    stopButton.classList.add("hide");
-    startButton.classList.remove("hide");
-    clearInterval(interval);
-  })
-);
-
-//Initialize values and func calls
-const initializer = () => {
-  result.innerText = "";
-  winCount = 0;
-  let cardValues = generateRandom();
-  console.log(cardValues);
-  matrixGenerator(cardValues);
+// Começar o jogo automaticamente ao carregar a página
+window.onload = () => {
+  matrixGenerator(generateRandom(), 4); // Inicia com um novo conjunto de cartas
+  interval = setInterval(timeGenerator, 1000); // Inicia o cronômetro
 };
+
+const StopButton = document.getElementById("stop");
+
+// Função para recarregar a página quando o botão "Reiniciar" for clicado
+stopButton.addEventListener("click", () => {
+  location.reload();  // Isso recarrega a página e reinicia o jogo
+});
+const checkWin = (cardValues) => {
+  if (winCount === Math.floor(cardValues.length / 2)) {
+    // Exibe a mensagem de vitória
+    result.innerHTML = `<h2>Parabéns! Você venceu!</h2>
+    <h4>Movimentos: ${movesCount}</h4>
+    <p>Você completou o jogo. Clique em "Reiniciar" para jogar novamente.</p>`;
+    
+    // Exibe o botão de reiniciar
+    stopButton.classList.remove("hide");
+  }
+};
+

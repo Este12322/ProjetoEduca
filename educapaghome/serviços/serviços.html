@@ -224,7 +224,7 @@
 
         <div class="agendamento-container" id="agendar">
             <h1 class="agendamento-title">Agendamento</h1><br>
-            <form class="agendamento-form" id="appointment-form" onsubmit="handleSubmit(event)">
+            <form class="agendamento-form" id="appointment-form" action="https://formspree.io/f/mzzbrgrj" method="POST">
                 <div class="form-group">
                     <label for="name">Nome Completo:</label>
                     <input type="text" id="name" name="name" required>
@@ -263,8 +263,6 @@
                     <input type="time" id="time" name="time" required>
                 </div><br>
                 <div class="form-group">
-                </div>
-                <div class="form-group">
                     <label for="payment">Opções de Pagamento:</label>
                     <select id="payment" name="payment" required>
                         <option value="">Selecione uma opção...</option>
@@ -273,8 +271,7 @@
                         <option value="debit-card">Cartão de Débito</option>
                         <option value="boleto">Boleto</option>
                     </select>
-                </div>
-                <br>
+                </div><br>
                 <div class="form-group">
                     <button type="submit" class="agendamento-button">Agendar</button>
                 </div>
@@ -286,53 +283,40 @@
             </div>
         </div>
         
+        <script>
+            const professionals = {
+                "aulas-particulares": ["Sem Preferência", "Prof. João Silva", "Prof. Ana Lima", "Prof. Lucas Costa", "Prof. Beatriz Rocha", "Prof. Felipe Almeida"],
+                "tutoria-mentoria": ["Sem Preferência", "Mentor Carlos Souza", "Mentora Juliana Ferreira", "Mentor Pedro Gomes", "Mentora Fernanda Lima", "Mentor Ricardo Alves"],
+                "consultas-psicologicas": ["Sem Preferência", "Dra. Mariana Costa", "Dr. Felipe Almeida", "Dr. Carlos Silva", "Dra. Ana Oliveira", "Dr. Pedro Santos", "Dra. Maria Ferreira", "Dr. Lucas Ribeiro"],
+                "palestras-educacionais": ["Sem Preferência", "Palestrante Ricardo Oliveira", "Palestrante Gabriela Santos", "Palestrante Ana Paula Mendes", "Palestrante Bruno Ribeiro", "Palestrante Luana Martins"],
+                "orientacao-vocacional": ["Sem Preferência", "Orientador Tiago Martins", "Orientadora Vanessa Pereira", "Orientador Felipe Cruz", "Orientadora Juliana Costa", "Orientador André Lima"],
+            };
         
-    
-    <script>
-        const professionals = {
-            "aulas-particulares": ["Sem Preferência", "Prof. João Silva", "Prof. Ana Lima", "Prof. Lucas Costa", "Prof. Beatriz Rocha", "Prof. Felipe Almeida"],
-            "tutoria-mentoria": ["Sem Preferência", "Mentor Carlos Souza", "Mentora Juliana Ferreira", "Mentor Pedro Gomes", "Mentora Fernanda Lima", "Mentor Ricardo Alves"],
-            "consultas-psicologicas": ["Sem Preferência", "Dra. Mariana Costa", "Dr. Felipe Almeida", "Dr. Carlos Silva", "Dra. Ana Oliveira", "Dr. Pedro Santos", "Dra. Maria Ferreira", "Dr. Lucas Ribeiro"],
-            "palestras-educacionais": ["Sem Preferência", "Palestrante Ricardo Oliveira", "Palestrante Gabriela Santos", "Palestrante Ana Paula Mendes", "Palestrante Bruno Ribeiro", "Palestrante Luana Martins"],
-            "orientacao-vocacional": ["Sem Preferência", "Orientador Tiago Martins", "Orientadora Vanessa Pereira", "Orientador Felipe Cruz", "Orientadora Juliana Costa", "Orientador André Lima"],
-        };
-    
-        function updateProfessionals() {
-            const areaSelect = document.getElementById('area');
-            const professionalSelect = document.getElementById('professional');
-            const selectedArea = areaSelect.value;
-    
-            professionalSelect.innerHTML = ""; // Limpa opções anteriores
-            if (selectedArea) {
-                professionals[selectedArea].forEach(professional => {
-                    const option = document.createElement('option');
-                    option.value = professional.toLowerCase().replace(/\s+/g, '-'); // Substitui espaços por hífens
-                    option.textContent = professional;
-                    professionalSelect.appendChild(option);
-                });
-            } else {
-                professionalSelect.innerHTML = "<option value=''>Selecione uma área primeiro...</option>";
+            function updateProfessionals() {
+                const areaSelect = document.getElementById('area');
+                const professionalSelect = document.getElementById('professional');
+                const selectedArea = areaSelect.value;
+        
+                professionalSelect.innerHTML = ""; // Limpa opções anteriores
+                if (selectedArea) {
+                    professionals[selectedArea].forEach(professional => {
+                        const option = document.createElement('option');
+                        option.value = professional.toLowerCase().replace(/\s+/g, '-'); // Substitui espaços por hífens
+                        option.textContent = professional;
+                        professionalSelect.appendChild(option);
+                    });
+                } else {
+                    professionalSelect.innerHTML = "<option value=''>Selecione uma área primeiro...</option>";
+                }
             }
-        }
-    
-        function handleSubmit(event) {
-            event.preventDefault(); // Impede o envio do formulário
-    
-            const dateInput = document.getElementById('date').value;
-            const selectedDate = new Date(dateInput);
-            const currentDate = new Date();
-    
-            // Verifica se a data é antes de 2024 ou se o mês já passou
-            if (selectedDate.getFullYear() < 2024 || 
-                (selectedDate.getFullYear() === 2024 && selectedDate.getMonth() < currentDate.getMonth())) {
-                alert("Não é possível agendar antes de 2024 ou para meses já passados.");
-                return;
-            }
-    
-            // Exibe a mensagem de confirmação
-            document.getElementById('confirmation-message').style.display = 'block';
-        }
-    </script>
+        
+            // Função para enviar o formulário
+            document.getElementById('appointment-form').onsubmit = function(event) {
+                event.preventDefault();
+                document.getElementById('confirmation-message').style.display = 'block';
+            };
+        </script>
+        
     
     
     
