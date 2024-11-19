@@ -38,13 +38,15 @@ function setGame() {
         board.push(row);
     }
 
-    // Clear winner message
-    document.getElementById("winner").innerText = "";
+    // Clear winner message and hide it initially
+    let winner = document.getElementById("winner");
+    winner.innerText = "";  // Clear any previous winner text
+    winner.style.display = "none";  // Hide the winner message
 }
 
 function setPiece() {
     if (gameOver) {
-        return;
+        return; // Do nothing if the game is over
     }
 
     let coords = this.id.split("-");
@@ -52,7 +54,7 @@ function setPiece() {
     let c = parseInt(coords[1]);
 
     if (r < 0) {
-        return;
+        return; // If the column is full, do nothing
     }
 
     board[r][c] = currPlayer;
@@ -70,7 +72,7 @@ function setPiece() {
 }
 
 function checkWinner() {
-    // horizontally
+    // Check for horizontal wins
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns - 3; c++) {
             if (board[r][c] != ' ') {
@@ -84,7 +86,7 @@ function checkWinner() {
         }
     }
 
-    // vertically
+    // Check for vertical wins
     for (let c = 0; c < columns; c++) {
         for (let r = 0; r < rows - 3; r++) {
             if (board[r][c] != ' ') {
@@ -98,7 +100,7 @@ function checkWinner() {
         }
     }
 
-    // diagonally down-right
+    // Check for diagonal wins (down-right)
     for (let r = 0; r < rows - 3; r++) {
         for (let c = 0; c < columns - 3; c++) {
             if (board[r][c] != ' ') {
@@ -112,7 +114,7 @@ function checkWinner() {
         }
     }
 
-    // diagonally up-right
+    // Check for diagonal wins (up-right)
     for (let r = 3; r < rows; r++) {
         for (let c = 0; c < columns - 3; c++) {
             if (board[r][c] != ' ') {
@@ -129,27 +131,34 @@ function checkWinner() {
 
 function setWinner(r, c) {
     let winner = document.getElementById("winner");
+
+    // Display the winner's message
     if (board[r][c] == playerRed) {
         winner.innerText = "Red Wins";
     } else {
         winner.innerText = "Yellow Wins";
     }
 
-    gameOver = true;
+    // Show the winner message
+    winner.style.display = "block";  // Make the winner message visible
+
+    gameOver = true;  // End the game
 }
 
 function restartGame() {
-    // Clear the board array
+    // Clear the board array and reset game variables
     board = [];
     currColumns = [5, 5, 5, 5, 5, 5, 5];
     gameOver = false;
 
-    // Clear board HTML
+    // Clear the board HTML
     document.getElementById("board").innerHTML = '';
 
-    // Clear winner message
-    document.getElementById("winner").innerText = "";
+    // Clear winner message and hide it
+    let winner = document.getElementById("winner");
+    winner.innerText = "";  // Clear the text
+    winner.style.display = "none";  // Hide the winner message
 
-    // Call setGame to initialize the board again
+    // Initialize the game again
     setGame();
 }

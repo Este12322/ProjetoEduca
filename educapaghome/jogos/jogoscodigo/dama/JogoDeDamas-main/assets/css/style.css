@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+     user-select: none; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+body{
+    background-color:#090909;
+    background-size: cover;
+}
+
+main{
+    /* transform: rotate(180deg); */
+    transition: .5s;
+    margin: auto;
+    border: 2px solid;
+    width: 520px;
+    height: 520px;
+    margin-top: 1rem;
+    background-image: url(/assets/img/boxClara2.png);
+    background-size: cover;
+}
+
+table{
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 2px solid;
+    background-color: gray;
+    margin-top: 8px;
+}
+
+td{
+    border: 2.5px solid;
+}
+
+td div{
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 80%;
+}
+
+.claras{
+    background-color: sandybrown;
+    background-image: url(/assets/img/claras.png);
+    background-size: cover;
+}
+
+.escuras{
+    background-color:  brown;
+    background-image: url(/assets/img/escuras.png);
+    background-size: cover;
+}
+
+.rainhaClara{
+    background-image: url(/assets/img/clarasRainha.png);
+    background-size: cover;
+}
+
+.rainhaEscura{
+    background-image: url(/assets/img/escurasRainha.png);
+    background-size: cover;
+}
+
+td:hover{
+    border-color: rgb(62, 186, 41);
+}
+
+tr:nth-of-type(odd) td:nth-of-type(odd), tr:nth-of-type(even) td:nth-of-type(even){
+    background-color: black;
+    background-image: url(/assets/img/boxEscura2.png);
+    background-size: cover;
+}
+
+tr:nth-of-type(odd) td:nth-of-type(even), tr:nth-of-type(even) td:nth-of-type(odd){
+    background-color: white;
+    background-image: url(/assets/img/boxClara1.png);
+    background-size: cover;
+}
+
+
+.back-button {
+    position: fixed;
+    top: 18px;
+    left: 23px;
+    z-index: 9999;
+    font-size: 5.8em;
+    color: #313030;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .back-button i {
+    transition: transform 0.3s ease;
+  }
+  .back-button:hover i {
+    transform: scale(1.2);
+    color: #313030;
+  }
+  .logo {
+    position: fixed;
+    top: 2px;   /* Distância do topo da tela */
+    right: 10px; /* Distância da borda direita */
+    width: 180px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 1000; /* Garante que a logo fique acima de outros elementos */
+  }
+
+  
+.reiniciar-link {
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+  }
+  
+  /* Estiliza o botão dentro do link */
+  .reiniciar-button {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 47%;
+    background-color: rgb(34, 174, 55) ; /* Cor de fundo do botão */
+    color: rgb(0, 0, 0);
+    font-size: 40px;              /* Cor do texto */
+    padding: 10px 20px;        /* Padding para ajustar o tamanho */
+    border: none;              /* Remove a borda do botão */
+    border-radius: 5px;        /* Bordas arredondadas */
+    font-size: 16px;           /* Tamanho da fonte */
+    cursor: pointer;          /* Aponta o cursor como mãozinha */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+  }
+  
+  /* Efeito de hover no botão */
+  .reiniciar-button:hover {
+    color: #fff;
+    background-color: #58914a; /* Cor mais escura quando o botão for hover */
+  }
+
+  
+h1{
+    font-size: 45px;
+    color: #ffffff;
+    margin-top: 3rem;
+    margin-left: 45rem;
+}

@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: cursive;
+    background-color: #000;
+    font-family: "Arial", sans-serif; /* Fonte padrão */
 }
 
 body {
     height: 100vh;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    background-color: black; /* Fundo preto */
+    color: white;  /* Texto branco */
 }
 
 main {
@@ -18,16 +20,19 @@ main {
     flex-direction: column;
     gap: 5px;
     align-items: center;
+    text-align: center; /* Centraliza o texto */
 }
 
 h1 {
-    text-align: center;
+    font-size: 4em;
+    margin-top: 2rem;
+    color: white; /* Título em branco */
 }
 
 hr {
     font-weight: bold;
     height: 3px;
-    background: black;
+    background: white; /* Linha horizontal branca */
     margin-bottom: 10px;
 }
 
@@ -42,6 +47,87 @@ hr {
     height: 100px;
     cursor: pointer;
     font-size: 50px;
-    background: aliceblue;
-    border: 1px solid black;
+    background: black; /* Fundo dos botões em preto */
+    border: 1px solid white; /* Borda branca */
+    color: white;  /* Texto branco para as peças */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
 }
+
+.game button:hover {
+    background-color: #61cb4685;  /* Cor um pouco mais clara quando o botão for hover */
+    transform: scale(1.1);  /* Efeito de aumento ao passar o mouse */
+}
+
+/* Opcional: alterando a cor do X e O */
+button.x {
+    color: white; /* Cor do X em branco */
+}
+
+button.o {
+    color: white; /* Cor do O em branco */
+}
+
+h2.currentPlayer {
+    font-size: 2em;
+    color: white;  /* Texto em branco para o jogador atual */
+}
+
+
+.back-button {
+    position: fixed;
+    top: 18px;
+    left: 23px;
+    z-index: 9999;
+    font-size: 5.8em;
+    color: #313030;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .back-button i {
+    transition: transform 0.3s ease;
+  }
+  .back-button:hover i {
+    transform: scale(1.2);
+    color: #303130;
+  }
+  .logo {
+    position: fixed;
+    top: 2px;   /* Distância do topo da tela */
+    right: 10px; /* Distância da borda direita */
+    width: 180px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 1000; /* Garante que a logo fique acima de outros elementos */
+  }
+
+  
+.reiniciar-link {
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+  }
+  
+  /* Estiliza o botão dentro do link */
+  .reiniciar-button {
+    display: flex;
+    margin-top: 35rem;
+    margin-left: -16.5rem;
+    background-color: rgb(34, 174, 55) ; /* Cor de fundo do botão */
+    color: rgb(0, 0, 0);
+    font-size: 40px;              /* Cor do texto */
+    padding: 10px 20px;        /* Padding para ajustar o tamanho */
+    border: none;              /* Remove a borda do botão */
+    border-radius: 5px;        /* Bordas arredondadas */
+    font-size: 16px;           /* Tamanho da fonte */
+    cursor: pointer;          /* Aponta o cursor como mãozinha */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+  }
+  
+  /* Efeito de hover no botão */
+  .reiniciar-button:hover {
+    color: #fff;
+    background-color: #58914a; /* Cor mais escura quando o botão for hover */
+  }
+  

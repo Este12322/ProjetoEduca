@@ -1,7 +1,16 @@
+/* Impede rolagem na tela */
+body, html {
+    margin: 0;               /* Remove as margens padrão do body e html */
+    padding: 0;              /* Remove o padding padrão */
+    height: 100%;            /* Faz o body ocupar 100% da altura da tela */
+    overflow: hidden;        /* Impede a rolagem na página */
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: rgb(165, 169, 172);
+    background-color: #000;
 }
 
 #board {
@@ -13,6 +22,25 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+#winner {
+    color: white;               /* Cor da fonte branca */
+    font-size: 24px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Deixar a fonte em negrito */
+    text-align: center;         /* Centralizar o texto */
+    padding: 20px;              /* Adicionar um pouco de espaço ao redor */
+    background-color: rgba(0, 0, 0, 0.6);  /* Cor de fundo semitransparente */
+    border-radius: 10px;        /* Bordas arredondadas */
+    position: absolute;         /* Posicionar na tela */
+    top: 50%;                   /* Centralizar verticalmente */
+    left: 50%;                  /* Centralizar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para realmente centralizar */
+    width: 100%;                /* Garantir que ocupe toda a largura disponível */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Sombra suave para destacar */
+    z-index: 1000;              /* Colocar o texto sobre outros elementos */
+    display: none; /* Esconde a mensagem até que o jogo termine */
+}
+
 
 .tile {
     height: 70px;
@@ -31,12 +59,55 @@ body {
     background-color: yellow;
 }
 
-#restartBtn {
-    background-color: rgb(109, 169, 189);
-    padding: 15px 30px;
-    font-size: 20px; 
-    color: rgb(208, 204, 204);
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
+img{
+    margin-top: 1rem;
+    border-radius: 20px;
 }
+#restartBtn{
+    display: flex;
+    margin-top: 8px;
+    margin-left: 47%;
+    background-color: rgb(19, 2, 250) ; /* Cor de fundo do botão */
+    color: rgb(255, 255, 255);
+    font-size: 40px;              /* Cor do texto */
+    padding: 10px 20px;        /* Padding para ajustar o tamanho */
+    border: none;              /* Remove a borda do botão */
+    border-radius: 5px;        /* Bordas arredondadas */
+    font-size: 16px;           /* Tamanho da fonte */
+    cursor: pointer;          /* Aponta o cursor como mãozinha */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+#restartBtn:hover {
+    color: #fff;
+    background-color: #0a2cef; /* Cor mais escura quando o botão for hover */
+  }
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 23px;
+    z-index: 9999;
+    font-size: 5.8em;
+    color: #313030;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .back-button i {
+    transition: transform 0.3s ease;
+  }
+  .back-button:hover i {
+    transform: scale(1.2);
+    color: #313030;
+  }
+  .logo {
+    position: fixed;
+    top: 10px;   /* Distância do topo da tela */
+    right: 10px; /* Distância da borda direita */
+    width: 180px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 1000; /* Garante que a logo fique acima de outros elementos */
+  }
+
