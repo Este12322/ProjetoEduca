@@ -1252,3 +1252,174 @@ nav img {
 .sub-menu a:active {
     background-color: #4a9e6a; /* Cor ao selecionar */
 }
+
+
+.conteudo-rodape {
+    background-color: #013927;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo-rodape-imagem {
+    width: 50%; /* A largura da imagem pode ser ajustada conforme necessário */
+    display: block;
+    margin-left: 20rem;
+}
+
+footer.conteudo-rodape {
+    background-color: #013927;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 50px 100px;
+    margin-top: 3rem;
+    background: #06182fc6;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Garante que as seções fiquem nas extremidades */
+    align-items: center; /* Alinha verticalmente no centro */
+    width: 100%;
+    margin-top: -40px;
+    max-width: 1200px; /* Limita a largura máxima para evitar que o rodapé fique muito largo em telas grandes */
+    gap: 50px; /* Espaçamento entre a imagem e as seções de texto */
+}
+
+.footer-container .sec {
+    margin: 0; /* Remove o margim padrão */
+}
+
+.footer-container .sec.aboutus {
+    width: 30%;
+    margin-top: 30px;
+    max-width: 450px; /* Largura da seção "Sobre nós" */
+}
+.footer-container .sec.aboutus p{
+    width: 500%;
+    font-size: 18px;
+    margin-left: -100px;
+    max-width: -450px; /* Largura da seção "Sobre nós" */
+}
+.footer-container .sec.aboutus h2{
+    width: 500%;
+    font-size: 24px;
+    margin-left: -100px;
+    max-width: -450px; /* Largura da seção "Sobre nós" */
+}
+
+.footer-container .sec.contactBx {
+    width: 30%;
+    margin-top: 50px;
+    max-width: 450px; /* Largura da seção "Informações de Contato" */
+}
+.footer-container .sec.contactBx span{
+    font-size: 21px;
+    max-width: -40px;
+    margin-top: 10px;
+    width: 100%; /* Largura da seção "Informações de Contato" */
+}
+.footer-container .sec.contactBx p{
+    font-size: 10px;
+    width: -50%; /* Largura da seção "Informações de Contato" */
+}
+
+
+.footer-container h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-container h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: green;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.contactBx .info li {
+    display: flex !important;
+    align-items: baseline;
+    margin-bottom: 16px;
+    margin-top: -10px;
+    margin-left: 55px;
+    
+}
+
+.contactBx .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contactBx .info li span {
+    color: #c7c7c7;
+}
+
+.contactBx .info li a {
+    color: #c7c7c7;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 22px;
+}
+
+.contactBx .info li a:hover {
+    color: #fff;
+}
+.contactBx .fa-brands{
+    width: 10px;
+    margin-left: -4.9 rem;
+}
+.contactBx .fa-regular{
+    width: 10px;
+    margin-left: -3rem;
+}
+
+.info-contacts {
+    margin-right: 150px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container .sec.aboutus,
+    .footer-container .sec.contactBx {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .conteudo-rodape-imagem {
+        width: 30%; /* Ajusta a largura da imagem em telas menores */
+    }
+}
+

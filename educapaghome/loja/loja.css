@@ -536,6 +536,10 @@ nav .fa {
     background-color: #155724; /* Cor do botão no hover */
 }
 
+.email-link {
+    color: white; /* Cor branca */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
 
 
 /* contato */

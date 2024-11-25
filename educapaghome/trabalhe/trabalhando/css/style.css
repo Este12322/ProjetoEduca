@@ -593,3 +593,16 @@ nav img {
     color: #34495e;
 }
   
+/* Estilo do link de email */
+.email-link {
+    color: white; /* Cor branca */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-decoration: none; /* Remove a linha embaixo */
+}
+
+/* Estilo do link quando o mouse passa sobre o link (hover) */
+.email-link:hover {
+    color: white; /* Mantém a cor branca */
+    font-weight: bold; /* Mantém o negrito */
+    text-decoration: none; /* Remove a linha embaixo também no hover */
+}

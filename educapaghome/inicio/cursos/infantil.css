@@ -214,14 +214,14 @@ body {
 }
 
 .conteudo h2 {
-    margin-top: 350px;
+    margin-top: 250px;
     color: #fff;
-    margin-left: 70px;
+    margin-left: 30px;
     font-size: 50px;
 }
 .conteudo p{
-    margin-left: 70px;
-    font-size: 25px;
+    margin-left: 20px;
+    font-size: 28px;
     margin-top: 10px;
     color: #fff;
     
@@ -318,7 +318,7 @@ video {
 
 .videoingles h1{
     color: #7ed6e2;
-    margin-left: 6.5rem;
+    margin-left: 8rem;
     margin-top: -48px;
     font-size: 30px;
     
@@ -326,7 +326,8 @@ video {
 
 .videoingles p{
     color: #fff;
-    margin-left: 45px;
+    margin-left: 65px;
+    margin-top: 1rem;
 }
 
 .jogos {
@@ -375,7 +376,265 @@ video {
     color: #ffffff;
     font-size: 45px;
     text-align: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    margin-top: 2rem; 
 }
 
 
+.conteudo-rodape {
+    background-color: #013927;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo-rodape-imagem {
+    width: 50%; /* A largura da imagem pode ser ajustada conforme necessário */
+    display: block;
+    margin-left: 20rem;
+}
+
+footer.conteudo-rodape {
+    background-color: #013927;
+    text-align: center;
+    padding: 20px;
+    width: 97.2%; /* Garante que o rodapé ocupe toda a largura */
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 50px 100px;
+    margin-top: 3rem;
+    background: #06182fc6;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Garante que as seções fiquem nas extremidades */
+    align-items: center; /* Alinha verticalmente no centro */
+    width: 100%;
+    margin-top: -40px;
+    max-width: 1200px; /* Limita a largura máxima para evitar que o rodapé fique muito largo em telas grandes */
+    gap: 50px; /* Espaçamento entre a imagem e as seções de texto */
+}
+
+.footer-container .sec {
+    margin: 0; /* Remove o margim padrão */
+}
+
+.footer-container .sec.aboutus {
+    width: 30%;
+    margin-top: 30px;
+    max-width: 450px; /* Largura da seção "Sobre nós" */
+}
+.footer-container .sec.aboutus p{
+    width: 500%;
+    font-size: 18px;
+    margin-left: -100px;
+    max-width: -450px; /* Largura da seção "Sobre nós" */
+}
+.footer-container .sec.aboutus h2{
+    width: 500%;
+    font-size: 24px;
+    margin-left: -100px;
+    max-width: -450px; /* Largura da seção "Sobre nós" */
+}
+
+.footer-container .sec.contactBx {
+    width: 30%;
+    margin-top: 50px;
+    max-width: 450px; /* Largura da seção "Informações de Contato" */
+}
+.footer-container .sec.contactBx span{
+    font-size: 21px;
+    max-width: -40px;
+    margin-top: 10px;
+    width: 100%; /* Largura da seção "Informações de Contato" */
+}
+.footer-container .sec.contactBx p{
+    font-size: 10px;
+    width: -50%; /* Largura da seção "Informações de Contato" */
+}
+
+
+.footer-container h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-container h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: green;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.contactBx .info li {
+    display: flex !important;
+    align-items: baseline;
+    margin-bottom: 16px;
+    margin-top: -10px;
+    margin-left: 55px;
+    
+}
+
+.contactBx .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contactBx .info li span {
+    color: #c7c7c7;
+}
+
+.contactBx .info li a {
+    color: #c7c7c7;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 22px;
+}
+
+.contactBx .info li a:hover {
+    color: #fff;
+}
+.contactBx .fa-brands{
+    width: 10px;
+}
+
+.info-contacts {
+    margin-right: 150px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container .sec.aboutus,
+    .footer-container .sec.contactBx {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .conteudo-rodape-imagem {
+        width: 30%; /* Ajusta a largura da imagem em telas menores */
+    }
+}
+
+/* Carrossel */
+/* Estilo para a seção principal com fundo e texto */
+.desenhos {
+    align-items: center;
+    background-color: #033108; /* Cor de fundo */
+    padding: 20px 0;  /* Adiciona um pouco de padding no topo e na base */
+    position: relative;  /* Necessário para a posição absoluta das setas */
+}
+
+/* Título (H1) centralizado e branco */
+h1 {
+    font-size: 3rem;
+    color: #fff;  /* Texto branco */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilos do carrossel */
+.carousel {
+    position: relative;
+    max-width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+/* Estilos das imagens */
+.carousel-item img {
+    width: 100%;        /* A imagem ocupará toda a largura disponível */
+    height: 600px;      /* Define uma altura fixa de 400px para as imagens */
+    object-fit: cover;  /* Garante que a imagem preencha a área sem distorcer, cortando partes dela, se necessário */
+    border-radius: 15px; /* Arredonda as bordas das imagens */
+}
+
+
+/* Títulos e descrições dentro do carrossel com texto branco e sombra */
+.carousel-item h2,
+.carousel-item p {
+    color: #fff;  /* Mudando o texto para branco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra no texto */
+}
+
+/* Estilo dos botões de navegação */
+.carousel-button {
+    position: absolute;
+    top: 50%;  /* Ajusta a posição das setas para o meio da tela */
+    z-index: 10;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para o botão */
+    color: white;  /* Cor dos botões */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);  /* Centraliza verticalmente */
+}
+
+/* Botão da esquerda */
+.carousel-button-left {
+    left: 10px;
+}
+
+/* Botão da direita */
+.carousel-button-right {
+    right: 10px;
+}
+
+/* Estilo do modal de vídeo */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);  /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal video {
+    max-width: 90%;
+    max-height: 80%;  /* Ajuste do tamanho do vídeo */
+}
+
+/* Cursor quando o modal é clicado */
+.modal:hover {
+    cursor: pointer;
+}
