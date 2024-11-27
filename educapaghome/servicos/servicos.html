@@ -230,67 +230,93 @@
             </div>
         </section>
 
-
-        <div class="agendamento-container" id="agendar">
-    <h1 class="agendamento-title">Agendamento</h1><br>
-    <form class="agendamento-form" id="appointment-form" action="enviar_email.php" method="POST">
-        <div class="form-group">
-            <label for="name">Nome Completo:</label>
-            <input type="text" id="name" name="name" required>
-        </div><br>
-        <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-        </div><br>
-        <div class="form-group">
-            <label for="phone">Telefone:</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div><br>
-        <div class="form-group">
-            <label for="area">Escolha a Área de Atendimento:</label>
-            <select id="area" name="area" required onchange="updateProfessionals()">
-                <option value="">Selecione...</option>
-                <option value="aulas-particulares">Aulas Particulares</option>
-                <option value="tutoria-mentoria">Tutoria e Mentoria</option>
-                <option value="consultas-psicologicas">Consultas Psicológicas</option>
-                <option value="palestras-educacionais">Palestras Educacionais</option>
-                <option value="orientacao-vocacional">Orientação Vocacional</option>
-            </select>
-        </div><br>
-        <div class="form-group">
-            <label for="professional">Escolha um Profissional:</label>
-            <select id="professional" name="professional" required>
-                <option value="">Selecione uma área primeiro...</option>
-            </select>
-        </div><br>
-        <div class="form-group">
-            <label for="date">Data do Agendamento:</label>
-            <input type="date" id="date" name="date" required>
-        </div><br>
-        <div class="form-group">
-            <label for="time">Horário:</label>
-            <input type="time" id="time" name="time" required>
-        </div><br>
-        <div class="form-group">
-            <label for="payment">Opções de Pagamento:</label>
-            <select id="payment" name="payment" required>
-                <option value="">Selecione uma opção...</option>
-                <option value="pix">Pix</option>
-                <option value="credit-card">Cartão de Crédito</option>
-                <option value="debit-card">Cartão de Débito</option>
-                <option value="boleto">Boleto</option>
-            </select>
-        </div><br>
-        <div class="form-group">
-            <button type="submit" class="agendamento-button">Agendar</button>
+        <div class="container">
+            <div class="agendamento-container" id="agendar">
+                <h1 class="agendamento-title">Agendamento</h1><br>
+                <!-- Atualizando a ação para FormSubmit -->
+                <form class="agendamento-form" id="appointment-form" action="https://formsubmit.co/educaescolaonline2024@gmail.com" method="POST">
+                    <!-- Nome Completo -->
+                    <div class="form-group">
+                        <label for="name">Nome Completo:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div><br>
+        
+                    <!-- E-mail -->
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div><br>
+        
+                    <!-- Telefone -->
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div><br>
+        
+                    <!-- Área de Atendimento -->
+                    <div class="form-group">
+                        <label for="area">Escolha a Área de Atendimento:</label>
+                        <select id="area" name="area" required onchange="updateProfessionals()">
+                            <option value="">Selecione...</option>
+                            <option value="aulas-particulares">Aulas Particulares</option>
+                            <option value="tutoria-mentoria">Tutoria e Mentoria</option>
+                            <option value="consultas-psicologicas">Consultas Psicológicas</option>
+                            <option value="palestras-educacionais">Palestras Educacionais</option>
+                            <option value="orientacao-vocacional">Orientação Vocacional</option>
+                        </select>
+                    </div><br>
+        
+                    <!-- Profissional -->
+                    <div class="form-group">
+                        <label for="professional">Escolha um Profissional:</label>
+                        <select id="professional" name="professional" required>
+                            <option value="">Selecione uma área primeiro...</option>
+                        </select>
+                    </div><br>
+        
+                    <!-- Data do Agendamento -->
+                    <div class="form-group">
+                        <label for="date">Data do Agendamento:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div><br>
+        
+                    <!-- Horário -->
+                    <div class="form-group">
+                        <label for="time">Horário:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div><br>
+        
+                    <!-- Opções de Pagamento -->
+                    <div class="form-group">
+                        <label for="payment">Opções de Pagamento:</label>
+                        <select id="payment" name="payment" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="pix">Pix</option>
+                            <option value="credit-card">Cartão de Crédito</option>
+                            <option value="debit-card">Cartão de Débito</option>
+                            <option value="boleto">Boleto</option>
+                        </select>
+                    </div><br>
+        
+                    <!-- Campo Hidden para redirecionamento -->
+                    <input type="hidden" name="_next" value="http://seu-site.com/pagina-de-confirmacao.html">
+        
+                    <!-- Botão de Enviar -->
+                    <div class="form-group">
+                        <button type="submit" class="agendamento-button">Agendar</button>
+                    </div>
+                </form>
+            
+                
+        
+                <!-- Mensagem de Confirmação -->
+                <div id="confirmation-message" style="display: none; text-align: center; margin-top: 20px;">
+                    <h2>✔️ Agendamento Confirmado!</h2>
+                    <p>Seu agendamento foi realizado com sucesso. Em breve, você receberá mais informações no seu e-mail.</p>
+                </div>
+            </div>
         </div>
-    </form>
-    
-    <div id="confirmation-message" style="display: none; text-align: center; margin-top: 20px;">
-        <h2>✔️ Agendamento Confirmado!</h2>
-        <p>Seu agendamento foi realizado com sucesso. Em breve, você receberá mais informações no seu e-mail.</p>
-    </div>
-</div>
+        
 
         <script>
             const professionals = {
