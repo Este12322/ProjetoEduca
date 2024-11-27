@@ -70,52 +70,47 @@
               </div>
         </section>
   <body>
-    <div class="container">
-      <div class="calendar">
-          <div class="month">
-              <div class="prev">&lt;</div>
-              <div class="date"></div>
-              <div class="next">&gt;</div>
-          </div>
-          <div class="weekdays">
-              <div>Dom</div>
-              <div>Seg</div>
-              <div>Ter</div>
-              <div>Qua</div>
-              <div>Qui</div>
-              <div>Sex</div>
-              <div>Sab</div>
-          </div>
-          <div class="days"></div>
-      </div>
-  
-      <div class="events">
-          <div class="no-event"><h3>Sem Eventos</h3></div>
-      
-  
-        <div class="add-event">
-            <button class="add-event-btn">Adicionar Evento</button>
+
+
+<div class="container">
+    <div class="calendar">
+        <div class="month">
+            <div class="prev">&lt;</div>
+            <div class="date"></div>
+            <div class="next">&gt;</div>
         </div>
+        <div class="weekdays">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sab</div>
+        </div>
+        <div class="days"></div>
+    </div>
+
+  
+
+    <div class="add-event-wrapper">
+        <div class="add-event-header">
+            <span class="title">Adicionar Evento</span>
+            <span class="close">&times;</span>
+        </div>
+        <div class="add-event-body">
+            <div class="add-event-input">
+                <input type="text" class="event-name" placeholder="Nome do Evento" />
+                <input type="text" class="event-location" placeholder="Local do Evento" />
+                <input type="time" class="event-time-from" placeholder="Hora de Início" />
+                <input type="time" class="event-time-to" placeholder="Hora de Fim" />
+            </div>
+        </div>
+        <div class="add-event-footer">
+            <button class="save-event-btn">Salvar Evento</button>
         </div>
     </div>
-  
-      <div class="add-event-wrapper">
-          <div class="add-event-header">
-              <span class="title">Adicionar Evento</span>
-              <span class="close">&times;</span>
-          </div>
-          <div class="add-event-body">
-              <div class="add-event-input">
-                  <input type="text" class="event-name" placeholder="Nome do Evento" />
-                  <input type="time" class="event-time-from" placeholder="Hora de Início" />
-                  <input type="time" class="event-time-to" placeholder="Hora de Fim" />
-              </div>
-          </div>
-          <div class="add-event-footer">
-              <button class="add-event-btn">Salvar Evento</button>
-          </div>
-      </div>
-  </div>
+</div></header>
   <script>
     function showMenu() {
         navLinks.style.right = "0";

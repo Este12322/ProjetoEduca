@@ -43,6 +43,7 @@ nav img {
     margin-top: -2rem;
     margin-left: -80px;
 }
+
 .nav-links {
     flex: 1;
     text-align: right;
@@ -55,12 +56,14 @@ nav img {
     display: inline-block;
     padding: 8px 12px;
     position: relative;
+    border: 2px solid #57b17b;  /* Borda para os links */
 }
 
 .nav-links ul li a {
     color: #ffffffe4;
     text-decoration: none;
     font-size: 22px;
+    padding: 10px;
 }
 
 .nav-links ul li {
@@ -82,7 +85,8 @@ nav img {
 }
 
 .nav-links ul li:hover::after {
-    width: 50%;
+    width: 80%;  /* Aumentando o efeito de hover */
+    transition: width 0.3s ease;
 }
 
 .text-box {
@@ -96,18 +100,15 @@ nav img {
 }
 
 .text-box h1 {
-    font-size: 89px;
+    font-size: 100px;  /* Aumentando o título */
 }
 
 .text-box p {
     margin: 10px 0 40px;
-    font-size: 23px;
+    font-size: 25px;  /* Aumentando o tamanho do texto */
     color: #fff;
 }
 
-.text-box h1{
-    color: #fff;
-}
 .hero-btn {
     display: inline-block;
     text-decoration: none;
@@ -133,11 +134,12 @@ nav .fa {
 
 @media(max-width: 700px) {
     .text-box h1 {
-        font-size: 20px;
+        font-size: 30px;  /* Reduzindo o título em telas pequenas */
     }
 
     .nav-links ul li {
         display: block;
+        padding: 12px;
     }
 
     .nav-links {
@@ -160,27 +162,50 @@ nav .fa {
         cursor: pointer;
     }
 
-    .nav .fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
+    .row {
+        flex-direction: column;
+    }
+
+    .campus-col {
+        flex-basis: 100%;  /* Expandindo para 100% em telas pequenas */
+    }
+
+    .course-col {
+        width: 100%;  /* Tornando as colunas 100% em telas pequenas */
     }
 }
 
-/* cursos */
+/* Cursos */
 .course {
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 40px;
     margin-bottom: 10px;
-    /* Reduz a margem inferior para 20px */
+    position: relative;
 }
 
+/* Aumentar o tamanho do vídeo */
+.video-container {
+    width: 100%; /* Aumenta a largura para 100% do contêiner pai */
+    height: 100%;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    position: relative;
+    background-color: #000;
+    /* border: 10px solid #18310e;  Borda do vídeo */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+video {
+    width: 100%; /* Ajuste a largura para ocupar 100% do contêiner */
+    height: 100%; /* Faz o vídeo preencher toda a altura do contêiner */
+}
+
+
 h1 {
-    font-size: 36px;
+    font-size: 45px;  /* Aumentando o tamanho do título */
     font-weight: 600;
     color: #4e9e20dd;
     margin-top: -60px;
@@ -202,13 +227,14 @@ p {
 }
 
 .course-col {
-    flex-basis: 31%;
+    width: 400px;
     background: #56715b;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
+    border: 5px solid #56715b;  /* Aumentando a borda */
 }
 
 .course-col img {
@@ -226,12 +252,7 @@ h3 {
 
 .course-col:hover {
     box-shadow: 0 0 20px rgba(6, 47, 4, 0.783);
-}
-
-@media(max-width: 700px) {
-    .row {
-        flex-direction: column;
-    }
+    border-color: #57b17b;  /* Alterando a cor da borda no hover */
 }
 
 .campus {
@@ -240,7 +261,6 @@ h3 {
     text-align: center;
     padding-top: 50px;
     margin-top: 0;
-    /* Remove a margem superior ou ajuste conforme necessário */
 }
 
 .campus-col {
@@ -250,6 +270,7 @@ h3 {
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    border: 5px solid #56715b;  /* Adicionando borda */
 }
 
 .campus-col img {
@@ -293,8 +314,8 @@ h3 {
     color: #fff;
 }
 
-/* outras abas */
-.container-principal h1{
+/* Outras Abas */
+.container-principal h1 {
     width: 80%;
     margin: auto;
     text-align: center;
@@ -302,24 +323,25 @@ h3 {
     margin-top: 0;
     margin-left: 80px;
 }
+
 .container-principal {
     margin-top: 30px;
     margin-left: 180px;
 }
 
-.container-principal img{
+.container-principal img {
     border-radius: 20px;
 }
 
 .container1 {
     display: flex;
-    gap: 30px;
+    gap: 40px;  /* Aumentando o espaço entre os itens */
 }
 
 .container2 {
     margin-top: 20px;
     display: flex;
-    gap: 30px;
+    gap: 40px;  /* Aumentando o espaço entre os itens */
 }
 
 .sub-menu {
@@ -330,6 +352,8 @@ h3 {
     padding: 10px;
     margin-top: 5px;
     z-index: 10;
+    border: 2px solid #4a9e6a;  /* Borda para o menu */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .sub-menu a {
@@ -337,25 +361,20 @@ h3 {
     text-decoration: none;
     display: block;
     padding: 8px;
-    border-radius: 15px; /* Adiciona arredondamento aos links */
-    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição suave */
+    border-radius: 15px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .sub-menu a:hover {
-    background-color: #7ae8a6; /* Cor ao passar o mouse */
-    transform: scale(1.05); /* Efeito de leve aumento */
+    background-color: #7ae8a6;
+    transform: scale(1.05); /* Leve aumento */
 }
 
-/* Adiciona estilo quando o item é selecionado (ativo) */
-.sub-menu a:active {
-    background-color: #4a9e6a; /* Cor ao selecionar */
+.nav-links ul li:hover .sub-menu {
+    display: block;
 }
 
-video {
-    width: 1080px;
-    height: 520px;
-    border: 5px solid #18310e;
-    border-radius: 10px;
-  }
-
- 
+.nav-links ul li {
+    position: relative;
+    display: inline-block;
+}
