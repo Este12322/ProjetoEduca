@@ -2,6 +2,8 @@
 
 * {
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 /* Faz parte do header/inicio */
@@ -12,11 +14,12 @@ body {
     height: 60vh;
     width: 100vw;
     overflow-x: hidden;
-    color:#013927
+    color: #ffffff;
+
 }
 
 .cabeçalho-menu {
-    background-color: #013927;
+    background-color: rgb(1, 57, 39);
     overflow: hidden;
     position: fixed;
     width: 100%;
@@ -26,8 +29,9 @@ body {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
+
 .cabeçalho-menu-item {
     display: block;
     color: white;
@@ -36,15 +40,18 @@ body {
     text-decoration: none;
     transition: background-color 0.3s;
 }
+
 .cabeçalho-menu-item:hover {
     background-color: #ddd;
-    color: black; 
+    color: black;
 }
+
 .cabeçalho-menu-item:active,
 .cabeçalho-menu-item:focus {
-    background-color: #43a271; 
-    color: white; 
+    background-color: #43a271;
+    color: white;
 }
+
 .login-button {
     background-color: #43a271;
     color: white;
@@ -52,45 +59,53 @@ body {
     text-decoration: none;
     border-radius: 20px;
     font-size: 16px;
-    margin-left: auto; 
+    margin-left: auto;
 }
+
 .header {
     background-color: #013927;
     color: #fff;
     text-align: center;
     padding: 0 20px;
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     position: relative;
 }
+
 .header-logo {
-    width: 600px; 
+    width: 600px;
     margin-bottom: 20px;
 }
+
 .header-text {
     text-align: center;
 }
+
 .inicio {
     text-align: center;
 }
+
 .header h1 {
     font-family: 'Brittany', sans-serif;
     font-size: 3em;
     margin: 0;
 }
+
 .line {
     width: 50px;
     height: 2px;
     background-color: white;
     margin: 10px auto;
 }
+
 .header p {
     font-size: 30px;
     margin: 20px 20px 10px 20px;
 }
+
 .button {
     display: inline-block;
     background-color: #43a271;
@@ -100,11 +115,12 @@ body {
     border-radius: 5px;
     font-size: 18px;
     margin-top: 20px;
-  
+
 }
+
 .section {
     padding: 60px 20px;
-    min-height: 100vh; 
+    min-height: 100vh;
     border-bottom: 1px solid #ddd;
     background-color: #f4f4f4;
 }
@@ -114,34 +130,49 @@ body {
 
 /* Faz da pagina sobre */
 #sobre {
-    background-color: #145631;
-}
-#sobre {
     position: relative;
     padding: 60px 20px;
-    min-height: 100vh; 
-    border-bottom: 1px solid #ddd;
+    min-height: 100vh;
     background-color: #14563f;
+    background-image: linear-gradient(rgba(1, 57, 39, 0.555), rgba(2, 19, 2, 0.705)), url('/images/sobre.png');
+    background-size: cover;  /* Faz com que a imagem ocupe todo o fundo sem distorcer */
+    background-position: center center;  /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat;  /* Impede que a imagem se repita */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;  /* Já está correto para alinhar à esquerda */
+    color: #fff;  /* Garante que o texto seja branco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);  /* Adiciona sombra ao texto para melhor legibilidade */
+    text-align: left;  /* Alinha o texto à esquerda */
 }
+
 #sobre h1 {
-    color: rgb(255, 255, 255);
     font-size: 60px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    margin-left: 60rem;
+    margin-top: 1rem;
 }
+
 #sobre p {
     color: #fff;
-    font-size: 40px; 
-    max-width: 600px; 
+    font-size: 25px;
+    max-width: 600px;
+    line-height: 1.5;
+    margin-left: 55rem;  /* Garante que o parágrafo também tenha o texto alinhado à esquerda */
 }
-#sobre video {
-    position: absolute;
-    right: 50px;
-    top: 260px;
-    width: 600px;
-    height: 400px;
+
+@media (max-width: 768px) {
+    #sobre h1 {
+        font-size: 40px;  /* Ajusta o tamanho do título para telas menores */
+    }
+
+    #sobre p {
+        font-size: 24px;  /* Ajusta o tamanho da descrição para telas menores */
+        max-width: 90%;  /* Ajusta a largura do texto */
+    }
 }
+
 
 
 
@@ -150,46 +181,61 @@ body {
 #serviços {
     background-color: #013927;
     padding: 60px 20px;
+    height: 2rem;
     text-align: center;
 }
+
 #serviços h1 {
     color: #cae6d5;
     font-size: 50px;
+    margin-top: -3.5rem;
 
 }
+
 #serviços h2 {
     color: rgb(255, 255, 255);
     font-size: 40px;
 }
+
 #serviços p {
     color: #fff;
-    font-size: 20px; 
-    max-width: 1000px; 
+    font-size: 20px;
+    max-width: 1000px;
 }
+
 .conteudo-secundario {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
+
 figure {
     flex: 1;
     max-width: 30%;
     margin: 0;
     padding: 10px;
 }
+
 img.conteudo-secundario-imagem1 {
-    width: 280px;
+    width: 300px;
     height: auto;
     border: 4px solid #162b24;
     border-radius: 20px;
+    margin-top: -2rem;
 }
-.conteudo-secundario h3, .conteudo-secundario p {
+
+.conteudo-secundario h3
+.conteudo-secundario p {
     margin: 10px 0;
+    margin-top: -2rem;
+
 }
+
 .button-container {
-    margin-top: 20px;
+    margin-top: -40px;
 }
+
 .button-container a {
     display: inline-block;
     padding: 10px 20px;
@@ -207,27 +253,31 @@ img.conteudo-secundario-imagem1 {
 
 
 /* Faz parte da pagina de cursos */
-#cursos h1{
+#cursos h1 {
     color: #fff;
-    font-size: 30px; 
+    font-size: 30px;
     text-align: center;
 }
+
 #cursos {
     background-color: #14563f;
     padding: 60px 20px;
     text-align: center;
     color: #fff;
 }
+
 #cursos h1 {
     font-size: 50px;
     margin: 0;
 }
+
 .line {
     width: 100px;
     height: 2px;
     background-color: #fff;
     margin: 20px auto;
 }
+
 .curso-container {
     display: flex;
     justify-content: space-between;
@@ -236,6 +286,7 @@ img.conteudo-secundario-imagem1 {
     max-width: 1400px;
     margin: 0 auto;
 }
+
 .curso-item {
     background-color: #14563f;
     border-radius: 10px;
@@ -246,6 +297,7 @@ img.conteudo-secundario-imagem1 {
     text-align: center;
     border: 2px solid #ffffff;
 }
+
 .curso-item img {
     width: 90%;
     height: auto;
@@ -253,13 +305,16 @@ img.conteudo-secundario-imagem1 {
     border: 5px solid #ffffff;
     border-radius: 20px;
 }
+
 .curso-text {
     padding: 10px;
 }
+
 .curso-text h2 {
     font-size: 30px;
     margin: 10px 0;
 }
+
 .curso-text p {
     font-size: 30px;
 }
@@ -268,6 +323,198 @@ img.conteudo-secundario-imagem1 {
 
 
 /* Faz parte da pagina de blog*/
+body {
+    background-color: #14563f;
+}
+
+.lina {
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    margin: 10px auto;
+    margin-top: -1.8rem;
+}
+.wrapper {
+    max-width: 100px;
+    width: 100%;
+    height: 500%;
+    position: relative;
+    margin-top: 40px;
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.wrapper i#left {
+    left: -22px;
+}
+
+.wrapper i#right {
+    right: -22px;
+}
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 25px); /* Calcular com o espaço */
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin-left: 13px;
+    padding-right: 25px; /* Pequeno espaço no final */
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 900px) {
+    .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+.container-carousel h2 {
+    font-size: 44px; 
+}
+.container-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    height: 500px;
+    list-style: none;
+    background-color: #14563f;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #fff;
+}
+
+.card .img {
+    background: green;
+    width: 170px;
+    height: 168px;
+    border-radius: 50%;
+    margin-bottom: 60px;
+}
+
+.card .img img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.card h2 {
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: -3rem;
+    font-size: 30px;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    text-align: center; 
+}
+
+.card span {
+    color: #ffffff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    text-align: center; 
+}
+
+.no-transition {
+    transition: none !important;
+}
+
+#linha-horizontal {
+    width: 210px;
+    border: 1px solid #ffffff;
+    margin-bottom: 2rem;
+}
+
+.imginicio {
+    width: 100%;
+    overflow: hidden;
+}
+
+.imginicio img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Para dispositivos menores */
+@media (max-width: 600px) {
+    .imginicio img {
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/* Faz parte do rodapé */
+.conteudo-rodape {
+    background-color: #013927;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo-rodape-imagem {
+    width: 20%;
+}
 
 
 
@@ -280,10 +527,13 @@ img.conteudo-secundario-imagem1 {
 /* Faz parte da pagina de frases */
 #frases {
     position: relative;
-    padding: 0; /* Remove o padding da seção */
-    min-height: 100vh; /* Garante que a altura mínima é 100vh */
+    padding: 0;
+    /* Remove o padding da seção */
+    min-height: 100vh;
+    /* Garante que a altura mínima é 100vh */
     background-color: #000;
-    overflow: hidden; /* Esconde o conteúdo que sai da área visível */
+    overflow: hidden;
+    /* Esconde o conteúdo que sai da área visível */
 }
 
 .slideshow-container {
@@ -296,9 +546,12 @@ img.conteudo-secundario-imagem1 {
     max-height: 100%;
     overflow: hidden;
     background-color: #000;
-    border-radius: 0; /* Remove bordas arredondadas */
-    box-shadow: none; /* Remove a sombra */
-    margin: 0; /* Remove a margem */
+    border-radius: 0;
+    /* Remove bordas arredondadas */
+    box-shadow: none;
+    /* Remove a sombra */
+    margin: 0;
+    /* Remove a margem */
 }
 
 .slide {
@@ -326,7 +579,8 @@ img.conteudo-secundario-imagem1 {
     border-radius: 5px;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -345,7 +599,8 @@ img.conteudo-secundario-imagem1 {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -353,7 +608,7 @@ img.conteudo-secundario-imagem1 {
 
 
 /* Faz parte da pagina de comentarios */
-#comentarios{
+#comentarios {
     background-color: #cae6d5;
 }
 
@@ -364,51 +619,55 @@ img.conteudo-secundario-imagem1 {
 #contato {
     background-color: #005034;
 }
-#contato h1{
+
+#contato h1 {
     font-family: "Qwitcher Grypen", cursive;
-    color:#ffffff;
+    color: #ffffff;
     text-align: center;
     font-size: 100px;
 }
 
-#contato h2{
+#contato h2 {
     font-family: "Roboto", cursive;
-    color:#9fcfbb;
+    color: #9fcfbb;
     text-align: center;
     font-size: 50px;
 }
-#contato p{
+
+#contato p {
     font-family: "Roboto", cursive;
-    color:#f6f6f6;
+    color: #f6f6f6;
     text-align: center;
     font-size: 40px;
 }
-#contato i{
-    color:#ffffff;
+
+#contato i {
+    color: #ffffff;
     font-size: 60px;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-#contato ul{
-    color:#ffffff;
+#contato ul {
+    color: #ffffff;
     font-size: 60px;
     text-align: center;
     display: flex;
     justify-content: space-around;
-    list-style:none;
+    list-style: none;
 }
 
-#contato h3{
+#contato h3 {
     font-family: "Roboto", cursive;
-    color:#43a271;
+    color: #43a271;
     text-align: center;
     font-size: 40px;
 }
-#contato h4{
+
+#contato h4 {
     font-family: "Roboto", cursive;
-    color:#9fcfbb;
+    color: #9fcfbb;
     text-align: center;
     font-size: 40px;
 }
@@ -418,6 +677,7 @@ img.conteudo-secundario-imagem1 {
 
 
 /* Faz parte do rodapé */
+
 .conteudo-rodape {
     background-color: #013927;
     text-align: center;
@@ -425,8 +685,184 @@ img.conteudo-secundario-imagem1 {
 }
 
 .conteudo-rodape-imagem {
-    width: 20%;
+    width: 50%;
+    /* A largura da imagem pode ser ajustada conforme necessário */
+    display: block;
+    margin-left: 20rem;
 }
+
+footer.conteudo-rodape {
+    background-color: #013927;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    /* Garante que o rodapé ocupe toda a largura */
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 50px 100px;
+    background: #06182fc6;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    /* Garante que as seções fiquem nas extremidades */
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    width: 100%;
+    margin-top: -40px;
+    max-width: 1200px;
+    /* Limita a largura máxima para evitar que o rodapé fique muito largo em telas grandes */
+    gap: 50px;
+    /* Espaçamento entre a imagem e as seções de texto */
+}
+
+.footer-container .sec {
+    margin: 0;
+    /* Remove o margim padrão */
+}
+
+.footer-container .sec.aboutus {
+    width: 30%;
+    margin-top: 30px;
+    max-width: 450px;
+    /* Largura da seção "Sobre nós" */
+}
+
+.footer-container .sec.aboutus p {
+    width: 500%;
+    font-size: 18px;
+    margin-left: -100px;
+    max-width: -450px;
+    /* Largura da seção "Sobre nós" */
+}
+
+.footer-container .sec.aboutus h2 {
+    width: 500%;
+    font-size: 24px;
+    margin-left: -100px;
+    max-width: -450px;
+    /* Largura da seção "Sobre nós" */
+}
+
+.footer-container .sec.contactBx {
+    width: 30%;
+    margin-top: 50px;
+    max-width: 450px;
+    /* Largura da seção "Informações de Contato" */
+}
+
+.footer-container .sec.contactBx span {
+    font-size: 21px;
+    max-width: -40px;
+    margin-top: 10px;
+    width: 100%;
+    /* Largura da seção "Informações de Contato" */
+}
+
+.footer-container .sec.contactBx p {
+    font-size: 10px;
+    width: -50%;
+    /* Largura da seção "Informações de Contato" */
+}
+
+
+.footer-container h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-container h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: green;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.contactBx .info li {
+    display: flex !important;
+    align-items: baseline;
+    margin-bottom: 16px;
+    margin-top: -10px;
+    margin-left: 55px;
+
+}
+
+.contactBx .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contactBx .info li span {
+    color: #c7c7c7;
+}
+
+.contactBx .info li a {
+    color: #c7c7c7;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 22px;
+    margin-left: px;
+}
+
+.contactBx .info li a:hover {
+    color: #fff;
+}
+
+.contactBx .fa-brands {
+    width: 10px;
+}
+
+.info-contacts {
+    margin-right: 150px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container .sec.aboutus,
+    .footer-container .sec.contactBx {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .conteudo-rodape-imagem {
+        width: 30%;
+        /* Ajusta a largura da imagem em telas menores */
+    }
+}
+
+
 
 
 /* Media do header*/
@@ -434,23 +870,29 @@ img.conteudo-secundario-imagem1 {
     .cabeçalho-menu-item {
         padding: 10px 12px;
     }
+
     .login-button {
         padding: 8px 16px;
         font-size: 16px;
     }
+
     .header-logo {
         width: 120px;
     }
+
     .header h1 {
         font-size: 2.5em;
     }
+
     .header p {
         font-size: 16px;
     }
+
     .button {
         font-size: 16px;
         padding: 8px 16px;
     }
+
     .section {
         padding: 40px 10px;
     }
@@ -461,37 +903,45 @@ img.conteudo-secundario-imagem1 {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .cabeçalho-menu-item {
         display: block;
         padding: 10px 0;
         text-align: left;
         width: 100%;
     }
+
     .login-button {
         margin-left: 0;
         width: 100%;
         text-align: center;
         margin-top: 10px;
     }
+
     .header {
         padding: 100px 10px 20px;
-        margin-top: 0; 
+        margin-top: 0;
     }
+
     .header-logo {
         width: 100px;
     }
+
     .header h1 {
         font-size: 2em;
     }
+
     .header p {
         font-size: 40px;
         margin: 20px 0;
         text-align: center;
     }
+
     .button {
         font-size: 14px;
         padding: 6px 12px;
     }
+
     .section {
         padding: 30px 10px;
     }
