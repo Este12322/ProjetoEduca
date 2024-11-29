@@ -752,31 +752,76 @@ footer p{
     margin-inline-end: 0px;
     unicode-bidi: isolate;
 }
-.contactBx .info li {
-    display: flex !important;
-    margin-bottom: 16px;
-    margin-top: -10px;
+
+.contactBx .info {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    display: flex; /* Usa Flexbox para alinhar os itens na linha */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    gap: 10px; /* Adiciona um espaço de 10px entre os itens */
 }
 
-.contactBx .info li span:nth-child(1) {
-    color: #fff;
-    font-size: 20px;
-    margin-right: 10px;
+.contactBx .info li {
+    display: flex; /* Garante que o conteúdo dentro de cada li fique alinhado em linha */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
 }
 
 .contactBx .info li span {
+    font-size: 18px; /* Ajusta o tamanho da fonte para deixar mais uniforme */
     color: #c7c7c7;
 }
 
 .contactBx .info li a {
-    color: #c7c7c7;
+    color: #fff; /* Cor do link */
+    font-size: 18px; /* Tamanho de fonte do link */
     text-decoration: none;
     transition: .5s;
 }
 
 .contactBx .info li a:hover {
-    color: #fff;
+    color: #fff; /* Cor do link ao passar o mouse */
 }
+.contactBx .info li:nth-child(2) {
+    margin-top: -20px;
+    margin-bottom: 20px; /* Ajuste a margem inferior para reduzir o espaço entre o e-mail e o Instagram */
+}
+
+.contactBx .info li:nth-child(3) {
+    margin-top: -60px; /* Ajusta a margem superior do Instagram para deixá-lo mais perto do e-mail */
+}
+
+/* Remove o risco (outline) dos links apenas no rodapé */
+.footer-container .sec.contactBx a:focus {
+    outline: none;
+}
+
+/* O restante do código para manter o foco nos links da navbar */
+.navbar a:focus {
+    outline: auto; /* Isso garante que o risco de foco continue na navbar */
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container .sec.aboutus,
+    .footer-container .sec.contactBx {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .conteudo-rodape-imagem {
+        width: 30%; /* Ajusta a largura da imagem em telas menores */
+    }
+}
+
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
