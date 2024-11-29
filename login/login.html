@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/login/login.css">
+    <link rel="website icon" type="png" href="/img/logotra.png" />
+
     <title>Login</title>
 </head>
 <body>
@@ -49,5 +51,27 @@
             window.location.href = '/educapaghome/inicio/inicial.html'; // Redireciona após a validação
         });
     </script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>    
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <style>
+        .acess-button {
+          background-color: #006400 !important;
+          border-radius: 50%; 
+          width: 60px;
+          height: 60px;
+        }
+      </style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+    
 </body>
 </html>
