@@ -7,6 +7,86 @@
     <title>Filmes</title>
 </head>
 <body>
+        
+
+    <!-- Inclusão do widget VLibras -->
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    
+        function toggleMenu() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const nav = document.querySelector('.nav');
+            toggleMenu.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    
+        window.addEventListener('scroll', function() {
+            var anime = document.querySelectorAll('.animeX');
+            var windowheight = window.innerHeight;
+            var animepoint = 150;
+    
+            anime.forEach(el => {
+                var animetop = el.getBoundingClientRect().top;
+    
+                if (animetop < windowheight - animepoint) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+        });
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const lists = document.querySelectorAll('.list');
+            const cards = document.querySelectorAll('.card');
+    
+            lists.forEach(list => {
+                list.addEventListener('click', function() {
+                    lists.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+    
+                    const dataFilter = this.getAttribute('data-filter');
+    
+                    cards.forEach(card => {
+                        card.classList.remove('active');
+                        card.classList.add('hide');
+    
+                        if (dataFilter === 'all' || card.getAttribute('data-item') === dataFilter) {
+                            card.classList.remove('hide');
+                            card.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <!-- Plugin do VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <!-- Inclusão do script VLibras Plugin -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget().init();
+    </script>
+    
+    <!-- Estilo para o widget VLibras ficar fixo no canto superior direito -->
+    <style>
+        #vlibras-widget {
+            position: fixed;   /* Fixa no canto da tela */
+            top: 20px;         /* Distância do topo da tela */
+            right: 20px;       /* Distância da direita da tela */
+            z-index: 9999;     /* Garante que o widget ficará acima de outros elementos */
+        }
+    </style>
     <div class="container">
         <div class="banner">
             <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mortal.jpeg" alt="Banner do filme" />

@@ -378,6 +378,7 @@ body {
     padding-right: 25px; /* Pequeno espaço no final */
 }
 
+
 /* Responsividade para telas menores */
 @media screen and (max-width: 900px) {
     .carousel {

@@ -305,34 +305,56 @@ h3 {
 }
 
 /* outras abas */
-.container-principal h1{
+/* Estilo do título (h1) */
+.container-principal h1 {
     width: 80%;
-    margin: auto;
+    margin: auto; /* Centraliza o título */
     text-align: center;
     padding-top: 50px;
     margin-top: 0;
-    margin-left: 80px;
+    /* Remover margin-left: 10rem; e utilizar margin de forma mais consistente */
 }
+
+/* Estilo principal da seção */
 .container-principal {
     margin-top: 30px;
-    margin-left: 180px;
+    display: flex; /* Flexbox para centralizar o conteúdo da seção */
+    flex-direction: column; /* Organiza as containers de imagem em uma coluna */
+    align-items: center; /* Centraliza as imagens horizontalmente */
+    justify-content: center;
 }
 
-.container-principal img{
+/* Estilo para as imagens */
+.container-principal img {
     border-radius: 20px;
+    max-width: 100%; /* Garante que a imagem ocupe o máximo de largura possível sem ultrapassar o container */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito de aumento */
 }
 
-.container1 {
+/* Efeito de zoom ao passar o mouse */
+.container-principal img:hover {
+    transform: scale(1.05); /* Aumenta a imagem em 10% ao passar o mouse */
+}
+
+
+/* Flexbox para alinhar as imagens de forma responsiva */
+.container1, .container2 {
     display: flex;
-    gap: 30px;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 30px; /* Adiciona espaçamento entre as imagens */
+    margin-top: 20px; /* Espaço entre as seções */
 }
 
-.container2 {
-    margin-top: 20px;
-    display: flex;
-    gap: 30px;
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container1, .container2 {
+        flex-direction: column; /* Coloca as imagens em coluna em telas pequenas */
+        align-items: center; /* Centraliza as imagens em telas menores */
+    }
 }
 
+/* Estilo do sub-menu */
 .sub-menu {
     display: none;
     position: absolute;
@@ -348,19 +370,19 @@ h3 {
     text-decoration: none;
     display: block;
     padding: 8px;
-    border-radius: 15px; /* Adiciona arredondamento aos links */
-    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição suave */
+    border-radius: 15px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .sub-menu a:hover {
-    background-color: #7ae8a6; /* Cor ao passar o mouse */
-    transform: scale(1.05); /* Efeito de leve aumento */
+    background-color: #7ae8a6;
+    transform: scale(1.05);
 }
 
-/* Adiciona estilo quando o item é selecionado (ativo) */
 .sub-menu a:active {
-    background-color: #4a9e6a; /* Cor ao selecionar */
+    background-color: #4a9e6a;
 }
+
 
 
 .conteudo-rodape {

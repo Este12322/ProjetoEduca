@@ -651,34 +651,80 @@ nav img {
 }
 
 /* outras abas */
-.container-principal h1{
+.container-principal h1 {
     width: 80%;
-    margin: auto;
+    margin: auto; /* Centraliza o título */
     text-align: center;
     padding-top: 50px;
     margin-top: 0;
-    margin-left: 80px;
-    font-size: 36px; /* Ajuste o tamanho da fonte se necessário */
-
+    /* Remover margin-left: 10rem; e utilizar margin de forma mais consistente */
 }
+
+/* Estilo principal da seção */
 .container-principal {
     margin-top: 30px;
-    margin-left: 180px;
+    display: flex; /* Flexbox para centralizar o conteúdo da seção */
+    flex-direction: column; /* Organiza as containers de imagem em uma coluna */
+    align-items: center; /* Centraliza as imagens horizontalmente */
+    justify-content: center;
 }
-
-.container-principal img{
+/* Estilo para as imagens */
+.container-principal img {
     border-radius: 20px;
+    max-width: 100%; /* Garante que a imagem ocupe o máximo de largura possível sem ultrapassar o container */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito de aumento */
 }
 
-.container1 {
-    display: flex;
-    gap: 30px;
+/* Efeito de zoom ao passar o mouse */
+.container-principal img:hover {
+    transform: scale(1.05); /* Aumenta a imagem em 10% ao passar o mouse */
 }
 
-.container2 {
-    margin-top: 20px;
-    display: flex;
-    gap: 30px;
+
+/* Flexbox para alinhar as imagens de forma responsiva */
+.container1, .container2 {
+display: flex;
+justify-content: center; /* Centraliza as imagens horizontalmente */
+gap: 30px; /* Adiciona espaçamento entre as imagens */
+margin-top: 20px; /* Espaço entre as seções */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+.container1, .container2 {
+    flex-direction: column; /* Coloca as imagens em coluna em telas pequenas */
+    align-items: center; /* Centraliza as imagens em telas menores */
+}
+}
+
+/* Estilo do sub-menu */
+.sub-menu {
+display: none;
+position: absolute;
+background-color: #67a973;
+border-radius: 5px;
+padding: 10px;
+margin-top: 5px;
+z-index: 10;
+}
+
+.sub-menu a {
+color: #fff;
+text-decoration: none;
+display: block;
+padding: 8px;
+border-radius: 15px;
+transition: background-color 0.3s, transform 0.3s;
+}
+
+.sub-menu a:hover {
+background-color: #7ae8a6;
+transform: scale(1.05);
+}
+
+.sub-menu a:active {
+background-color: #4a9e6a;
 }
 
 
@@ -1052,9 +1098,11 @@ nav img {
 
 
 /* agendamento */
+
  .agendamento-container {
-    max-width: 600px;
-    margin: auto;
+    max-width: 1000px;
+    margin-left: 20rem;
+    
     background: rgb(222, 222, 222);
     padding: 20px;
     border-radius: 8px;

@@ -6,9 +6,89 @@
     <link rel="stylesheet" href="/educapaghome/jogos/jogos.css">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="website icon"  type="png" href="/img/logotra.png"/>
-    <title>Jogos da Educa</title>
-    <script src="https://vlibras.gov.br/app/vlibras.js"></script>
 
+    <title>Jogos da Educa</title>
+   
+   
+    <!-- Inclusão do widget VLibras -->
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    
+        function toggleMenu() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const nav = document.querySelector('.nav');
+            toggleMenu.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    
+        window.addEventListener('scroll', function() {
+            var anime = document.querySelectorAll('.animeX');
+            var windowheight = window.innerHeight;
+            var animepoint = 150;
+    
+            anime.forEach(el => {
+                var animetop = el.getBoundingClientRect().top;
+    
+                if (animetop < windowheight - animepoint) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+        });
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const lists = document.querySelectorAll('.list');
+            const cards = document.querySelectorAll('.card');
+    
+            lists.forEach(list => {
+                list.addEventListener('click', function() {
+                    lists.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+    
+                    const dataFilter = this.getAttribute('data-filter');
+    
+                    cards.forEach(card => {
+                        card.classList.remove('active');
+                        card.classList.add('hide');
+    
+                        if (dataFilter === 'all' || card.getAttribute('data-item') === dataFilter) {
+                            card.classList.remove('hide');
+                            card.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <!-- Plugin do VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <!-- Inclusão do script VLibras Plugin -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget().init();
+    </script>
+    
+    <!-- Estilo para o widget VLibras ficar fixo no canto superior direito -->
+    <style>
+        #vlibras-widget {
+            position: fixed;   /* Fixa no canto da tela */
+            top: 20px;         /* Distância do topo da tela */
+            right: 20px;       /* Distância da direita da tela */
+            z-index: 9999;     /* Garante que o widget ficará acima de outros elementos */
+        }
+    </style>
+            
 </head>
 <body>
     <header>
@@ -202,7 +282,7 @@
         <h2> Filmes de Jogos Clássicos</h2>
         <div class="boxBx">
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/sonic.jpeg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/sonic.jpeg" alt="Sonic - O Filme">
                 <div class="content">
                     <h4><span>Aventura, Família</span> <br>Sonic - O Filme</h4>
                     <p>O porco-espinho azul mais famoso do mundo, se junta com os seus amigos para derrotar o terrível vilão...
@@ -216,7 +296,7 @@
             </div>
 
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/pixels.jpeg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/pixels.jpeg" alt="Pixels">
                 <div class="content">
                     <h4><span>Comédia, Ficção Científica</span> <br>Pixels</h4>
                     <p>
@@ -230,7 +310,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mario.jpeg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mario.jpeg" alt="Super Mario Bros. - O Filme">
                 <div class="content">
                     <h4><span> Animação, Comédia, Família</span> <br>Super Mario Bros. - O Filme</h4>
                     <p>
@@ -245,7 +325,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/jogador.jpeg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/jogador.jpeg" alt="Jogador Nº1">
                 <div class="content">
                     <h4><span> Ação, Ficção Científica</span> <br>Jogador Nº1</h4>
                     <p>Num futuro distópico em 2044, como o resto da humanidade, prefere a realidade virtual ao mundo real...
@@ -259,7 +339,7 @@
             </div>
 
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/pikachu.jpeg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/pikachu.jpeg" alt="Pokémon: Detetive Pikachu">
                 <div class="content">
                     <h4><span>Ação, Aventura</span> <br>Pokémon: Detetive Pikachu</h4>
                     <p>O desaparecimento do detetive Harry Goodman faz com que seu filho Tim vai à sua procura. Ao seu lado Pikachu...
@@ -272,7 +352,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mortal.jpeg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mortal.jpeg" alt="Mortal Kombat">
                 <div class="content">
                     <h4><span>Ação, Artes Marciais</span> <br>Mortal Kombat</h4>
                     <p>Um lutador de MMA é recrutado por um misterioso clã para participar de um torneio e salvar a Terra contra...                    </p>
@@ -285,7 +365,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mine.jpg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/mine.jpg" alt="A Minecraft Movie">
                 <div class="content">
                     <h4><span>Aventura, Animação, Fantasia</span> <br>A Minecraft Movie</h4>
                     <p>
@@ -299,7 +379,7 @@
             </div>
 
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/detona.jpeg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/detona.jpeg"alt="Detona Ralph">
                 <div class="content">
                     <h4><span>Aventura, Animação, Família</span> <br>Detona Ralph</h4>
                     <p>Detona Ralph o vilão de Conserta Félix Jr. de um popular jogo de fliperama que está completando 30 anos...
@@ -312,7 +392,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/free.jpg">
+                <img src="/educapaghome/jogos/filmes/imgsdosfilmes/free.jpg" alt="Free Guy - Assumindo o Controle">
                 <div class="content">
                     <h4><span>Ação, Aventura, Comédia</span> <br>Free Guy - Assumindo o Controle</h4>
                     <p>Assumindo o Controle, Guy é um personagem não-jogador (NPC) em Free City, um jogo de RPG. Sem saber...
@@ -363,86 +443,7 @@
     </footer>
 
 
-    <!-- Inclusão do widget VLibras -->
-    <script>
-        new window.VLibras.Widget().init();
-    </script>
-    <script>
-        window.addEventListener('scroll', function() {
-            var header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        });
-        
-        function toggleMenu() {
-            const toggleMenu = document.querySelector('.toggleMenu');
-            const nav = document.querySelector('.nav'); // Corrigido para querySelector
-            toggleMenu.classList.toggle('active');
-            nav.classList.toggle('active'); // Corrigido para classList
-        }
-        
-        window.addEventListener('scroll', function() {
-            var anime = document.querySelectorAll('.animeX');
-            var windowheight = window.innerHeight;
-            var animepoint = 150;
-        
-            anime.forEach(el => {
-                var animetop = el.getBoundingClientRect().top;
-        
-                if (animetop < windowheight - animepoint) {
-                    el.classList.add('active');
-                } else {
-                    el.classList.remove('active');
-                }
-            });
-        });
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const lists = document.querySelectorAll('.list');
-            const cards = document.querySelectorAll('.card');
-        
-            lists.forEach(list => {
-                list.addEventListener('click', function() {
-                    lists.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-        
-                    const dataFilter = this.getAttribute('data-filter');
-        
-                    cards.forEach(card => {
-                        card.classList.remove('active');
-                        card.classList.add('hide');
-        
-                        if (dataFilter === 'all' || card.getAttribute('data-item') === dataFilter) {
-                            card.classList.remove('hide');
-                            card.classList.add('active');
-                        }
-                    });
-                });
-            });
-        });
-        </script>
-
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>    
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    <style>
-        .acess-button {
-          background-color: #006400 !important;
-          border-radius: 50%; 
-          width: 60px;
-          height: 60px;
-        }
-      </style>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-    
-        
+ 
+            
 </body>
 </html>
